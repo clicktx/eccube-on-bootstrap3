@@ -1,0 +1,7 @@
+@charset 'utf-8';
+
+#detailrightbloc .plg_weightdeliv_weight {
+    background: url("../img/background/line_dot_01.gif") repeat-x scroll center bottom transparent;
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+}
