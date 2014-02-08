@@ -293,13 +293,13 @@ div#undercolumn_login .login_area h4 {
 /* レイアウト
 ----------------------------------------------- */
 #header_wrap {
-    border-top: solid 3px #f90;
+/*    border-top: solid 3px #f90;
     min-height: 82px;
-    background: url("../img/common/bg_header.gif") repeat-x bottom #fffaf0;
+    background: url("../img/common/bg_header.gif") repeat-x bottom #fffaf0;*/
 }
 #header {
-    margin: auto;
-    width: 980px;
+/*    margin: auto;
+    width: 980px;*/
 }
 #header_utility {
     float: right;

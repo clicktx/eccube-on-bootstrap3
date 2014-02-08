@@ -22,12 +22,25 @@
 
 <!--▼HEADER-->
 <!--{strip}-->
-    <div id="header_wrap">
-        <div id="header" class="clearfix">
-            <div id="logo_area">
-                <p id="site_description">EC-CUBE発!世界中を旅して見つけた立方体グルメを立方隊長が直送！</p>
-                <a href="<!--{$smarty.const.TOP_URL}-->"><img src="<!--{$TPL_URLPATH}-->img/common/logo.gif" alt="<!--{$arrSiteInfo.shop_name|h}-->/<!--{$tpl_title|h}-->" /></a>
+    <div id="header_wrap" class="navbar navbar-fixed-top navbar-default" role="navigation">
+        <div id="header" class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="<!--{$smarty.const.TOP_URL}-->"><!--{$arrSiteInfo.shop_name|h}-->/<!--{$tpl_title|h}--></a>
             </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </div>
+            
             <div id="header_utility">
                 <div id="headerInternalColumn">
                 <!--{* ▼HeaderInternal COLUMN *}-->

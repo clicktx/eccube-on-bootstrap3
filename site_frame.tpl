@@ -1,4 +1,4 @@
-<!--{printXMLDeclaration}--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--{printXMLDeclaration}--><!DOCTYPE html>
 <!--{*
  * This file is part of EC-CUBE
  *
@@ -21,8 +21,12 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *}-->
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<html lang="ja">
 <head>
+    <meta charset="<!--{$smarty.const.CHAR_CODE}-->" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
 <meta http-equiv="Content-Type" content="text/html; charset=<!--{$smarty.const.CHAR_CODE}-->" />
 <title><!--{$arrSiteInfo.shop_name|h}--><!--{if $tpl_subtitle|strlen >= 1}--> / <!--{$tpl_subtitle|h}--><!--{elseif $tpl_title|strlen >= 1}--> / <!--{$tpl_title|h}--><!--{/if}--></title>
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
@@ -56,6 +60,15 @@
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <!--{/if}-->
 <!--{/if}-->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->/bootstrap/3.1.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="<!--{$TPL_URLPATH}-->/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">//<![CDATA[
     <!--{$tpl_javascript}-->
