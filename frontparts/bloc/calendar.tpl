@@ -23,6 +23,7 @@
 <!--{strip}-->
     <div class="block_outer">
         <div id="calender_area">
+            <span class="glyphicon glyphicon-calendar"></span>
         <h2><img src="<!--{$TPL_URLPATH}-->img/title/tit_bloc_calender.gif" alt="カレンダー" /></h2>
             <div class="block_body">
                 <!--{section name=num loop=$arrCalendar}-->
