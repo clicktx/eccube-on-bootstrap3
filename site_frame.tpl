@@ -60,7 +60,8 @@
 <!--{/if}-->
 
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->/bootstrap/3.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->/bootstrap/3.1.0/css/bootstrap.min.css" />
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
 <link rel="stylesheet" href="<!--{$smarty.const.ROOT_URLPATH}-->js/jquery.colorbox/colorbox.css" type="text/css" media="all" />
 <link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/import.css" type="text/css" media="all" />
     <!-- Just for debugging purposes. Don't actually copy this line! -->
