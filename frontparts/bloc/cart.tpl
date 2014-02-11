@@ -31,11 +31,11 @@
     <div class="block_outer">
         <div id="cart_area" class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">
+                <h2 class="panel-title">
                     <span class="glyphicon glyphicon-shopping-cart"></span> 現在のカゴの中
-                </h3>
+                </h2>
             </div>
-            <div class="panel-body">
+            <div class="block_body panel-body">
                 <div class="information">
                     <p class="item">合計数量：<span class="attention"><!--{$arrCartList.0.TotalQuantity|number_format|default:0}--></span></p>
                     <p class="total">商品金額：<span class="price"><!--{$arrCartList.0.ProductsTotal|number_format|default:0}-->円</span></p>

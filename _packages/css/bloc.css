@@ -32,8 +32,8 @@
 }
 .side_column .block_body,
 #main_column .block_body {
-    border: solid 1px #ccc;
-    border-top: none;
+/*    border: solid 1px #ccc;
+    border-top: none;*/
 }
 .side_column .block_body .box {
     border: solid 1px #ccc;
@@ -80,18 +80,18 @@
 #calender_area h2,
 #cart_area h2,
 #cart h2 {
-    padding: 5px 0 8px 10px;
+/*    padding: 5px 0 8px 10px;
     border-style: solid;
     border-color: #f90 #ccc #ccc;
     border-width: 1px 1px 0;
     background: url('../img/background/bg_tit_bloc_01.jpg') repeat-x left bottom;
-    font-size: 14px;
+    font-size: 14px;*/
 }
 #category_area h2 {
-    border-top: solid 1px #f90;
+/*    border-top: solid 1px #f90;
     background: url('../img/background/bg_tit_bloc_01.jpg') repeat-x left bottom;
     padding: 5px 0 8px 10px;
-    font-size: 14px;
+    font-size: 14px;*/
 }
 
 /* タイトルの背景 オレンジ */

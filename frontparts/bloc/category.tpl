@@ -30,11 +30,11 @@
     <div class="block_outer">
         <div id="category_area" class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">
+                <h2 class="panel-title">
                     <span class="glyphicon glyphicon-list-alt"></span> 商品カテゴリ
-                </h3>
+                </h2>
             </div>
-            <div class="panel-body">
+            <div class="block_body panel-body">
                 <!--{include file="`$smarty.const.TEMPLATE_REALDIR`frontparts/bloc/category_tree_fork.tpl" children=$arrTree treeID="" display=1}-->
             </div>
         </div>
