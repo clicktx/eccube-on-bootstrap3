@@ -148,8 +148,8 @@
     border-top: 1px dotted gray;
 }
 #cart_area .postage .point_announce {
-    padding: 2px 0 2px 20px;
-    background: url("../img/icon/ico_price.gif") no-repeat left top;
+/*    padding: 2px 0 2px 20px;
+    background: url("../img/icon/ico_price.gif") no-repeat left top;*/
 }
 #cart_area .btn {
 /*    padding: 10px 0;

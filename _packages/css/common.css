@@ -21,30 +21,6 @@ img.picture {
     margin-bottom: 20px;
 }
 
-/* ==============================================
- カラー
-=============================================== */
-.price {
-    color: #d44950;
-}
-.yellow {
-    color: #fff6c2;
-}
-.orange {
-    color: orange;
-}
-.red {
-    color: #d44950;
-}
-.blue {
-    color: #2f6f9f;
-}
-.light-blue {
-    color: #4f9fcf;
-}
-.light-gray {
-    color: lightgray;
-}
 
 /* ==============================================
  フレーム
@@ -195,13 +171,13 @@ h5 {
     line-height: 150%;
 }
 .sale_price {
-    color: #f00;
+    color: #d44950;
 }
 .normal_price {
     font-size: 90%;
 }
 .point {
-    color: #f00;
+    color: #d44950;
     font-weight: bold;
 }
 .user_name {
@@ -212,10 +188,10 @@ h5 {
 }
 
 .attention {
-    color: #f00;
+    color: #d44950;
 }
 .attentionSt {
-    color: #f00;
+    color: #d44950;
     font-weight: bold;
 }
 .st {
@@ -223,6 +199,36 @@ h5 {
 }
 .mini {
     font-size: 90%;
+}
+
+/* カラー
+----------------------------------------------- */
+.price {
+    color: #d44950;
+}
+.white {
+    color: #ffffff;
+}
+.light-yellow {
+    color: #fcf8e3;
+}
+.yellow {
+    color: #faebcc;
+}
+.orange {
+    color: #f0ad4e;
+}
+.red {
+    color: #d44950;
+}
+.blue {
+    color: #2f6f9f;
+}
+.light-blue {
+    color: #4f9fcf;
+}
+.light-gray {
+    color: lightgray;
 }
 
 
@@ -345,7 +351,7 @@ div#undercolumn_login .login_area h4 {
     width: 580px;*/
 }
 #errorHeader {
-    color: #F00;
+    color: #d44950;
     font-weight: bold;
     font-size: 12px;
     background-color: #FEB;
