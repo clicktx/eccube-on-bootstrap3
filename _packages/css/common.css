@@ -4,12 +4,12 @@
  共通設定
 ************************************************ */
 body {
-    color: #666;
+/*    color: #666;
     font-family: Verdana,Arial,Helvetica,sans-serif;
     background-color: #f5f5f5;
     font-size: 72.5%;
     line-height: 150%;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.1em;*/
 }
 
 /* 写真 */
@@ -17,24 +17,52 @@ img.picture {
     border: 1px solid #ccc;
 }
 
+.block {
+    margin-bottom: 20px;
+}
+
+/* ==============================================
+ カラー
+=============================================== */
+.price {
+    color: #d44950;
+}
+.yellow {
+    color: #fff6c2;
+}
+.orange {
+    color: orange;
+}
+.red {
+    color: #d44950;
+}
+.blue {
+    color: #2f6f9f;
+}
+.light-blue {
+    color: #4f9fcf;
+}
+.light-gray {
+    color: lightgray;
+}
 
 /* ==============================================
  フレーム
 =============================================== */
 /* 全体を包括 */
 .frame_outer {
-    margin: 0 auto;
+/*    margin: 0 auto;
     width: 100%;
-    text-align: center;
+    text-align: center;*/
 }
 
 /* コンテンツ */
 #container {
-    margin: 0 auto;
+/*    margin: 0 auto;
     padding: 0 0 30px;
     width: 980px;
     background: #fff;
-    text-align: left;
+    text-align: left;*/
 }
 
 
@@ -45,51 +73,51 @@ img.picture {
 /* メイン部
 ----------------------------------------------- */
 #main_column {
-    padding: 10px 0 0;
+    /*padding: 10px 0 0;*/
 }
 
 /* 1カラム時 */
 #main_column.colnum1 {
-    margin: 0 auto;
-    width: 80%;
+/*    margin: 0 auto;
+    width: 80%;*/
 }
 
 /* 2カラム時 (共通) */
 #main_column.colnum2 {
-    width: 78%;
+    /*width: 78%;*/
 }
 
 /* 2カラム時 (メイン部が左) */
 #main_column.colnum2.left {
-    padding-left: 1.5%;
-    float: left;
+/*    padding-left: 1.5%;
+    float: left;*/
 }
 
 /* 2カラム時 (メイン部が右) */
 #main_column.colnum2.right {
-    padding-right: 1.5%;
-    float: right;
+ /*   padding-right: 1.5%;
+    float: right;*/
 }
 
 /* 3カラム時 */
 #main_column.colnum3 {
-    padding-left: 0.5%;
+ /*   padding-left: 0.5%;
     width: 59%;
-    float: left;
+    float: left;*/
 }
 
 /* サイドカラム
 ----------------------------------------------- */
 .side_column {
-    padding: 10px 0 0;
+    /*padding: 10px 0 0;*/
 }
 #leftcolumn {
-    float: left;
-    width: 20%;
+/*    float: left;
+    width: 20%;*/
 }
 #rightcolumn {
-    float: right;
-    width: 20%;
+    /*float: right;
+    width: 20%;*/
 }
 
 /* 他
@@ -117,15 +145,15 @@ img.picture {
 /* フロート回り込み解除
 ----------------------------------------------- */
 .clearfix:after {
-    display: block;
+/*    display: block;
     clear: both;
     height: 0px;
     line-height: 0px;
     visibility: hidden;
-    content: ".";
+    content: ".";*/
 }
 .clearfix {
-    display: block; /* for IE8 */
+    /*display: block;*/ /* for IE8 */
 }
 .clear {
     clear: both;
@@ -135,18 +163,29 @@ img.picture {
 ----------------------------------------------- */
 a:link,
 a:visited {
-    color: #39c;
-    text-decoration: none;
+/*    color: #39c;
+    text-decoration: none;*/
 }
 a:link:hover,
 a[href]:hover {
-    color: #f60;
-    text-decoration: underline;
+/*    color: #f60;
+    text-decoration: underline;*/
 }
 
 
 /* フォント
 ----------------------------------------------- */
+.ultra-large {
+    font-size: 200%;
+}
+.large {
+    font-size: 150%;
+}
+/*.smallは標準*/
+.ultra-small {
+    font-size: 50%;
+}
+
 h1,
 h2,
 h3,
@@ -210,8 +249,8 @@ select {
 }
 input[type='text'],
 input[type='password'] {
-    border: solid 1px #ccc;
-    padding: 2px;
+/*    border: solid 1px #ccc;
+    padding: 2px;*/
 }
 
 .box40 {
@@ -302,8 +341,8 @@ div#undercolumn_login .login_area h4 {
     width: 980px;*/
 }
 #header_utility {
-    float: right;
-    width: 580px;
+/*    float: right;
+    width: 580px;*/
 }
 #errorHeader {
     color: #F00;
@@ -331,17 +370,17 @@ div#undercolumn_login .login_area h4 {
 /* ヘッダーナビ
 ----------------------------------------------- */
 div#header_navi {
-    float: right;
+/*    float: right;
     width: 409px;
-    height: 38px;
+    height: 38px;*/
 }
 div#header_navi ul li {
-    display: block;
-    float: left;
+/*    display: block;
+    float: left;*/
 }
 div#header_navi ul li.mypage,
 div#header_navi ul li.entry {
-    margin-top: 6px;
+    /*margin-top: 6px;*/
 }
 
 
@@ -349,16 +388,16 @@ div#header_navi ul li.entry {
  フッター
 =============================================== */
 #footer_wrap {
-    margin: 0 auto;
+/*    margin: 0 auto;
     width: 980px;
     height: 80px;
-    background: #fff;
+    background: #fff;*/
 }
 #footer {
-    margin: auto;
+/*    margin: auto;
     padding-top: 10px;
     border-top: solid 1px #ccc;
-    width: 950px;
+    width: 950px;*/
 }
 #pagetop {
     width: 210px;
@@ -366,10 +405,10 @@ div#header_navi ul li.entry {
     text-align: right;
 }
 #copyright {
-    width: 740px;
+/*    width: 740px;
     float: left;
     text-align: left;
-    font-size: 97%;
+    font-size: 97%;*/
 }
 
 

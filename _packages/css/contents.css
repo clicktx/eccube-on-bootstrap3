@@ -229,20 +229,20 @@ div.listphoto {
 
 /* メインカラム用 1カラム時*/
 #main_column.colnum1 div.listrightbloc {
-    float: right;
-    width: 74%;
+/*    float: right;
+    width: 74%;*/
 }
 
 /* メインカラム用 2カラム時*/
 #main_column.colnum2 div.listrightbloc {
-    float: right;
-    width: 80%;
+/*    float: right;
+    width: 80%;*/
 }
 
 /* メインカラム用 3カラム時*/
 #main_column.colnum3 div.listrightbloc {
-    float: right;
-    width: 74%;
+/*    float: right;
+    width: 74%;*/
 }
 
 
@@ -350,71 +350,71 @@ div.listrightbloc .cartin_btn {
 ----------------------------------------------- */
 /* 1カラム用 */
 #main_column.colnum1 div#detailphotobloc {
-    width: 37%;
-    float: left;
+    /*width: 37%;
+    float: left;*/
 }
 #main_column.colnum1 #detailrightbloc {
-    width: 63%;
-    float: right;
+    /*width: 63%;
+    float: right;*/
 }
 #main_column.colnum1 div.subtext {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;
     float: left;
-    width: 69%;
+    width: 69%;*/
 }
 #main_column.colnum1 div.subphotoimg {
-    float: right;
+    /*float: right;
     width: 25%;
-    text-align: right;
+    text-align: right;*/
 }
 #main_column.colnum1 p.subtext {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
 
 /* 2カラム用 */
 #main_column.colnum2 div#detailphotobloc {
-    float: left;
-    width: 37%;
+    /*float: left;
+    width: 37%;*/
 }
 #main_column.colnum2 #detailrightbloc {
-    float: right;
-    width: 63%;
+    /*float: right;
+    width: 63%;*/
 }
 #main_column.colnum2 div.subtext {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;
     float: left;
-    width: 73%;
+    width: 73%;*/
 }
 #main_column.colnum2 p.subtext {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
 #main_column.colnum2 div.subphotoimg {
-    float: right;
+    /*float: right;
     width: 25%;
-    text-align: right;
+    text-align: right;*/
 }
 
 /* 3カラム用 */
 #main_column.colnum3 div#detailphotobloc {
-    float: left;
-    width: 49%;
+    /*float: left;
+    width: 49%;*/
 }
 #main_column.colnum3 #detailrightbloc {
-    float: right;
-    width: 50%;
+    /*float: right;
+    width: 50%;*/
 }
 #main_column.colnum3 div.subtext {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;
     float: left;
-    width: 63%;
+    width: 63%;*/
 }
 #main_column.colnum3 p.subtext {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
 #main_column.colnum3 div.subphotoimg {
-    float: right;
+    /*float: right;
     width: 35%;
-    text-align: right;
+    text-align: right;*/
 }
 
 /* 商品情報 各種設定

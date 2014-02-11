@@ -43,13 +43,13 @@
 /* 外枠
 ----------------------------------------------- */
 #container .block_outer {
-    padding: 0 15px 10px; /* #container の背景色を欠けさせないため敢えて padding */
+    /*padding: 0 15px 10px;*/ /* #container の背景色を欠けさせないため敢えて padding */
 }
 #container #main_column .block_outer {
-    padding: 0 0 20px;
+    /*padding: 0 0 20px;*/
 }
 #container .side_column .block_outer {
-    padding: 0 7% 10px;
+    /*padding: 0 7% 10px;*/
 }
 
 /* リスト
@@ -144,55 +144,117 @@
 #cart_area .postage {
     margin-top: 10px;
     padding-top: 10px;
-    background: url("../img/background/line_dot_01.gif") repeat-x top;
+    /*background: url("../img/background/line_dot_01.gif") repeat-x top;*/
+    border-top: 1px dotted gray;
 }
 #cart_area .postage .point_announce {
     padding: 2px 0 2px 20px;
     background: url("../img/icon/ico_price.gif") no-repeat left top;
 }
 #cart_area .btn {
-    padding: 10px 0;
+/*    padding: 10px 0;
     background: url("../img/background/line_dot_01.gif") repeat-x top #f7f7e6;
-    text-align: center;
+    text-align: center;*/
 }
 
 
 /* ===============================================
 ▼カテゴリ
 =============================================== */
+/*
+    bootstrap3.x The removal of nav-list
+    http://stackoverflow.com/questions/18281636/what-replaces-nav-lists-in-bootstrap-3
+    https://gist.github.com/jimbojsb/6754116
+*/
+.nav-list {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0;
+}
+ 
+.nav-list > li > a,
+.nav-list .nav-header {
+  margin-left: -25px;
+  margin-right: -25px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+}
+ 
+.nav-list > li > a {
+  padding: 3px 10px;
+}
+ 
+.nav-list > .active > a,
+.nav-list > .active > a:hover,
+.nav-list > .active > a:focus {
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+  background-color: #08c;
+}
+ 
+.nav-list [class^="icon-"],
+.nav-list [class*=" icon-"] {
+  margin-right: 2px;
+}
+ 
+.nav-list .divider {
+  *width: 100%;
+  height: 1px;
+  margin: ((1.428571429 / 2) - 1) 1px; /*8px 1px*/
+  *margin: -5px 0 5px;
+  overflow: hidden;
+  background-color: #428bca;
+  border-bottom: 1px solid white;
+}
+ 
+.nav-header {
+  display: block;
+  padding: 3px 15px;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1.428571429;
+  color: #999;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  text-transform: uppercase;
+}
+/*Space them out when they follow another list item (link)*/
+.nav li + .nav-header {
+  margin-top: 9px;
+}
+
+
 #container #category_area .block_body {
-    background-color: #fffaf0;
+    /*background-color: #fffaf0;*/
 }
 
 #category_area li {
-    padding-left: 5px;
+    /*padding-left: 5px;*/
 }
 #category_area li.level1 {
-    border-bottom: solid 1px #ccc;
+    /*border-bottom: solid 1px #ccc;*/
 }
 #category_area li.level1 p {
-    padding-left: 20px;
-    margin: 7px 3px;
+    /*padding-left: 20px;*/
+    /*margin: 7px 3px;*/
 }
 #category_area li.level1 p {
-    background: url("../img/icon/ico_arrow_01.gif") 2px 3px no-repeat;
+    /*background: url("../img/icon/ico_arrow_01.gif") 2px 3px no-repeat;*/
 }
 #category_area li.level1 li p {
-    background: url("../img/icon/ico_level.gif") 7px 7px no-repeat;
+    /*background: url("../img/icon/ico_level.gif") 7px 7px no-repeat;*/
 }
 #category_area li a {
-    display: block;
-    padding: 0;
+    /*display: block;*/
+    /*padding: 0;*/
 }
 a.onlink:link {
-    color: #f00;
-    text-decoration: underline;
+    /*color: #f00;*/
+    /*text-decoration: underline;*/
 }
 a.onlink:visited {
-    color: #f00;
+    /*color: #f00;*/
 }
 a.onlink:hover {
-    color: #f00;
+    /*color: #f00;*/
 }
 
 
@@ -203,16 +265,16 @@ a.onlink:hover {
     border: none;
 }
 #guide_area li {
-    margin-bottom: 5px;
-    letter-spacing: -0.05em;
+    /*margin-bottom: 5px;*/
+    /*letter-spacing: -0.05em;*/
 }
 ul.button_like li {
-    margin: 0;
-    padding: 0 0 1px 0;
-    background: url("../img/background/bg_btn_list.jpg") bottom repeat-x;
+    /*margin: 0;*/
+    /*padding: 0 0 1px 0;*/
+    /*background: url("../img/background/bg_btn_list.jpg") bottom repeat-x;*/
 }
 ul.button_like li a {
-    margin: 0;
+    /*margin: 0;
     padding: 10px 15px 10px 10px;
     border: 1px solid;
     border-bottom: none;
@@ -220,7 +282,7 @@ ul.button_like li a {
     display: block;
     background: url("../img/icon/ico_arrow_02.gif") no-repeat right;
     text-decoration: none;
-    outline: none;
+    outline: none;*/
 }
 
 
