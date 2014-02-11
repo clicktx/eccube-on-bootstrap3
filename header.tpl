@@ -22,74 +22,72 @@
 
 <!--▼HEADER-->
 <!--{strip}-->
-    <div id="header_wrap">
-        <nav class="navbar navbar-default navbar-static-top" role="navigation">
-            <div id="header" class="container">
-                <div class="navbar-header">
-                    <button class="navbar-toggle">
-                        <span class="sr-only">navigation</span>
-                        <span class="glyphicon glyphicon-shopping-cart"></span>
-                    </button>
-                    <button class="navbar-toggle" data-toggle="collapse" data-target="#header_navi">
-                        <span class="sr-only">navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="<!--{$smarty.const.TOP_URL}-->"><!--{$arrSiteInfo.shop_name|h}-->/<!--{$tpl_title|h}--></a>
+    <div id="header_wrap" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div id="header" class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle">
+                    <span class="sr-only">navigation</span>
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                </button>
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#header_navi">
+                    <span class="sr-only">navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="<!--{$smarty.const.TOP_URL}-->"><!--{$arrSiteInfo.shop_name|h}-->/<!--{$tpl_title|h}--></a>
+            </div>
+
+            <div id="header_utility">
+                <div id="headerInternalColumn">
+                <!--{* ▼HeaderInternal COLUMN *}-->
+                <!--{if $arrPageLayout.HeaderInternalNavi|@count > 0}-->
+                    <!--{* ▼上ナビ *}-->
+                    <!--{foreach key=HeaderInternalNaviKey item=HeaderInternalNaviItem from=$arrPageLayout.HeaderInternalNavi}-->
+                        <!-- ▼<!--{$HeaderInternalNaviItem.bloc_name}--> -->
+                        <!--{if $HeaderInternalNaviItem.php_path != ""}-->
+                            <!--{include_php file=$HeaderInternalNaviItem.php_path items=$HeaderInternalNaviItem}-->
+                        <!--{else}-->
+                            <!--{include file=$HeaderInternalNaviItem.tpl_path items=$HeaderInternalNaviItem}-->
+                        <!--{/if}-->
+                        <!-- ▲<!--{$HeaderInternalNaviItem.bloc_name}--> -->
+                    <!--{/foreach}-->
+                    <!--{* ▲上ナビ *}-->
+                <!--{/if}-->
+                <!--{* ▲HeaderInternal COLUMN *}-->
                 </div>
+                <div id="header_navi" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
 
-                <div id="header_utility">
-                    <div id="headerInternalColumn">
-                    <!--{* ▼HeaderInternal COLUMN *}-->
-                    <!--{if $arrPageLayout.HeaderInternalNavi|@count > 0}-->
-                        <!--{* ▼上ナビ *}-->
-                        <!--{foreach key=HeaderInternalNaviKey item=HeaderInternalNaviItem from=$arrPageLayout.HeaderInternalNavi}-->
-                            <!-- ▼<!--{$HeaderInternalNaviItem.bloc_name}--> -->
-                            <!--{if $HeaderInternalNaviItem.php_path != ""}-->
-                                <!--{include_php file=$HeaderInternalNaviItem.php_path items=$HeaderInternalNaviItem}-->
-                            <!--{else}-->
-                                <!--{include file=$HeaderInternalNaviItem.tpl_path items=$HeaderInternalNaviItem}-->
-                            <!--{/if}-->
-                            <!-- ▲<!--{$HeaderInternalNaviItem.bloc_name}--> -->
-                        <!--{/foreach}-->
-                        <!--{* ▲上ナビ *}-->
-                    <!--{/if}-->
-                    <!--{* ▲HeaderInternal COLUMN *}-->
-                    </div>
-                    <div id="header_navi" class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#">HOME</a></li>
-                            <li><a href="#">about</a></li>
-                            <li><a href="#">contact</a></li>
-                        </ul>
-
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="mypage dropdown">
-                                <a href="#" class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown">マイページ<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-header">
-                                        ログインまたは新規登録
-                                    </li>
-                                    <li>
-                                        <a href="#" class="btn btn btn-danger">ログイン</a>
-                                    </li>
-                                    <li>
-                                        <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/login.php"><span class="glyphicon glyphicon-user"></span> マイページ</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="entry">
-                                <a href="<!--{$smarty.const.ROOT_URLPATH}-->entry/kiyaku.php"><span class="glyphicon glyphicon-ok"></span> 会員登録</a>
-                            </li>
-                            <li>
-                                <a href="<!--{$smarty.const.CART_URL}-->"><span class="glyphicon glyphicon-shopping-cart"></span> カート</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="mypage dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> アカウントサービス<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-header">
+                                    ログインまたは新規登録
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn btn-danger">ログイン</a>
+                                </li>
+                                <li>
+                                    <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/login.php"><span class="glyphicon glyphicon-user"></span> MYページ</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="entry">
+                            <a href="<!--{$smarty.const.ROOT_URLPATH}-->entry/kiyaku.php"><span class="glyphicon glyphicon-ok"></span> 会員登録</a>
+                        </li>
+                        <li>
+                            <a href="<!--{$smarty.const.CART_URL}-->"><span class="glyphicon glyphicon-shopping-cart"></span> カート</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </nav>
+        </div>
     </div>
 
     <!-- for small mobile -->
