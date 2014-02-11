@@ -82,7 +82,7 @@
                             <a href="<!--{$smarty.const.ROOT_URLPATH}-->entry/kiyaku.php"><span class="glyphicon glyphicon-ok"></span> 会員登録</a>
                         </li>
                         <li>
-                            <a href="<!--{$smarty.const.CART_URL}-->"><span class="glyphicon glyphicon-shopping-cart"></span> カート</a>
+                            <a href="<!--{$smarty.const.CART_URL}-->"><span class="glyphicon glyphicon-shopping-cart"></span> カート<span class="badge bg-red" data-role="cart-total-quantity"></span></a>
                         </li>
                     </ul>
                 </div>
@@ -119,7 +119,8 @@
             </li>
             <li class="col-xs-4">
                 <a href="#" class="btn btn-link">
-                    <span class="glyphicon glyphicon-shopping-cart large"></span><br />
+                    <span class="glyphicon glyphicon-shopping-cart large"></span>
+                    <span class="badge bg-red" data-role="cart-total-quantity"></span><br />
                     <small>カートを見る</small>
                 </a>
             </li>

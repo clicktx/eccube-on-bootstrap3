@@ -20,6 +20,13 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *}-->
 
+<!--{if $arrCartList.0.TotalQuantity}-->
+    <script>
+        $(function(){
+            $('[data-role="cart-total-quantity"]').text("<!--{$arrCartList.0.TotalQuantity|number_format|default:0}-->");
+        });
+    </script>
+<!--{/if}-->
 <!--{strip}-->
     <div class="block_outer">
         <div id="cart_area" class="panel panel-default">

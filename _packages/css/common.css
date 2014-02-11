@@ -221,6 +221,9 @@ h5 {
 .red {
     color: #d44950;
 }
+.bg-red {
+    background-color: #d44950;
+}
 .blue {
     color: #2f6f9f;
 }
