@@ -5,7 +5,7 @@
 ************************************************ */
 /* デフォルトテーブル
 ----------------------------------------------- */
-table {
+/*table {
     margin: 15px auto 20px auto;
     border-top: 1px solid #ccc;
     border-left: 1px solid #ccc;
@@ -26,7 +26,7 @@ table td {
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
 }
-
+*/
 /* 見出し
 ----------------------------------------------- */
 div#undercolumn_shopping table th[scope=col] {

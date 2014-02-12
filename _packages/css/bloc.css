@@ -341,49 +341,49 @@ ul.button_like li a {
 /* ===============================================
 ▼カレンダー
 =============================================== */
-#calender_area {
+/*#calender_area {
     background-color: transparent;
     border: none;
 }
 #calender_area .block_body {
     padding: 10px 0;
     background-color: #f1f9fc;
-}
-#calender_area table {
+}*/
+/*#calender_area table {
     background: #fff;
     border: none;
     width: 150px;
     margin: 0 auto 5px;
     font-size: 90%;
-}
+}*/
 #calender_area table td {
     padding: 1px 3px;
-    border-top: 1px solid #ccc;
-    border-right: none;
+/*    border-top: 1px solid #ccc;
+    border-right: none;*/
     text-align: center;
 }
 #calender_area th {
     padding: 1px 3px;
-    background: #fff;
-    border: none;
+/*    background: #fff;
+    border: none;*/
     text-align: center;
 }
-#calender_area table .month {
+/*#calender_area table .month {
     margin-bottom: 5px;
     padding-left: 12px;
     background: url("../img/icon/ico_arrow_04.gif") no-repeat left;
     font-size: 120%;
-}
+}*/
 #calender_area .off {
-    color: #f00;
+    color: #d44950;
 }
-#calender_area .today {
-    background-color: #FFF99D;
+/*#calender_area .today {
+    background-color: #08c;
     font-weight: bold;
-}
+}*/
 #calender_area .information {
-    margin-left: 10px;
-    font-size: 90%;
+/*    margin-left: 10px;
+    font-size: 90%;*/
 }
 
 
