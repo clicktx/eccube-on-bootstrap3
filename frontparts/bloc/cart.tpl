@@ -57,7 +57,7 @@
                     </p>
                     <!--{/if}-->
                 </div>
-                <a href="<!--{$smarty.const.CART_URL}-->" class="btn btn-warning">カゴの中を見る</a>
+                <a href="<!--{$smarty.const.CART_URL}-->" class="btn btn-block btn-warning">カゴの中を見る</a>
             </div>
         </div>
     </div>
