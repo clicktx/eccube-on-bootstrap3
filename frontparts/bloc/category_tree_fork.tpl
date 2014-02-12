@@ -25,11 +25,7 @@
         <!--{foreach from=$children item=child}-->
             <li class="level<!--{$child.level}--><!--{if in_array($child.category_id, $tpl_category_id)}--> onmark active<!--{/if}-->">
                 <a href="<!--{$smarty.const.ROOT_URLPATH}-->products/list.php?category_id=<!--{$child.category_id}-->"<!--{if in_array($child.category_id, $tpl_category_id)}--> class="onlink"<!--{/if}-->>
-                    <!--{if $child.level ==1}--><span class="glyphicon glyphicon-chevron-right
-"></span>
-                    <!--{else}-->└
-                    <!--{/if}-->
-                    <!--{$child.category_name|h}-->(<!--{$child.product_count|default:0}-->)</a>
+                    <!--{if $child.level ==1}--><span class="fa fa-angle-right"></span> <!--{else}-->└ <!--{/if}--><!--{$child.category_name|h}-->(<!--{$child.product_count|default:0}-->)</a>
                 <!--{if in_array($child.category_id, $arrParentID)}-->
                     <!--{assign var=disp_child value=1}-->
                 <!--{else}-->

@@ -25,10 +25,10 @@
         <div id="guide_area" class="block_body">
 
             <div class="list-group">
-              <a href="<!--{$smarty.const.ROOT_URLPATH}-->abouts/<!--{$smarty.const.DIR_INDEX_PATH}-->" class="list-group-item<!--{if $tpl_page_class_name == "LC_Page_Abouts"}--> active<!--{/if}-->">当サイトについて<span class="fa fa-chevron-circle-right pull-right light-gray"></span></a>
-              <a href="<!--{$smarty.const.HTTPS_URL}-->contact/<!--{$smarty.const.DIR_INDEX_PATH}-->" class="list-group-item<!--{if $tpl_page_class_name == "LC_Page_Contact" || $tpl_page_class_name == "LC_Page_Contact_Complete"}--> active<!--{/if}-->">お問い合わせ<span class="fa fa-chevron-circle-right pull-right light-gray"></span></a>
-              <a href="<!--{$smarty.const.ROOT_URLPATH}-->order/<!--{$smarty.const.DIR_INDEX_PATH}-->" class="list-group-item<!--{if $tpl_page_class_name == "LC_Page_Order"}--> active<!--{/if}-->">特定商取引法に基づく表記<span class="fa fa-chevron-circle-right pull-right light-gray"></span></a>
-              <a href="<!--{$smarty.const.ROOT_URLPATH}-->guide/privacy.php" class="list-group-item<!--{if $tpl_page_class_name == "LC_Page_Guide_Privacy"}--> active<!--{/if}-->">プライバシーポリシー<span class="fa fa-chevron-circle-right pull-right light-gray"></span></a>
+              <a href="<!--{$smarty.const.ROOT_URLPATH}-->abouts/<!--{$smarty.const.DIR_INDEX_PATH}-->" class="list-group-item<!--{if $tpl_page_class_name == "LC_Page_Abouts"}--> active<!--{/if}-->">当サイトについて<span class="fa fa-angle-right pull-right"></span></a>
+              <a href="<!--{$smarty.const.HTTPS_URL}-->contact/<!--{$smarty.const.DIR_INDEX_PATH}-->" class="list-group-item<!--{if $tpl_page_class_name == "LC_Page_Contact" || $tpl_page_class_name == "LC_Page_Contact_Complete"}--> active<!--{/if}-->">お問い合わせ<span class="fa fa-angle-right pull-right"></span></a>
+              <a href="<!--{$smarty.const.ROOT_URLPATH}-->order/<!--{$smarty.const.DIR_INDEX_PATH}-->" class="list-group-item<!--{if $tpl_page_class_name == "LC_Page_Order"}--> active<!--{/if}-->">特定商取引法に基づく表記<span class="fa fa-angle-right pull-right"></span></a>
+              <a href="<!--{$smarty.const.ROOT_URLPATH}-->guide/privacy.php" class="list-group-item<!--{if $tpl_page_class_name == "LC_Page_Guide_Privacy"}--> active<!--{/if}-->">プライバシーポリシー<span class="fa fa-angle-right pull-right"></span></a>
             </div>
         </div>
     </div>
