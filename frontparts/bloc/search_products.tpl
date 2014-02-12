@@ -25,7 +25,7 @@
         <div id="search_area" class="panel panel-default">
             <div class="panel-heading">
                 <h2 class="panel-title">
-                    <span class="fa fa-search fa-lg"></span> 検索条件
+                    <span class="fa fa-search"></span> 検索条件
                 </h2>
             </div>
             <div class="block_body panel-body">

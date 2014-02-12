@@ -25,7 +25,7 @@
         <div id="calender_area" class="panel panel-default">
             <div class="panel-heading">
                 <h2 class="panel-title">
-                    <span class="fa fa-calendar fa-lg"></span> 営業カレンダー
+                    <span class="fa fa-calendar"></span> 営業カレンダー
                 </h2>
             </div>
             <div class="block_body panel-body">
