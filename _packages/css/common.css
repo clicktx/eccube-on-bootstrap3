@@ -22,6 +22,21 @@ img.picture {
 }
 
 
+/* ブロック要素マージン
+----------------------------------------------- */
+.margin-top-sm {
+    margin-top: 5px !important;
+}
+.margin-bottom-sm {
+    margin-bottom: 5px !important;
+}
+.margin-top-lg {
+    margin-top: 20px !important;
+}
+.margin-bottom-lg {
+    margin-bottom: 20px !important;
+}
+
 /* ==============================================
  フレーム
 =============================================== */
@@ -253,13 +268,13 @@ h5 {
 
 /* フォーム
 ----------------------------------------------- */
-select {
+/*select {
     border: solid 1px #ccc;
 }
 input[type='text'],
 input[type='password'] {
-/*    border: solid 1px #ccc;
-    padding: 2px;*/
+    border: solid 1px #ccc;
+    padding: 2px;
 }
 
 .box40 {
@@ -297,11 +312,11 @@ input[type='password'] {
 }
 .box380 {
     width: 380px;
-}
+}*/
 
 /* フォームが縦に重なり合う場合に併用する余白 */
 .top { /* FIXME 簡素な単語は、単独で、込み入った指定に使用しない */
-    margin-bottom: 5px;
+    /*margin-bottom: 5px;*/
 }
 
 
