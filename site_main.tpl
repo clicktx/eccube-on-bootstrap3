@@ -74,7 +74,7 @@
                     <!--{* ▲TOP COLUMN*}-->
 
             <div class="row">
-                <div class="<!--{if $tpl_column_num == 3}-->col-md-9<!--{/if}-->">
+                <div class="<!--{if $tpl_column_num == 3}-->col-wrap col-md-9<!--{/if}-->">
                     <!--{* ▼CENTER COLUMN *}-->
                     <div id="main_column" class="
                         <!--{if $tpl_column_num == 3}-->
