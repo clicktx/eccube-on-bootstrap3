@@ -73,7 +73,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-<script src="<!--{$TPL_URLPATH}-->/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="<!--{$TPL_URLPATH}-->bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">//<![CDATA[
     <!--{$tpl_javascript}-->

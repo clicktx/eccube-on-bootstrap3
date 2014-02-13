@@ -184,12 +184,15 @@ a[href]:hover {
 }
 
 h1,
-h2,
-h3,
+h2 {
+    font-size: 150%;
+}
+h3 {
+    font-size: 125%;
+}
 h4,
 h5 {
     font-size: 100%;
-    line-height: 150%;
 }
 .sale_price {
     color: #d44950;
@@ -234,7 +237,7 @@ h5 {
     color: #fcf8e3;
 }
 .yellow {
-    color: #faebcc;
+    color: #e7bf40;
 }
 .orange {
     color: #f0ad4e;

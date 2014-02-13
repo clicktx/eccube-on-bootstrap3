@@ -95,7 +95,7 @@
 }*/
 
 /* タイトルの背景 オレンジ */
-#recommend_area h2,
+/*#recommend_area h2,
 #news_area h2 {
     padding: 5px 0 8px 10px;
     border-style: solid;
@@ -103,7 +103,7 @@
     border-width: 1px 1px 0;
     background: url('../img/background/bg_btn_bloc_02.jpg') repeat-x left bottom #fef3d8;
 }
-
+*/
 
 /* ***********************************************
 ▼各機能ブロックの指定
@@ -120,12 +120,12 @@
     overflow: auto;
     overflow-y: scroll;
 }
-#news_area dl.newslist {
+/*#news_area dl.newslist {
     background: url("../img/background/line_dot_01.gif") repeat-x bottom;
-}
-#news_area dl.newslist:last-child { /* IE9 未満では無効 (影響度合いが低いので黙殺) */
-    background: none;
-}
+}*/
+/*#news_area dl.newslist:last-child {*/ /* IE9 未満では無効 (影響度合いが低いので黙殺) */
+    /*background: none;*/
+/*}*/
 #news_area dl.newslist dt {
     margin-bottom: 5px;
 }
@@ -398,7 +398,26 @@ ul.button_like li a {
 =============================================== */
 /* 共通
 ----------------------------------------------- */
-#recommend_area .block_body,
+#recommend_area a:link:hover {
+    text-decoration: none;
+}
+#recommend_area .recommend-title {
+    display: block;
+    height: 30px;
+    overflow: hidden;
+}
+#recommend_area .recommend-price {
+    display: block;
+    height: 40px;
+    overflow: hidden;
+}
+#recommend_area .recommend-comment {
+    display: block;
+    height: 40px;
+    overflow: hidden;
+}
+
+/*#recommend_area .block_body,
 #whobought_area .product_item {
     padding: 10px 0 10px;
     border: none;
@@ -420,64 +439,64 @@ ul.button_like li a {
     font-size: 100%;
     font-weight: normal;
 }
-
+*/
 /* サイドカラム用 */
-.side_column #recommend_area .product_item {
+/*.side_column #recommend_area .product_item {
     margin-bottom: 10px;
 }
-
+*/
 
 /* 画像
 ----------------------------------------------- */
 /* メインカラム用 */
-#main_column #recommend_area .block_body .productImage,
+/*#main_column #recommend_area .block_body .productImage,
 #whobought_area .product_item .productImage {
     margin-bottom: 10px;
     float: left;
     width: 90px;
-}
+}*/
 /* サイドカラム用 */
-.side_column #recommend_area .block_body .productImage {
+/*.side_column #recommend_area .block_body .productImage {
     float: none;
     text-align: center;
     width: auto;
-}
+}*/
 
 
 /* 左右の振り分け
 ----------------------------------------------- */
-#main_column #recommend_area .product_item,
+/*#main_column #recommend_area .product_item,
 #whobought_area .product_item {
     float: left;
     width: 47.5%;
     padding-left: 1%;
     padding-right: 1%;
 }
-
+*/
 
 /* 商品説明テキスト
 ----------------------------------------------- */
 /* メインカラム用 1カラム時*/
-#main_column.colnum1 #recommend_area .block_body .productContents {
+/*#main_column.colnum1 #recommend_area .block_body .productContents {
     float: right;
     width: 74%;
-}
+}*/
 
 /* メインカラム用 2カラム時*/
-#main_column.colnum2 #recommend_area .block_body .productContents,
+/*#main_column.colnum2 #recommend_area .block_body .productContents,
 #main_column.colnum2 #whobought_area .productContents {
     float: right;
     width: 74%;
-}
+}*/
 
 /* メインカラム用 3カラム時*/
-#main_column.colnum3 #recommend_area .block_body .productContents,
+/*#main_column.colnum3 #recommend_area .block_body .productContents,
 #main_column.colnum3 #whobought_area .productContents {
     float: right;
     width: 67%;
-}
+}*/
 
 /* サイドカラム用 */
-.side_column #recommend_area .block_body .productContents {
+/*.side_column #recommend_area .block_body .productContents {
     clear: both;
-}
+}*/

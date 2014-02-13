@@ -19,32 +19,42 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *}-->
-
+<script>
+    $(function(){
+        // $.imageLoaded("#recommend_area .product_item").heightLine("refresh");
+        // $("#recommend_area .product_item").heightLine();
+    });
+</script>
 <!--{strip}-->
     <!--{if count($arrBestProducts) > 0}-->
-        <div class="block_outer clearfix">
+        <div class="block_outer">
             <div id="recommend_area">
-                <h2><img src="<!--{$TPL_URLPATH}-->img/title/tit_bloc_recommend.png" alt="*" class="title_icon" /></h2>
-                <div class="block_body clearfix">
+                <div class="page-header">
+                    <h2>
+                        <span class="fa fa-star yellow"></span> おすすめ商品情報
+                        <small class="pull-right">
+                            <a href="<!--{$smarty.const.ROOT_URLPATH}-->products/list.php">
+                                すべての商品を見る
+                            </a>
+                        </small>
+                    </h2>
+                </div>
+                <div class="block_body row">
                     <!--{foreach from=$arrBestProducts item=arrProduct name="recommend_products"}-->
-                        <div class="product_item clearfix">
-                            <div class="productImage">
-                                <a href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$arrProduct.product_id|u}-->">
-                                    <img src="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrProduct.main_list_image|sfNoImageMainList|h}-->" style="max-width: 80px;max-height: 80px;" alt="<!--{$arrProduct.name|h}-->" />
-                                </a>
-                            </div>
-                            <div class="productContents">
-                                <h3>
-                                    <a href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$arrProduct.product_id|u}-->"><!--{$arrProduct.name|h}--></a>
-                                </h3>
-                                <p class="sale_price">
+                        <div class="product_item col-xs-6 col-sm-4 col-md-4">
+                            <a href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$arrProduct.product_id|u}-->" class="thumbnail">
+                                <img src="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrProduct.main_image|sfNoImageMainList|h}-->" alt="<!--{$arrProduct.name|h}-->" class="img-responsive img-rounded" />
+                                <div class="caption">
+                                    <h4 class="recommend-title"><!--{$arrProduct.name|h}--></h4>
+                                    <p class="recommend-price sale_price">
                                     <!--{$smarty.const.SALE_PRICE_TITLE}-->(税込)： <span class="price"><!--{$arrProduct.price02_min_inctax|number_format}--> 円</span>
-                                </p>
-                                <p class="mini comment"><!--{$arrProduct.comment|h|nl2br}--></p>
-                            </div>
+                                    </p>
+                                    <p class="recommend-comment mini comment"><!--{$arrProduct.comment|h|nl2br}--></p>
+                                </div>
+                            </a>
                         </div>
                         <!--{if $smarty.foreach.recommend_products.iteration % 2 === 0}-->
-                            <div class="clear"></div>
+                            <!-- <div class="clear"></div> -->
                         <!--{/if}-->
                     <!--{/foreach}-->
                 </div>
