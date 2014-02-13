@@ -23,7 +23,14 @@
 <!--{strip}-->
     <div class="block_outer">
         <div id="news_area">
-            <h2><img src="<!--{$TPL_URLPATH}-->img/title/tit_bloc_news.png" alt="新着情報" /><span class="rss"><a href="<!--{$smarty.const.ROOT_URLPATH}-->rss/<!--{$smarty.const.DIR_INDEX_PATH}-->" target="_blank"><img src="<!--{$TPL_URLPATH}-->img/button/btn_rss.jpg" alt="RSS" /></a></span></h2>
+            <div class="page-header">
+                <h2>
+                    新着情報
+                    <div class="pull-right">
+                        <a href="<!--{$smarty.const.ROOT_URLPATH}-->rss/<!--{$smarty.const.DIR_INDEX_PATH}-->" class="btn btn-xs btn-warning"><span class="fa fa-rss"></span> RSS</a>
+                    </div>
+                </h2>
+            </div>
             <div class="block_body">
                 <div class="news_contents">
                 <!--{section name=data loop=$arrNews}-->

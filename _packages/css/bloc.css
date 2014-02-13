@@ -112,6 +112,9 @@
 /* ===============================================
 ▼新着情報
 =============================================== */
+#news_area .block_body {
+    padding-bottom: 30px;
+}
 #news_area .news_contents {
     padding: 10px;
     max-height: 260px;

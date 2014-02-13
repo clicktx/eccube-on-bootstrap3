@@ -3,23 +3,23 @@
 /************************************************
  共通設定
 ************************************************ */
-body {
-/*    color: #666;
+/*body {
+    color: #666;
     font-family: Verdana,Arial,Helvetica,sans-serif;
     background-color: #f5f5f5;
     font-size: 72.5%;
     line-height: 150%;
-    letter-spacing: 0.1em;*/
-}
+    letter-spacing: 0.1em;
+}*/
 
 /* 写真 */
-img.picture {
+/*img.picture {
     border: 1px solid #ccc;
-}
+}*/
 
-.block {
+/*.block {
     margin-bottom: 20px;
-}
+}*/
 
 
 /* ブロック要素マージン
@@ -41,27 +41,27 @@ img.picture {
  フレーム
 =============================================== */
 /* 全体を包括 */
-.frame_outer {
-/*    margin: 0 auto;
+/*.frame_outer {
+    margin: 0 auto;
     width: 100%;
-    text-align: center;*/
-}
+    text-align: center;
+}*/
 
 /* コンテンツ */
-#container {
-/*    margin: 0 auto;
+/*#container {
+    margin: 0 auto;
     padding: 0 0 30px;
     width: 980px;
     background: #fff;
-    text-align: left;*/
-}
+    text-align: left;
+}*/
 
 
 /* ==============================================
  カラム指定
 =============================================== */
 .col-wrap {
-    /*leftカラムとmainカラムの幅を調整する*/
+    /*bs3 leftカラムとmainカラムの幅を調整する*/
     padding-left: 0;
     padding-right: 0;
 }
@@ -71,69 +71,72 @@ img.picture {
 
 #main_column {
     /*padding: 10px 0 0;*/
+    padding-bottom: 40px; /*bs3*/
 }
 
 /* 1カラム時 */
-#main_column.colnum1 {
-/*    margin: 0 auto;
-    width: 80%;*/
-}
+/*#main_column.colnum1 {
+    margin: 0 auto;
+    width: 80%;
+}*/
 
 /* 2カラム時 (共通) */
-#main_column.colnum2 {
-    /*width: 78%;*/
-}
+/*#main_column.colnum2 {
+    width: 78%;
+}*/
 
 /* 2カラム時 (メイン部が左) */
-#main_column.colnum2.left {
-/*    padding-left: 1.5%;
-    float: left;*/
-}
+/*#main_column.colnum2.left {
+    padding-left: 1.5%;
+    float: left;
+}*/
 
 /* 2カラム時 (メイン部が右) */
-#main_column.colnum2.right {
- /*   padding-right: 1.5%;
-    float: right;*/
-}
+/*#main_column.colnum2.right {
+    padding-right: 1.5%;
+    float: right;
+}*/
 
 /* 3カラム時 */
-#main_column.colnum3 {
- /*   padding-left: 0.5%;
+/*#main_column.colnum3 {
+    padding-left: 0.5%;
     width: 59%;
-    float: left;*/
-}
+    float: left;
+}*/
 
 /* サイドカラム
 ----------------------------------------------- */
-.side_column {
-    /*padding: 10px 0 0;*/
-}
+/*.side_column {
+    padding: 10px 0 0;
+}*/
 #leftcolumn {
 /*    float: left;
     width: 20%;*/
+    padding-bottom: 40px; /*bs3*/
 }
 #rightcolumn {
     /*float: right;
     width: 20%;*/
+    padding-bottom: 40px; /*bs3*/
 }
 
 /* 他
 ----------------------------------------------- */
 /* ヘッダーとフッターの上下 */
-#topcolumn,
+/*#topcolumn,
 #bottomcolumn,
 #footerbottomcolumn {
     margin: 0px;
     background: #fff;
     text-align: left;
     clear: both;
-}
+}*/
 
 /* 下層コンテンツ */
-#undercolumn {
+/*#undercolumn {
     width: 100%;
     margin: 0 0 30px 0;
-}
+}*/
 
 
 /* ==============================================
