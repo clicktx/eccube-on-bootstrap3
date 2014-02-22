@@ -38,16 +38,14 @@
                 <input type="hidden" name="url" value="<!--{$smarty.server.REQUEST_URI|h}-->" />
                 <div class="block_body panel-body">
                     <!--{if $tpl_login}-->
-                        <p>ようこそ<br />
+                        <p class="margin-bottom-lg">ようこそ
                             <span class="user_name"><!--{$tpl_name1|h}--> <!--{$tpl_name2|h}--> 様</span><br />
                             <!--{if $smarty.const.USE_POINT !== false}-->
                                 所持ポイント：<span class="point"> <!--{$tpl_user_point|number_format|default:0}--> pt</span>
                             <!--{/if}-->
                         </p>
                         <!--{if !$tpl_disable_logout}-->
-                            <p class="btn">
-                                <input type="image" class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_bloc_logout.jpg" onclick="eccube.fnFormModeSubmit('login_form', 'logout', '', ''); return false;" alt="ログアウト" />
-                            </p>
+                            <button class="btn btn-block btn-default" onclick="eccube.fnFormModeSubmit('login_form', 'logout', '', ''); return false;">ログアウト</button>
                         <!--{/if}-->
                     <!--{else}-->
                         <div class="formlist input-group margin-bottom-sm">

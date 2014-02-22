@@ -65,13 +65,18 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li class="mypage dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> アカウントサービス<span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <!--{if $tpl_login}-->ようこそ ユーザーさん<br>
+                                <!--{else}-->ゲストさん<br>
+                                <!--{/if}-->
+                                <span class="glyphicon glyphicon-user"></span> アカウントサービス<span class="caret"></span>
+                            </a>
                             <ul class="dropdown-menu">
                                 <li class="dropdown-header">
                                     ログインまたは新規登録
                                 </li>
                                 <li>
-                                    <a href="#" class="btn btn btn-danger">ログイン</a>
+                                    <button href="#" class="btn btn btn-danger">ログイン</button>
                                 </li>
                                 <li>
                                     <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/login.php"><span class="glyphicon glyphicon-user"></span> MYページ</a>
@@ -79,10 +84,16 @@
                             </ul>
                         </li>
                         <li class="entry">
-                            <a href="<!--{$smarty.const.ROOT_URLPATH}-->entry/kiyaku.php"><span class="glyphicon glyphicon-ok"></span> 会員登録</a>
+                            <a href="<!--{$smarty.const.ROOT_URLPATH}-->entry/kiyaku.php">
+                                bbb <br>
+                                <span class="glyphicon glyphicon-ok"></span> 会員登録
+                            </a>
                         </li>
                         <li>
-                            <a href="<!--{$smarty.const.CART_URL}-->"><span class="glyphicon glyphicon-shopping-cart"></span> カート<span class="badge bg-red" data-role="cart-total-quantity"></span></a>
+                            <a href="<!--{$smarty.const.CART_URL}-->">
+                                ccc <br>
+                                <span class="glyphicon glyphicon-shopping-cart"></span> カート<span class="badge bg-red" data-role="cart-total-quantity"></span>
+                            </a>
                         </li>
                     </ul>
                 </div>
