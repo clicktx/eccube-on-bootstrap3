@@ -112,17 +112,17 @@
 /* ===============================================
 ▼新着情報
 =============================================== */
-#news_area .block_body {
+/*#news_area .block_body {
     padding-bottom: 30px;
-}
-#news_area .news_contents {
+}*/
+/*#news_area .news_contents {
     padding: 10px;
     max-height: 260px;
-    height: auto !important; /* hack? */
-    height: 260px; /* hack? */
+    height: auto !important;
+    height: 260px;
     overflow: auto;
     overflow-y: scroll;
-}
+}*/
 /*#news_area dl.newslist {
     background: url("../img/background/line_dot_01.gif") repeat-x bottom;
 }*/
@@ -191,7 +191,7 @@
 .nav-list > .active > a:focus {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
-  background-color: #08c;
+  background-color: #428bca;
 }
  
 .nav-list [class^="icon-"],

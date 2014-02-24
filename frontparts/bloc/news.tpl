@@ -32,22 +32,34 @@
                 </h2>
             </div>
             <div class="block_body">
-                <div class="news_contents">
+                <div class="panel-group" id="news-area-accordion">
+                    <div class="panel panel-default">
                 <!--{section name=data loop=$arrNews}-->
                 <!--{assign var="date_array" value="-"|explode:$arrNews[data].cast_news_date}-->
-                <dl class="newslist">
-                    <dt><!--{$date_array[0]}-->年<!--{$date_array[1]}-->月<!--{$date_array[2]}-->日</dt>
-                    <dt>
-                        <a
-                            <!--{if $arrNews[data].news_url}--> href="<!--{$arrNews[data].news_url}-->" <!--{if $arrNews[data].link_method eq "2"}--> target="_blank"
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <small class="show margin-bottom-sm"><!--{$date_array[0]}-->年<!--{$date_array[1]}-->月<!--{$date_array[2]}-->日</small>
+                                <a href="#news-collapse<!--{$smarty.section.data.index}-->" data-toggle="collapse" data-parent="#news-area-accordion">
+                                    <!--{$arrNews[data].news_title|h|nl2br}-->
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="news-collapse<!--{$smarty.section.data.index}-->" class="panel-collapse collapse <!--{if $smarty.section.data.index == 0}-->in<!--{/if}-->">
+                            <div class="panel-body">
+                                <p>
+                                    <!--{$arrNews[data].news_comment|h|nl2br}-->
+                                </p>
+                                <!--{if $arrNews[data].news_url}-->
+                                <p>
+                                    <a href="<!--{$arrNews[data].news_url}-->"<!--{if $arrNews[data].link_method eq "2"}--> target="_blank"<!--{/if}-->
+                                    >詳しくはこちら<!--{if $arrNews[data].link_method eq "2"}--><span class="glyphicon glyphicon-new-window"></span><!--{/if}--></a>
+
+                                </p>
                                 <!--{/if}-->
-                            <!--{/if}-->
-                        >
-                            <!--{$arrNews[data].news_title|h|nl2br}--></a>
-                    </dt>
-                    <dd class="mini"><!--{$arrNews[data].news_comment|h|nl2br}--></dd>
-                </dl>
+                            </div>
+                        </div>
                 <!--{/section}-->
+                    </div>
                 </div>
             </div>
         </div>
