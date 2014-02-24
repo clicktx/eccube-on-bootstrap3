@@ -348,6 +348,53 @@ div.listrightbloc .cartin_btn {
 
 /* レイアウト
 ----------------------------------------------- */
+/*Off Canvas*/
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+       -moz-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -80%;
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -80%;
+  }
+
+  .row-offcanvas-right.active {
+    right: 80%;
+    margin-right: 0px;
+  }
+
+  .row-offcanvas-left.active {
+    left: 80%;
+    margin-left: 0px;
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 80%;
+  }
+}
 /* 1カラム用 */
 #main_column.colnum1 div#detailphotobloc {
     /*width: 37%;

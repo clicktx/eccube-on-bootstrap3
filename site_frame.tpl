@@ -74,11 +74,19 @@
     <![endif]-->
 
 <script src="<!--{$TPL_URLPATH}-->bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="<!--{$TPL_URLPATH}-->js/jquery.plugin.js"></script>
 
 <script type="text/javascript">//<![CDATA[
     <!--{$tpl_javascript}-->
     $(function(){
         <!--{$tpl_onload}-->
+        // off canvas button
+        $('[data-toggle=offcanvas]').click(function() {
+            $('.row-offcanvas').toggleClass('active');
+            return false;
+        });
+        // input clear
+        $("input").inputClear();
     });
 //]]></script>
 

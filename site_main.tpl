@@ -73,7 +73,7 @@
                     <!--{/if}-->
                     <!--{* ▲TOP COLUMN*}-->
 
-            <div class="row">
+            <div class="row row-offcanvas row-offcanvas-left">
                 <div class="<!--{if $tpl_column_num == 3}-->col-wrap col-md-9<!--{/if}-->">
                     <!--{* ▼CENTER COLUMN *}-->
                     <div id="main_column" class="
@@ -131,7 +131,7 @@
                         col-xs-12 col-sm-4 col-md-3
                         <!--{else}-->
                         col-xs-12 col-sm-6 col-md-3
-                        <!--{/if}--> side_column"
+                        <!--{/if}--> side_column sidebar-offcanvas"
                             <!--{* ▼左ナビ *}-->
                             <!--{foreach key=LeftNaviKey item=LeftNaviItem from=$arrPageLayout.LeftNavi}-->
                                 <!-- ▼<!--{$LeftNaviItem.bloc_name}--> -->
@@ -143,6 +143,11 @@
                                 <!-- ▲<!--{$LeftNaviItem.bloc_name}--> -->
                             <!--{/foreach}-->
                             <!--{* ▲左ナビ *}-->
+                            <p class="visible-xs">
+                                <button class="btn btn-primary" data-toggle="offcanvas">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </button>
+                            </p>
                         </div>
                     <!--{/if}-->
                     <!--{* ▲LEFT COLUMN *}-->

@@ -35,7 +35,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<!--{$smarty.const.TOP_URL}-->"><!--{$arrSiteInfo.shop_name|h}-->/<!--{$tpl_title|h}--></a>
+                <a class="navbar-brand" href="<!--{$smarty.const.TOP_URL}-->"><!--{$arrSiteInfo.shop_name|h}--></a>
             </div>
 
             <div id="header_utility">
@@ -102,12 +102,14 @@
     </div>
 
     <!-- for small mobile -->
-    <section class="block visible-xs">
+    <section class="block visible-xs margin-bottom-lg">
     <div class="container">
         <form action="">
             <div class="input-group">
-                <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-                <input type="text" class="form-control" placeholder="キーワードを入力">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-search"></span>
+                </span>
+                <input type="text" class="form-control input-clear" placeholder="キーワードを入力">
             </div>
         </form>
     </div>
@@ -117,22 +119,22 @@
       <div class="container text-center">
         <ul class="nav navbar-nav">
             <li class="col-xs-4">
-                <a href="#" class="btn btn-link">
-                    <span class="glyphicon glyphicon-lock large"></span><br />
-                    <small>ログイン</small>
+                <a href="#" class="btn btn-link" data-toggle="offcanvas">
+                    <span class="glyphicon glyphicon-list-alt large"></span><br />
+                    <small>カテゴリ</small>
                 </a>
             </li>
             <li class="col-xs-4">
-                <a href="#" class="btn btn-link">
+                <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/login.php" class="btn btn-link">
                     <span class="glyphicon glyphicon-user large"></span><br />
                     <small>MYページ</small>
                 </a>
             </li>
             <li class="col-xs-4">
-                <a href="#" class="btn btn-link">
+                <a href="<!--{$smarty.const.CART_URL}-->" class="btn btn-link">
                     <span class="glyphicon glyphicon-shopping-cart large"></span>
                     <span class="badge bg-red" data-role="cart-total-quantity"></span><br />
-                    <small>カートを見る</small>
+                    <small>カート</small>
                 </a>
             </li>
         </ul>

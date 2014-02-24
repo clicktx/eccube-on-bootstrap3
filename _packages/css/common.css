@@ -280,6 +280,11 @@ h5 {
 
 /* フォーム
 ----------------------------------------------- */
+input[type='text'],
+input[type='password'] {
+    font-size: 16px;
+}
+
 /*select {
     border: solid 1px #ccc;
 }
