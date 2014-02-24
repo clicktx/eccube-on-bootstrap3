@@ -309,7 +309,7 @@ div.listrightbloc dd p.attention {
     margin-top: 5px;
 }
 
-/* カゴに入れる */
+/* カートに入れる */
 div.listrightbloc .cartin {
     margin: 0;
     float :right;
@@ -643,7 +643,7 @@ div#whobought_area h2 {
 /* ***********************************************
 ▼カートの中
 /*********************************************** */
-/* 現在のカゴの中
+/* 現在のカートの中
 ----------------------------------------------- */
 div#undercolumn_cart .point_announce {
     padding: 20px;

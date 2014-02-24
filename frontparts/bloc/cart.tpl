@@ -32,7 +32,7 @@
         <div id="cart_area" class="panel panel-default">
             <div class="panel-heading">
                 <h2 class="panel-title">
-                    <span class="glyphicon glyphicon-shopping-cart"></span> 現在のカゴの中
+                    <span class="glyphicon glyphicon-shopping-cart"></span> 現在のカートの中
                 </h2>
             </div>
             <div class="block_body panel-body">
@@ -40,7 +40,7 @@
                     <p class="item">合計数量：<span class="attention"><!--{$arrCartList.0.TotalQuantity|number_format|default:0}--></span></p>
                     <p class="total">商品金額：<span class="price"><!--{$arrCartList.0.ProductsTotal|number_format|default:0}-->円</span></p>
                     <!--{*************************************
-                         * カゴの中に商品がある場合にのみ表示
+                         * カートの中に商品がある場合にのみ表示
                          * 複数の商品種別が存在する場合は非表示
                          *************************************}-->
                     <!--{if $arrCartList.0.TotalQuantity > 0 and $arrCartList.0.free_rule > 0 and !$isMultiple and !$hasDownload}-->
@@ -57,7 +57,7 @@
                     </p>
                     <!--{/if}-->
                 </div>
-                <a href="<!--{$smarty.const.CART_URL}-->" class="btn btn-block btn-warning">カゴの中を見る</a>
+                <a href="<!--{$smarty.const.CART_URL}-->" class="btn btn-block btn-warning">カートの中を見る</a>
             </div>
         </div>
     </div>

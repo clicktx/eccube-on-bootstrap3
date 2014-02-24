@@ -39,7 +39,7 @@
         <!--{/if}-->
 
         <p class="totalmoney_area">
-            <!--{* カゴの中に商品がある場合にのみ表示 *}-->
+            <!--{* カートの中に商品がある場合にのみ表示 *}-->
             <!--{if count($cartKeys) > 1}-->
                 <span class="attentionSt"><!--{foreach from=$cartKeys item=key name=cartKey}--><!--{$arrProductType[$key]|h}--><!--{if !$smarty.foreach.cartKey.last}-->、<!--{/if}--><!--{/foreach}-->は同時購入できません。<br />
                     お手数ですが、個別に購入手続きをお願い致します。
@@ -69,7 +69,7 @@
                             <h3><!--{$arrProductType[$key]|h}--></h3>
                             <!--{assign var=purchasing_goods_name value=$arrProductType[$key]}-->
                         <!--{else}-->
-                            <!--{assign var=purchasing_goods_name value="カゴの中の商品"}-->
+                            <!--{assign var=purchasing_goods_name value="カートの中の商品"}-->
                         <!--{/if}-->
                         <p>
                             <!--{$purchasing_goods_name|h}-->の合計金額は「<span class="price"><!--{$tpl_total_inctax[$key]|number_format|h}-->円</span>」です。

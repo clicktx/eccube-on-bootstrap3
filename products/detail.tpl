@@ -223,7 +223,7 @@
                         <!--★数量★-->
                         <dl class="quantity">
                             <dt>数量：</dt>
-                            <dd><input type="text" class="box60" name="quantity" value="<!--{$arrForm.quantity.value|default:1|h}-->" maxlength="<!--{$smarty.const.INT_LEN}-->" style="<!--{$arrErr.quantity|sfGetErrorColor}-->" />
+                            <dd><input type="number" class="box60" name="quantity" value="<!--{$arrForm.quantity.value|default:1|h}-->" maxlength="<!--{$smarty.const.INT_LEN}-->" style="<!--{$arrErr.quantity|sfGetErrorColor}-->" />
                                 <!--{if $arrErr.quantity != ""}-->
                                     <br /><span class="attention"><!--{$arrErr.quantity}--></span>
                                 <!--{/if}-->
@@ -233,9 +233,9 @@
                         <div class="cartin">
                             <div class="cartin_btn">
                                 <div id="cartbtn_default">
-                                    <!--★カゴに入れる★-->
+                                    <!--★カートに入れる★-->
                                     <a href="javascript:void(document.form1.submit())">
-                                        <img class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_cartin.jpg" alt="カゴに入れる" />
+                                        <img class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_cartin.jpg" alt="カートに入れる" />
                                     </a>
                                 </div>
                             </div>

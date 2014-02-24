@@ -86,7 +86,7 @@
             return false;
         });
         // input clear
-        $("input").inputClear();
+        $(".input-clear").inputClear();
     });
 //]]></script>
 
