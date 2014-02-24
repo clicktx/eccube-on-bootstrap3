@@ -31,10 +31,10 @@
             <div id="recommend_area">
                 <div class="page-header">
                     <h2>
-                        <span class="fa fa-star yellow"></span> おすすめ商品情報
+                        <span class="fa fa-star"></span> おすすめ商品
                         <small class="pull-right">
                             <a href="<!--{$smarty.const.ROOT_URLPATH}-->products/list.php">
-                                すべての商品を見る
+                                全ての商品
                             </a>
                         </small>
                     </h2>
