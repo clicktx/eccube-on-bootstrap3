@@ -102,44 +102,52 @@
     </div>
 
     <!-- for small mobile -->
-    <section class="block visible-xs margin-bottom-lg">
-    <div class="container">
-        <form action="">
-            <div class="input-group">
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-search"></span>
-                </span>
-                <input type="text" class="form-control input-clear" placeholder="キーワードを入力">
-            </div>
-        </form>
-    </div>
-    </section>
+    <section id="mobile-nav" class="visible-xs ">
+        <div class="container margin-bottom-lg">
+            <form ame="search_form" method="get" action="<!--{$smarty.const.ROOT_URLPATH}-->products/list.php">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </span>
+                    <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
+                    <input type="hidden" name="mode" value="search" />
+                    <input type="text" name="name" class="form-control input-clear" value="<!--{$smarty.get.name|h}-->" placeholder="キーワードを入力" />
+                </div>
+            </form>
+        </div>
 
-    <nav class="navbar navbar-default visible-xs" role="navigation">
-      <div class="container text-center">
-        <ul class="nav navbar-nav">
-            <li class="col-xs-4">
-                <a href="#" class="btn btn-link" data-toggle="offcanvas">
-                    <span class="glyphicon glyphicon-list-alt large"></span><br />
-                    <small>カテゴリ</small>
-                </a>
-            </li>
-            <li class="col-xs-4">
-                <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/login.php" class="btn btn-link">
-                    <span class="glyphicon glyphicon-user large"></span><br />
-                    <small>MYページ</small>
-                </a>
-            </li>
-            <li class="col-xs-4">
-                <a href="<!--{$smarty.const.CART_URL}-->" class="btn btn-link">
-                    <span class="glyphicon glyphicon-shopping-cart large"></span>
-                    <span class="badge bg-red" data-role="cart-total-quantity"></span><br />
-                    <small>カート</small>
-                </a>
-            </li>
-        </ul>
-      </div>
-    </nav>
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="container text-center">
+            <ul class="nav navbar-nav">
+                <li class="col-xs-3">
+                    <a href="#" class="btn btn-link" data-toggle="offcanvas">
+                        <span class="glyphicon glyphicon-list-alt large"></span><br />
+                        <small>カテゴリ</small>
+                    </a>
+                </li>
+                <li class="col-xs-3">
+                    <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/login.php" class="btn btn-link">
+                        <span class="glyphicon glyphicon-user large"></span><br />
+                        <small>MYページ</small>
+                    </a>
+                </li>
+                <li class="col-xs-3">
+                    <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/favorite.php" class="btn btn-link">
+                        <span class="glyphicon glyphicon-star-empty large"></span><br />
+                        <small>お気に入り</small>
+                    </a>
+                </li>
+                <li class="col-xs-3">
+                    <a href="<!--{$smarty.const.CART_URL}-->" class="btn btn-link">
+                        <span class="glyphicon glyphicon-shopping-cart large"></span>
+                        <span class="badge bg-red" data-role="cart-total-quantity"></span><br />
+                        <small>カート</small>
+                    </a>
+                </li>
+            </ul>
+          </div>
+        </nav>
+    </section>
     <!-- for small mobile -->
 
 

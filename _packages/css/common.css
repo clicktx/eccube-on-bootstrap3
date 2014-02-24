@@ -424,6 +424,11 @@ div#header_navi ul li.entry {
     /*margin-top: 6px;*/
 }
 
+/*for mobile*/
+#mobile-nav .nav>li>a{
+    padding-left: 0;
+    padding-right: 0;
+}
 
 /* ==============================================
  フッター

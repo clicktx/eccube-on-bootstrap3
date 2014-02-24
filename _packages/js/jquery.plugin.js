@@ -36,12 +36,13 @@ THE SOFTWARE.
                 .bind("clear-focus", (
                     function () {
                         if ($(this).data("clear-button")) return;
-                        var x = $("<a class='clear-text' style='cursor:pointer;color:#888;'><i class='fa fa-times-circle fa-lg'></i></a>");
+                        var x = $("<a class='clear-text' style='cursor:pointer;color:#aaa;padding:3px 10px;'><span class='fa fa-times-circle fa-2x'></span></a>");
                         $(x).data("text-box", this);
                         $(x).mouseover(function () { $(this).addClass("over"); }).mouseleave(function () { $(this).removeClass("over"); });
                         $(this).data("clear-button", x);
-                        $(x).css({ "position": "absolute", "left": ($(this).position().right), "top": $(this).position().top, "margin": "7px 0px 0px -20px" });
+                        $(x).css({ "position": "absolute", "left": ($(this).position().right), "top": $(this).position().top, "margin": "0px 0px 0px -40px" });
                         $(this).after(x);
+
                     //$(this));
                     }))
                 .unbind("clear-blur").bind("clear-blur", (
@@ -57,6 +58,7 @@ THE SOFTWARE.
                                 e.stopPropagation();
                                 e.stopImmediatePropagation();
                                 setTimeout($.proxy(function () { $(this).trigger("focus"); }, txt), 50);
+                                $(this).focus();
                                 return false;
                             }
                         }
