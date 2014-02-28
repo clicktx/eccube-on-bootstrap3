@@ -340,11 +340,11 @@ div.listrightbloc .cartin_btn {
         * 3カラム時
 
 ----------------------------------------------- */
-#detailarea,
+/*#detailarea,
 .sub_area {
     margin-bottom: 20px;
     width: 100%;
-}
+}*/
 
 /* レイアウト
 ----------------------------------------------- */
@@ -466,7 +466,7 @@ body {
 
 /* 商品情報 各種設定
 ----------------------------------------------- */
-#detailrightbloc h2 {
+/*#detailrightbloc h2 {
     margin: 0 0 10px 0;
     padding: 0 0 15px 0;
     color: #666;
@@ -479,10 +479,10 @@ body {
     margin: 0 0 10px 0;
     padding: 0 0 10px 0;
     background: url("../img/background/line_dot_01.gif") repeat-x bottom ;
-}
-#detailrightbloc .main_comment {
+}*/
+/*#detailrightbloc .main_comment {
     margin-bottom: 20px;
-}
+}*/
 
 /* 商品コード */
 #detailrightbloc .product_code dt,
@@ -491,72 +491,72 @@ body {
 }
 
 /* 商品ステータス */
-#detailrightbloc ul.status_icon {
+/*#detailrightbloc ul.status_icon {
     margin-bottom: 10px;
     width: 100%;
-}
-#detailrightbloc ul.status_icon li {
+}*/
+/*#detailrightbloc ul.status_icon li {
     margin-right: 5px;
     margin-bottom: 3px;
     float: left;
-}
+}*/
 
 /* 通常価格 */
-#detailrightbloc .normal_price dt,
+/*#detailrightbloc .normal_price dt,
 #detailrightbloc .normal_price dd {
     display: inline;
-}
+}*/
 
 /* 販売価格 */
-#detailrightbloc .sale_price dt,
+/*#detailrightbloc .sale_price dt,
 #detailrightbloc .sale_price dd {
     display: inline;
-}
+}*/
 
 /* ポイント */
-#detailrightbloc .point dt,
+/*#detailrightbloc .point dt,
 #detailrightbloc .point dd {
     display: inline;
-}
+}*/
 
 /* 規格 */
-#detailrightbloc div.classlist {
+/*#detailrightbloc div.classlist {
     margin-bottom: 10px;
     padding-bottom: 10px;
     width: 100%;
     background: url("../img/background/line_dot_02.gif") repeat-x bottom ;
-}
-#detailrightbloc .classlist {
+}*/
+/*#detailrightbloc .classlist {
     margin-bottom: 5px;
-}
-#detailrightbloc ul {
+}*/
+/*#detailrightbloc ul {
     margin-bottom: 10px;
     width: 100%;
-}
-#detailrightbloc ul li {
+}*/
+/*#detailrightbloc ul li {
     vertical-align: top;
     float: left;
-}
+}*/
 
 /* メーカー */
-#detailrightbloc .maker dt,
+/*#detailrightbloc .maker dt,
 #detailrightbloc .maker dd {
     display: inline;
-}
+}*/
 
 /* メーカーURL */
-#detailrightbloc .comment1 dt,
+/*#detailrightbloc .comment1 dt,
 #detailrightbloc .comment1 dd {
     display: inline;
 }
-
+*/
 /* 関連カテゴリ */
-#detailrightbloc .relative_cat dd {
+/*#detailrightbloc .relative_cat dd {
     margin-left: 1em;
-}
+}*/
 
 /* 買い物かご */
-#detailrightbloc .cart_area {
+/*#detailrightbloc .cart_area {
     padding: 10px;
     background-color: #ecf5ff;
     border: 1px solid #cef0f4;
@@ -574,7 +574,7 @@ body {
 #detailrightbloc .favorite_btn {
     text-align: center;
     margin-top: 10px;
-}
+}*/
 
 
 /* お客様の声

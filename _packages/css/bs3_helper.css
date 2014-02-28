@@ -1,0 +1,69 @@
+@charset 'utf-8';
+
+/* フォント
+----------------------------------------------- */
+/*.smallは標準*/
+.text-size-xs {
+    font-size: 50%;
+}
+.text-size-lg {
+    font-size: 150%;
+}
+.text-size-xl {
+    font-size: 200%;
+}
+
+
+/* ブロック要素マージン
+----------------------------------------------- */
+.margin-top-sm {
+    margin-top: 5px !important;
+}
+.margin-top-lg {
+    margin-top: 20px !important;
+}
+.margin-bottom-sm {
+    margin-bottom: 5px !important;
+}
+.margin-bottom-md {
+    margin-bottom: 10px !important;
+}
+.margin-bottom-lg {
+    margin-bottom: 20px !important;
+}
+.margin-bottom-xl {
+    margin-bottom: 40px !important;
+}
+
+
+/* カラー
+----------------------------------------------- */
+.white {
+    color: #ffffff;
+}
+.light-yellow {
+    color: #fcf8e3;
+}
+.yellow {
+    color: #e7bf40;
+}
+.orange {
+    color: #f0ad4e;
+}
+.red {
+    color: #d44950;
+}
+.blue {
+    color: #2f6f9f;
+}
+.light-blue {
+    color: #4f9fcf;
+}
+.light-gray {
+    color: lightgray;
+}
+/* バックグラウンドカラー
+----------------------------------------------- */
+.bg-red {
+    background-color: #d44950;
+}

@@ -21,22 +21,6 @@
     margin-bottom: 20px;
 }*/
 
-
-/* ブロック要素マージン
------------------------------------------------ */
-.margin-top-sm {
-    margin-top: 5px !important;
-}
-.margin-bottom-sm {
-    margin-bottom: 5px !important;
-}
-.margin-top-lg {
-    margin-top: 20px !important;
-}
-.margin-bottom-lg {
-    margin-bottom: 20px !important;
-}
-
 /* ==============================================
  フレーム
 =============================================== */
@@ -144,48 +128,37 @@
 =============================================== */
 /* フロート回り込み解除
 ----------------------------------------------- */
-.clearfix:after {
-/*    display: block;
+/*.clearfix:after {
+    display: block;
     clear: both;
     height: 0px;
     line-height: 0px;
     visibility: hidden;
-    content: ".";*/
-}
-.clearfix {
+    content: ".";
+}*/
+/*.clearfix {*/
     /*display: block;*/ /* for IE8 */
-}
-.clear {
+/*}*/
+/*.clear {
     clear: both;
 }
-
+*/
 /* リンク指定
 ----------------------------------------------- */
-a:link,
+/*a:link,
 a:visited {
-/*    color: #39c;
-    text-decoration: none;*/
+    color: #39c;
+    text-decoration: none;
 }
 a:link:hover,
 a[href]:hover {
-/*    color: #f60;
-    text-decoration: underline;*/
+    color: #f60;
+    text-decoration: underline;
 }
-
+*/
 
 /* フォント
 ----------------------------------------------- */
-.ultra-large {
-    font-size: 200%;
-}
-.large {
-    font-size: 150%;
-}
-/*.smallは標準*/
-.ultra-small {
-    font-size: 50%;
-}
-
 h1,
 h2 {
     font-size: 150%;
@@ -233,34 +206,6 @@ h5 {
 .price {
     color: #d44950;
 }
-.white {
-    color: #ffffff;
-}
-.light-yellow {
-    color: #fcf8e3;
-}
-.yellow {
-    color: #e7bf40;
-}
-.orange {
-    color: #f0ad4e;
-}
-.red {
-    color: #d44950;
-}
-.bg-red {
-    background-color: #d44950;
-}
-.blue {
-    color: #2f6f9f;
-}
-.light-blue {
-    color: #4f9fcf;
-}
-.light-gray {
-    color: lightgray;
-}
-
 
 /* 行揃え
 ----------------------------------------------- */
@@ -280,9 +225,9 @@ h5 {
 
 /* フォーム
 ----------------------------------------------- */
-input[type='text'],
-input[type='password'] {
-    font-size: 16px;
+input,
+select {
+    font-size: 16px !important;
 }
 
 /*select {
