@@ -25,10 +25,6 @@
     <div id="header_wrap" class="navbar navbar-default navbar-static-top" role="navigation">
         <div id="header" class="container">
             <div class="navbar-header">
-                <button class="navbar-toggle">
-                    <span class="sr-only">navigation</span>
-                    <span class="glyphicon glyphicon-shopping-cart"></span>
-                </button>
                 <button class="navbar-toggle" data-toggle="collapse" data-target="#header_navi">
                     <span class="sr-only">navigation</span>
                     <span class="icon-bar"></span>
@@ -60,15 +56,12 @@
                     <ul class="nav navbar-nav">
                         <li><a href="#">HOME</a></li>
                         <li><a href="#">about</a></li>
-                        <li><a href="#">contact</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
                         <li class="mypage dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <!--{if $tpl_login}-->ようこそ ユーザーさん<br>
-                                <!--{else}-->ゲストさん<br>
-                                <!--{/if}-->
+                                aaaa <br>
                                 <span class="glyphicon glyphicon-user"></span> アカウントサービス<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
@@ -102,7 +95,7 @@
     </div>
 
     <!-- for small mobile -->
-    <section id="mobile-nav" class="visible-xs ">
+    <section id="mobile-nav" class="visible-xs">
         <div class="container margin-bottom-lg">
             <form ame="search_form" method="get" action="<!--{$smarty.const.ROOT_URLPATH}-->products/list.php">
                 <div class="input-group">
@@ -121,25 +114,25 @@
             <ul class="nav navbar-nav">
                 <li class="col-xs-3">
                     <a href="#" class="btn btn-link" data-toggle="offcanvas">
-                        <span class="glyphicon glyphicon-list-alt large"></span><br />
+                        <span class="glyphicon glyphicon-list-alt text-size-lg"></span><br />
                         <small>カテゴリ</small>
                     </a>
                 </li>
                 <li class="col-xs-3">
                     <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/login.php" class="btn btn-link">
-                        <span class="glyphicon glyphicon-user large"></span><br />
+                        <span class="glyphicon glyphicon-user text-size-lg"></span><br />
                         <small>MYページ</small>
                     </a>
                 </li>
                 <li class="col-xs-3">
                     <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/favorite.php" class="btn btn-link">
-                        <span class="glyphicon glyphicon-star-empty large"></span><br />
+                        <span class="glyphicon glyphicon-star-empty text-size-lg"></span><br />
                         <small>お気に入り</small>
                     </a>
                 </li>
                 <li class="col-xs-3">
                     <a href="<!--{$smarty.const.CART_URL}-->" class="btn btn-link">
-                        <span class="glyphicon glyphicon-shopping-cart large"></span>
+                        <span class="glyphicon glyphicon-shopping-cart text-size-lg"></span>
                         <span class="badge bg-red" data-role="cart-total-quantity"></span><br />
                         <small>カート</small>
                     </a>
