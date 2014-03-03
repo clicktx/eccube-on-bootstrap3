@@ -61,13 +61,13 @@
 ************************************************ */
 /* 共通
 ----------------------------------------------- */
-#container .block_outer #banner_area .block_body {
+/*#container .block_outer #banner_area .block_body {
     border: none;
-}
+}*/
 
 /* 【メイン】バナーエリア_02
 ----------------------------------------------- */
-#main_column .block_outer #banner_area .block_body ul {
+/*#main_column .block_outer #banner_area .block_body ul {
     width: 100%;
 }
 #main_column .block_outer #banner_area .block_body ul li {
@@ -75,14 +75,14 @@
 }
 #main_column .block_outer #banner_area .block_body ul li.sub_01 {
     padding-right: 8px;
-}
+}*/
 
 /* 【サイド】バナーエリア_01
 ----------------------------------------------- */
 /* 【サイド】バナーエリア_02
 ----------------------------------------------- */
-#leftcolumn .block_outer #banner_area .block_body ul li,
+/*#leftcolumn .block_outer #banner_area .block_body ul li,
 #rightcolumn .block_outer #banner_area .block_body ul li {
     margin-bottom: 8px;
-}
+}*/
 
