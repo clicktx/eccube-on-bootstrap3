@@ -46,23 +46,21 @@
                                 class="expansion"
                                 target="_blank"
                             >
-                        <!--{/if}-->
-                            <img src="<!--{$arrFile[$key].filepath|h}-->" width="<!--{$arrFile[$key].width}-->" height="<!--{$arrFile[$key].height}-->" alt="<!--{$arrProduct.name|h}-->" class="picture img-responsive img-thumbnail center-block" />
-                        <!--{if $arrProduct.main_large_image|strlen >= 1}-->
+                            <img src="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrProduct.main_large_image|h}-->" width="470" height="470" alt="<!--{$arrProduct.name|h}-->" class="picture img-responsive img-thumbnail center-block" />
                             </a>
+                            <span class="mini">
+                                    <!--★拡大する★-->
+                                    <a
+                                        href="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrProduct.main_large_image|h}-->"
+                                        class="expansion"
+                                        target="_blank"
+                                    >
+                                        画像を拡大する</a>
+                            </span>
+                        <!--{else}-->
+                            <img src="<!--{$arrFile[$key].filepath|h}-->" width="470" height="470" alt="<!--{$arrProduct.name|h}-->" class="picture img-responsive img-thumbnail center-block" />
                         <!--{/if}-->
                     </div>
-                    <!--{if $arrProduct.main_large_image|strlen >= 1}-->
-                        <span class="mini sr-only">
-                                <!--★拡大する★-->
-                                <a
-                                    href="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrProduct.main_large_image|h}-->"
-                                    class="expansion"
-                                    target="_blank"
-                                >
-                                    画像を拡大する</a>
-                        </span>
-                    <!--{/if}-->
                 </div>
             </div>
             <div id="detailrightbloc-wrap" class="col-md-7">
