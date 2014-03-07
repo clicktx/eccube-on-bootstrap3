@@ -227,7 +227,8 @@ h5 {
 /* フォーム
 ----------------------------------------------- */
 input,
-select {
+select,
+textarea {
     font-size: 16px !important;
 }
 
@@ -286,13 +287,13 @@ input[type='password'] {
 /* タイトル
 ----------------------------------------------- */
 h2.title {
-    margin-bottom: 10px;
+/*    margin-bottom: 10px;
     padding: 8px;
     border-top: solid 1px #ebeced;
     color: #f60;
     background: url("../img/background/bg_tit_sub_01.jpg") repeat-x left bottom;
     background-color: #fef3d8;
-    font-size: 170%;
+    font-size: 170%;*/
 }
 
 #main_column .sub_area h3,
@@ -344,13 +345,13 @@ div#undercolumn_login .login_area h4 {
 /* ロゴ
 ----------------------------------------------- */
 #logo_area {
-    padding-left: 10px;
+/*    padding-left: 10px;
     float: left;
     width: 390px;
-    text-align: left;
+    text-align: left;*/
 }
 #site_description {
-    font-size: 90%;
+    /*font-size: 90%;*/
 }
 
 
@@ -410,14 +411,14 @@ div#header_navi ul li.entry {
 /* ボタン
 ----------------------------------------------- */
 .btn_area {
-    margin-top: 10px;
+/*    margin-top: 10px;
     width: 100%;
-    text-align: center;
+    text-align: center;*/
 }
 
 .btn_area li {
-    padding-right: 10px;
-    display: inline;
+/*    padding-right: 10px;
+    display: inline;*/
 }
 
 

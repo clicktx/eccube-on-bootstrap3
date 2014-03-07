@@ -37,8 +37,12 @@
 .margin-bottom-xl {
     margin-bottom: 40px !important;
 }
-
-
+.margin-left-sm {
+    margin-left: 5px !important;
+}
+.margin-left-lg {
+    margin-left: 20px !important;
+}
 /* カラー
 ----------------------------------------------- */
 .white {
