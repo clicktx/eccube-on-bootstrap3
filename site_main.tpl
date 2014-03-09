@@ -78,7 +78,7 @@
                     <!--{* ▼CENTER COLUMN *}-->
                     <div id="main_column" class="
                         <!--{if $tpl_column_num == 3}-->
-                        col-md-8 pull-right
+                        col-sm-8 col-md-8 pull-right
                         <!--{elseif $tpl_column_num == 2}-->
                         col-sm-8 col-md-9 pull-right
                         <!--{else}-->
@@ -126,7 +126,7 @@
                     <!--{if $arrPageLayout.LeftNavi|@count > 0}-->
                         <div id="leftcolumn" class="
                         <!--{if $tpl_column_num == 3}-->
-                        col-xs-12 col-sm-6 col-md-4
+                        col-xs-12 col-sm-4 col-md-4
                         <!--{elseif $tpl_column_num == 2}-->
                         col-xs-12 col-sm-4 col-md-3
                         <!--{else}-->
@@ -155,7 +155,7 @@
 
                     <!--{* ▼RIGHT COLUMN *}-->
                     <!--{if $arrPageLayout.RightNavi|@count > 0}-->
-                        <div id="rightcolumn" class="side_column col-xs-12 col-sm-6 col-md-3 pull-right">
+                        <div id="rightcolumn" class="side_column col-xs-12 col-sm-4 col-md-3 pull-right">
                             <!--{* ▼右ナビ *}-->
                             <!--{foreach key=RightNaviKey item=RightNaviItem from=$arrPageLayout.RightNavi}-->
                                 <!-- ▼<!--{$RightNaviItem.bloc_name}--> -->
