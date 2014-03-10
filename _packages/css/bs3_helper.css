@@ -6,6 +6,9 @@
 .text-size-xs {
     font-size: 50%;
 }
+.text-size-sm {
+    font-size: 80%;
+}
 .text-size-lg {
     font-size: 150%;
 }
