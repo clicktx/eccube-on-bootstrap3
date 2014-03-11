@@ -22,20 +22,16 @@
 <!--{include file="`$smarty.const.TEMPLATE_REALDIR`popup_header.tpl" subtitle="お客様の声書き込み（完了ページ）"}-->
 
 <div id="window_area">
-    <h2 class="title">お客様の声書き込み</h2>
-    <div id="completebox">
-        <p class="message">登録が完了しました。ご利用ありがとうございました。</p>
+    <h2 class="title">商品レビューの投稿</h2>
+    <div id="completebox" class="panel-body">
+        <p class="message alert alert-info">登録が完了しました。ご利用ありがとうございました。</p>
         <p>弊社にて登録内容を確認後、ホームページに反映させていただきます。<br />
             今しばらくお待ちくださいませ。</p>
     </div>
     <div class="btn_area">
-        <ul>
-            <li>
-                <a href="javascript:window.close()">
-                    <img class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_close.jpg" alt="閉じる" />
-                </a>
-            </li>
-        </ul>
+        <a class="btn btn-default col-sm-4 center-block" href="javascript:window.close()">
+            閉じる
+        </a>
     </div>
 </div>
 

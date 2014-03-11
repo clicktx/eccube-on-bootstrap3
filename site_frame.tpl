@@ -87,6 +87,8 @@
         });
         // input clear
         $(".input-clear").inputClear();
+        // tooltip
+        $('[data-toggle=tooltip]').tooltip();
     });
 //]]></script>
 

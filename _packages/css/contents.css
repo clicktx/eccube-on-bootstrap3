@@ -187,6 +187,9 @@ div#undercolumn_error .message_area .error {
 =============================================== */
 /* ページ送り
 ----------------------------------------------- */
+.disp_number .dropdown-menu { /*bs3*/
+    min-width: 95px;
+}
 .pagenumber_area {
     padding-bottom: 10px;
     background: url("../img/background/line_dot_01.gif") repeat-x bottom ;
@@ -217,14 +220,21 @@ div#undercolumn_error .message_area .error {
 
 /* レイアウト
 ----------------------------------------------- */
+@media (min-width:768px){
+    div.list_area,
+    div.list_area .col-sm-12 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
 div.list_area {
-    padding: 0 0 30px 0;
+/*    padding: 0 0 30px 0;
     width: 100%;
-    overflow: auto;
+    overflow: auto;*/
 }
 
 div.listphoto {
-    float: left;
+    /*float: left;*/
 }
 
 /* メインカラム用 1カラム時*/
@@ -250,82 +260,83 @@ div.listphoto {
 ----------------------------------------------- */
 /* 商品ステータス */
 div.listrightbloc ul.status_icon {
-    margin-bottom: 10px;
-    width: 100%;
+/*    margin-bottom: 10px;
+    width: 100%;*/
 }
 div.listrightbloc ul.status_icon li {
-    margin-right: 5px;
-    float: left;
+/*    margin-right: 5px;
+    float: left;*/
 }
 
 /* 商品名 */
 div.listrightbloc h3 {
-    font-weight: bold;
-    font-size: 120%;
+/*    font-weight: bold;
+    font-size: 120%;*/
+    margin: 0;
 }
 
 /* コメント */
 div.listrightbloc .listcomment {
-    margin: 0 0 10px 0;
-    text-align: left;
+/*    margin: 0 0 10px 0;
+    text-align: left;*/
 }
 
 /* 商品詳細を見る */
 div.listrightbloc .detail_btn {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
 
 /* 価格 */
 div.listrightbloc .pricebox {
-    margin: 0 0 10px 0;
+    /*margin: 0 0 10px 0;*/
 }
 
 /* 買い物かご */
 div.listrightbloc .cart_area {
-    padding: 10px;
+/*    padding: 10px;
     border: 1px solid #cef0f4;
     background-color: #ecf5ff;
-    width: 94%;
+    width: 94%;*/
 }
 
 /* 規格 */
 div.listrightbloc .classlist {
-    margin-bottom: 10px;
+/*    margin-bottom: 10px;
     padding-bottom: 10px;
-    background: url("../img/background/line_dot_02.gif") repeat-x bottom ;
+    background: url("../img/background/line_dot_02.gif") repeat-x bottom ;*/
 }
 div.listrightbloc dl {
-    width: 100%;
+    /*width: 100%;*/
 }
 div.listrightbloc dt {
-    display: inline-block;
-    vertical-align: top;
+/*    display: inline-block;
+    vertical-align: top;*/
 }
 div.listrightbloc dd {
-    padding-bottom: 10px;
-    display: inline-block;
+/*    padding-bottom: 10px;
+    display: inline-block;*/
 }
 div.listrightbloc dd p.attention {
-    margin-top: 5px;
+    /*margin-top: 5px;*/
 }
 
 /* カートに入れる */
 div.listrightbloc .cartin {
-    margin: 0;
-    float :right;
+/*    margin: 0;
+    float :right;*/
 }
 div.listrightbloc .cartin .quantity {
-    padding: 3px 10px 0 0;
+ /*   padding: 3px 10px 0 0;
     width: 150px;
     float :left;
-    text-align: right;
+    text-align: right;*/
 }
 div.listrightbloc .cartin .quantity .box {
-    width: 70px;
+    /*width: 70px;*/
 }
 div.listrightbloc .cartin_btn {
-    width: 160px;
-    float :left;
+ /*   width: 160px;
+    float :left;*/
 }
 
 
@@ -580,18 +591,21 @@ body {
 /* お客様の声
 ----------------------------------------------- */
 div#customervoice_area {
-    clear: both;
+    /*clear: both;*/
     padding: 35px 0 0 0;
 }
 
 div#customervoice_area h2 {
-    margin-bottom: 20px;
+/*    margin-bottom: 20px;
     padding: 6px 0 8px 10px;
     border-top: solid 1px #f90;
     background: url('../img/background/bg_tit_sub_01.jpg') repeat-x left bottom;
+*/
+    margin: 0;
+    padding: 0;
 }
 
-div#customervoice_area .review_bloc {
+/*div#customervoice_area .review_bloc {
     margin-bottom: 20px;
     padding: 10px;
     background-color: #f6f6f6;
@@ -622,7 +636,7 @@ div#customervoice_area .voicetitle {
 
 div#customervoice_area .voicedate {
     margin-bottom: 10px;
-}
+}*/
 
 
 /* 関連商品（商品部分はbloc.cssのおすすめ商品と共通）
@@ -633,10 +647,12 @@ div#whobought_area {
 }
 
 div#whobought_area h2 {
-    border-top: solid 1px #f90;
+/*    border-top: solid 1px #f90;
     background: url('../img/background/bg_tit_sub_01.jpg') repeat-x left bottom;
     padding: 5px 0 8px 10px;
-    font-size: 14px;
+    font-size: 14px;*/
+    margin: 0;
+    padding: 0;
 }
 
 

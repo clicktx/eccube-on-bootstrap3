@@ -6,6 +6,9 @@
 .text-size-xs {
     font-size: 50%;
 }
+.text-size-sm {
+    font-size: 80%;
+}
 .text-size-lg {
     font-size: 150%;
 }
@@ -16,6 +19,9 @@
 
 /* ブロック要素マージン
 ----------------------------------------------- */
+.margin-none {
+    margin: 0;
+}
 .margin-top-sm {
     margin-top: 5px !important;
 }
@@ -34,8 +40,12 @@
 .margin-bottom-xl {
     margin-bottom: 40px !important;
 }
-
-
+.margin-left-sm {
+    margin-left: 5px !important;
+}
+.margin-left-lg {
+    margin-left: 20px !important;
+}
 /* カラー
 ----------------------------------------------- */
 .white {
