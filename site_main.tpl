@@ -73,49 +73,21 @@
                     <!--{* ▲TOP COLUMN*}-->
 
                 <div class="row row-offcanvas row-offcanvas-left">
-                    <!--{* ▼LEFT COLUMN *}-->
-                    <!--{if $arrPageLayout.LeftNavi|@count > 0}-->
-                        <div id="leftcolumn" class="
-                        <!--{if $tpl_column_num == 3}-->
-                        col-xs-12 col-sm-6 col-md-3
-                        <!--{elseif $tpl_column_num == 2}-->
-                        col-xs-12 col-sm-4 col-md-3
-                        <!--{else}-->
-                        col-xs-12 col-sm-6 col-md-3
-                        <!--{/if}--> side_column sidebar-offcanvas"
-                            <!--{* ▼左ナビ *}-->
-                            <!--{foreach key=LeftNaviKey item=LeftNaviItem from=$arrPageLayout.LeftNavi}-->
-                                <!-- ▼<!--{$LeftNaviItem.bloc_name}--> -->
-                                <!--{if $LeftNaviItem.php_path != ""}-->
-                                    <!--{include_php file=$LeftNaviItem.php_path items=$LeftNaviItem}-->
-                                <!--{else}-->
-                                    <!--{include file=$LeftNaviItem.tpl_path items=$LeftNaviItem}-->
-                                <!--{/if}-->
-                                <!-- ▲<!--{$LeftNaviItem.bloc_name}--> -->
-                            <!--{/foreach}-->
-                            <!--{* ▲左ナビ *}-->
-                            <p class="visible-xs">
-                                <button class="btn btn-default col-xs-4" data-toggle="offcanvas">
-                                    <span class="glyphicon glyphicon-chevron-left"></span>
-                                </button>
-                            </p>
-                        </div>
-                    <!--{/if}-->
-                    <!--{* ▲LEFT COLUMN *}-->
-
                     <!--{* ▼CENTER COLUMN *}-->
                     <div id="main_column" class="
                         <!--{if $tpl_column_num == 3}-->
-                        col-md-6
+                        col-sm-8 col-sm-push-4 col-md-6 col-md-push-3
                         <!--{elseif $tpl_column_num == 2}-->
                         col-sm-8 col-md-9
+                            <!--{if $arrPageLayout.LeftNavi|@count == 0}-->
+                            <!--{" "}-->col-sm-push-0 col-md-push-0 left
+                            <!--{else}-->
+                            <!--{" "}-->col-sm-push-4 col-md-push-3 right
+                            <!--{/if}-->
                         <!--{else}-->
                         col-md-10 col-md-offset-1
                         <!--{/if}--> colnum<!--{$tpl_column_num|h}-->
-                        <!--{if $tpl_column_num == 2}-->
-                            <!--{" "}--><!--{if $arrPageLayout.LeftNavi|@count == 0}-->left<!--{else}-->right<!--{/if}-->
-                        <!--{/if}-->"
-                    >
+                    ">
                         <!--{* ▼メイン上部 *}-->
                         <!--{if $arrPageLayout.MainHead|@count > 0}-->
                             <!--{foreach key=MainHeadKey item=MainHeadItem from=$arrPageLayout.MainHead}-->
@@ -150,9 +122,50 @@
                     </div>
                     <!--{* ▲CENTER COLUMN *}-->
 
+                    <!--{* ▼LEFT COLUMN *}-->
+                    <!--{if $arrPageLayout.LeftNavi|@count > 0}-->
+                        <div id="leftcolumn" class="side_column sidebar-offcanvas
+                            <!--{if $tpl_column_num == 3}-->
+                                <!--{" "}-->col-xs-12 col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-6
+                            <!--{elseif $tpl_column_num == 2}-->
+                                <!--{" "}-->col-xs-12 col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9
+                            <!--{else}-->
+                                <!--{" "}-->col-xs-12 col-sm-6 col-md-3
+                            <!--{/if}-->
+                        ">
+                            <!--{* ▼左ナビ *}-->
+                            <!--{foreach key=LeftNaviKey item=LeftNaviItem from=$arrPageLayout.LeftNavi}-->
+                                <!-- ▼<!--{$LeftNaviItem.bloc_name}--> -->
+                                <!--{if $LeftNaviItem.php_path != ""}-->
+                                    <!--{include_php file=$LeftNaviItem.php_path items=$LeftNaviItem}-->
+                                <!--{else}-->
+                                    <!--{include file=$LeftNaviItem.tpl_path items=$LeftNaviItem}-->
+                                <!--{/if}-->
+                                <!-- ▲<!--{$LeftNaviItem.bloc_name}--> -->
+                            <!--{/foreach}-->
+                            <!--{* ▲左ナビ *}-->
+                            <p class="visible-xs">
+                                <button class="btn btn-default col-xs-4" data-toggle="offcanvas">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </button>
+                            </p>
+                        </div>
+                    <!--{/if}-->
+                    <!--{* ▲LEFT COLUMN *}-->
+
                     <!--{* ▼RIGHT COLUMN *}-->
                     <!--{if $arrPageLayout.RightNavi|@count > 0}-->
-                        <div id="rightcolumn" class="side_column col-xs-12 col-sm-6 col-md-3 pull-right">
+                        <div id="rightcolumn" class="side_column col-xs-12 col-sm-4 col-md-3
+                            <!--{if $tpl_column_num == 3}-->
+                                <!--{" "}-->col-sm-pull-8 col-md-pull-0
+                            <!--{elseif $tpl_column_num == 2}-->
+                                <!--{if $arrPageLayout.LeftNavi|@count == 0}-->
+                                <!--{" "}-->col-sm-push-0
+                                <!--{else}-->
+                                <!--{" "}-->col-sm-pull-8 col-md-pull-0
+                                <!--{/if}-->
+                            <!--{/if}-->
+                        ">
                             <!--{* ▼右ナビ *}-->
                             <!--{foreach key=RightNaviKey item=RightNaviItem from=$arrPageLayout.RightNavi}-->
                                 <!-- ▼<!--{$RightNaviItem.bloc_name}--> -->
