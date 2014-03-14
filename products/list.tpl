@@ -144,74 +144,68 @@
             <div id="product-list-wrap" class="row">
         <!--{/if}-->
 
-        <!--{assign var=id value=$arrProduct.product_id}-->
-        <!--{assign var=arrErr value=$arrProduct.arrErr}-->
-        <!--▼商品-->
-        <div class="list_area clearfix col-sm-4 col-md-3">
-            <a name="product<!--{$id|h}-->"></a>
-            <div class="listphoto col-xs-5 col-sm-12 pull-left">
-                <!--★画像★-->
-                <a href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$arrProduct.product_id|u}-->">
-                    <img src="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrProduct.main_image|sfNoImageMainList|h}-->" alt="<!--{$arrProduct.name|h}-->" class="picture img-responsive img-rounded" width="180" /></a>
-            </div>
+                <!--{assign var=id value=$arrProduct.product_id}-->
+                <!--{assign var=arrErr value=$arrProduct.arrErr}-->
+                <!--▼商品-->
+                <div class="list_area clearfix col-sm-4 col-md-3">
+                    <a name="product<!--{$id|h}-->"></a>
+                    <a href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$arrProduct.product_id|u}-->" class="thumbnail">
+                    <!--★画像★-->
+                        <img src="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrProduct.main_image|sfNoImageMainList|h}-->" alt="<!--{$arrProduct.name|h}-->" class="picture col-xs-5 col-sm-12" />
+                        <div class="caption">
+                            <!--▼商品ステータス-->
 
-            <div class="listrightbloc col-sm-12">
-                <!--▼商品ステータス-->
-                <!--{if count($productStatus[$id]) > 0}-->
-                    <div class="status_icon text-size-sm">
-                        <!--{foreach from=$productStatus[$id] item=status}-->
-                        <span class="label
-                            <!--{if $status == 1}-->
-                            label-primary
-                            <!--{elseif $status == 2}-->
-                            label-success
-                            <!--{elseif $status == 3}-->
-                            label-warning
-                            <!--{elseif $status == 4}-->
-                            label-danger
-                            <!--{elseif $status == 5}-->
-                            label-info
-                            <!--{else}-->
-                            label-default
-                            <!--{/if}-->"><!--{$arrSTATUS[$status]}--></span>
-                        <!--{/foreach}-->
-                    </div>
-                <!--{/if}-->
-                <!--▲商品ステータス-->
-
-                <!--★商品名★-->
-                <h3>
-                    <a href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$arrProduct.product_id|u}-->"><!--{$arrProduct.name|h}--></a>
-                </h3>
-                <!--★価格★-->
-                <div class="pricebox sale_price">
-                    <!--{$smarty.const.SALE_PRICE_TITLE}-->(税込)：
-                    <span class="price">
-                        <span id="price02_default_<!--{$id}-->"><!--{strip}-->
-                            <!--{if $arrProduct.price02_min_inctax == $arrProduct.price02_max_inctax}-->
-                                <!--{$arrProduct.price02_min_inctax|number_format}-->
-                            <!--{else}-->
-                                <!--{$arrProduct.price02_min_inctax|number_format}-->～<!--{$arrProduct.price02_max_inctax|number_format}-->
+                            <!--{if count($productStatus[$id]) > 0}-->
+                                <div class="status_icon">
+                                <!--{foreach from=$productStatus[$id] item=status}-->
+                                    <span class="label
+                                        <!--{if $status == 1}-->
+                                        label-primary
+                                        <!--{elseif $status == 2}-->
+                                        label-success
+                                        <!--{elseif $status == 3}-->
+                                        label-warning
+                                        <!--{elseif $status == 4}-->
+                                        label-danger
+                                        <!--{elseif $status == 5}-->
+                                        label-info
+                                        <!--{else}-->
+                                        label-default
+                                        <!--{/if}-->"><!--{$arrSTATUS[$status]}--></span>
+                                <!--{/foreach}-->
+                                </div>
                             <!--{/if}-->
-                        </span><span id="price02_dynamic_<!--{$id}-->"></span><!--{/strip}-->
-                        円</span>
-                </div>
 
-                <!--★コメント★-->
-                <div class="listcomment"><!--{$arrProduct.main_list_comment|h|nl2br}--></div>
+                            <!--★商品名★-->
+                            <h3>
+                                <!--{$arrProduct.name|h}-->
+                            </h3>
+                            <!--★価格★-->
+                            <div class="pricebox">
+                                <span class="price">
+                                    <span id="price02_default_<!--{$id}-->"><!--{strip}-->
+                                        <!--{if $arrProduct.price02_min_inctax == $arrProduct.price02_max_inctax}-->
+                                            <!--{$arrProduct.price02_min_inctax|number_format}-->円
+                                        <!--{else}-->
+                                            <!--{$arrProduct.price02_min_inctax|number_format}-->円～
+                                        <!--{/if}-->
+                                    </span><!--{/strip}-->
+                                </span>
+                            </div>
+                            <!--★コメント★-->
+                            <div class="listcomment"><!--{$arrProduct.main_list_comment|h|nl2br}--></div>
 
-                <!--▼買い物かご-->
-                <div class="cart_area clearfix">
-                    <!--{if $tpl_stock_find[$id]}-->
-                        詳細はこちら
-                    <!--{else}-->
-                        <div class="cartbtn attention">申し訳ございませんが、只今品切れ中です。</div>
-                    <!--{/if}-->
+                            <!--▼買い物かご-->
+                            <div class="cart_area clearfix">
+                                <!--{if !$tpl_stock_find[$id]}-->
+                                    <span class="soldout label label-danger fa-rotate-45">SOLD OUT</span>
+                                <!--{/if}-->
+                            </div>
+                            <!--▲買い物かご-->
+                        </div>
+                    </a>
                 </div>
-                <!--▲買い物かご-->
-            </div>
-        </div>
-        <!--▲商品-->
+                <!--▲商品-->
 
         <!--{if $smarty.foreach.arrProducts.last}-->
             </div>

@@ -220,17 +220,85 @@ div#undercolumn_error .message_area .error {
 
 /* レイアウト
 ----------------------------------------------- */
+.soldout {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+}
+@media (max-width: 767px) {
+    .soldout {
+        top: 30px;
+        left: 5px;
+        font-size: 10px;
+    }
+    div.list_area .picture {
+        margin-top: 7px;
+    }
+    #product-list-wrap {
+        padding: 0 15px;
+        padding-bottom: 20px;
+    }
+    div.list_area {
+        position: relative;
+        display: block;
+        min-height: 150px;
+        margin-bottom: -1px;
+        padding: 0;
+        border-radius: 0;
+        background-color: #fff;
+        border: 1px solid #ddd;
+    }
+    div.list_area:first-child {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+    div.list_area:last-child {
+        margin-bottom: 0;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+    div.list_area:hover,
+    div.list_area:focus {
+      text-decoration: none;
+      background-color: #f5f5f5;
+    }
+    div.list_area a.thumbnail {
+        margin: 0;
+        padding: 7px 0;
+        background-color: transparent;
+        border: none;
+    }
+}
 @media (min-width:768px){
-    div.list_area,
-    div.list_area .col-sm-12 {
-        padding-left: 5px;
-        padding-right: 5px;
+    div.list_area {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+    div.list_area .thumbnail{
+        height: 325px;
+        overflow: hidden;
+    }
+    .picture {
+        padding: 9px;
     }
 }
 div.list_area {
 /*    padding: 0 0 30px 0;
     width: 100%;
     overflow: auto;*/
+}
+div.list_area > a:hover {
+    text-decoration: none;
+}
+div.list_area .status_icon {
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+div.list_area h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 div.listphoto {
