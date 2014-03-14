@@ -236,7 +236,7 @@
 
                                 <!--★数量★-->
                                 <div class="row form-group">
-                                    <div class="quantity col-xs-6 col-md-5">
+                                    <div class="quantity col-xs-6 col-sm-5">
                                         <div class="input-group<!--{if $arrErr.quantity != ""}--> has-error<!--{/if}-->">
                                             <span class="input-group-addon">数量</span>
                                             <input type="number" id="cart-quantity" class="box60 form-control" name="quantity" value="<!--{$arrForm.quantity.value|default:1|h}-->" maxlength="<!--{$smarty.const.INT_LEN}-->" min="1" style="<!--{$arrErr.quantity|sfGetErrorColor}-->" />
@@ -246,7 +246,7 @@
                                         <!--{/if}-->
                                     </div>
 
-                                    <div class="cartin col-xs-6 col-md-7">
+                                    <div class="cartin col-xs-6 col-sm-7">
                                         <div class="cartin_btn">
                                             <div id="cartbtn_default">
                                                 <!--★カートに入れる★-->
@@ -271,22 +271,9 @@
                                         <div class="attention"><!--{$arrErr[$add_favorite]}--></div>
                                     <!--{/if}-->
                                     <!--{if !$is_favorite}-->
-                                        <a href="javascript:eccube.changeAction('?product_id=<!--{$arrProduct.product_id|h}-->'); eccube.setModeAndSubmit('add_favorite','favorite_product_id','<!--{$arrProduct.product_id|h}-->');" class="btn btn-default btn-block btn-sm"><span class="glyphicon glyphicon-star-empty"></span> お気に入りに追加</a>
+                                        <a href="javascript:eccube.changeAction('?product_id=<!--{$arrProduct.product_id|h}-->'); eccube.setModeAndSubmit('add_favorite','favorite_product_id','<!--{$arrProduct.product_id|h}-->');" class="btn btn-default btn-sm btn-block"><span class="glyphicon glyphicon-star-empty"></span> お気に入りに追加</a>
                                     <!--{else}-->
-                                        <button class="btn btn-default btn-sm" disabled="disabled"><span class="glyphicon glyphicon-star"></span> お気に入りに追加済み</button>
-                                        <img src="<!--{$TPL_URLPATH}-->img/button/btn_add_favorite_on.jpg" alt="お気に入り登録済" name="add_favorite_product" id="add_favorite_product" />
-                                        <script type="text/javascript" src="<!--{$smarty.const.ROOT_URLPATH}-->js/jquery.tipsy.js"></script>
-                                        <script type="text/javascript">
-                                            var favoriteButton = $("#add_favorite_product");
-                                            favoriteButton.tipsy({gravity: $.fn.tipsy.autoNS, fallback: "お気に入りに登録済み", fade: true });
-
-                                            <!--{if $just_added_favorite == true}-->
-                                            favoriteButton.load(function(){$(this).tipsy("show")});
-                                            $(function(){
-                                                var tid = setTimeout('favoriteButton.tipsy("hide")',5000);
-                                            });
-                                            <!--{/if}-->
-                                        </script>
+                                        <button class="btn btn-default btn-sm btn-block" disabled="disabled"><span class="glyphicon glyphicon-star"></span> お気に入りに追加済み</button>
                                     <!--{/if}-->
                                 </div>
                             <!--{/if}-->
