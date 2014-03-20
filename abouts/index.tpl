@@ -54,7 +54,8 @@
     <div id="undercolumn_aboutus">
         <h2 class="title"><!--{$tpl_title|h}--></h2>
 
-        <table summary="当サイトについて">
+        <div class="table-responsive panel panel-default">
+        <table summary="当サイトについて" class="table table-bordered">
             <col width="20%" />
             <col width="80%" />
             <!--{if strlen($arrSiteInfo.shop_name)}-->
@@ -121,6 +122,9 @@
             <!--{/if}-->
 
         </table>
+        </div>
+
+        <hr />
 
         <div id="maps"></div>
     </div>
