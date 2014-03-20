@@ -89,6 +89,11 @@
         $(".input-clear").inputClear();
         // tooltip
         $('[data-toggle=tooltip]').tooltip();
+        // pagetop
+        $("a[href^=#top]").click(function(){
+            $((navigator.userAgent.indexOf("Opera") != -1) ? document.compatMode == 'BackCompat' ? 'body' : 'html' :'html,body').animate({scrollTop:0}, 'slow');
+            return false;
+        });
     });
 //]]></script>
 
