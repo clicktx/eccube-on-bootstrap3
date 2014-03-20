@@ -187,19 +187,12 @@ div#undercolumn_error .message_area .error {
 =============================================== */
 /* ページ送り
 ----------------------------------------------- */
-.disp_number .dropdown-menu { /*bs3*/
-    min-width: 95px;
-}
 .pagenumber_area {
-    padding-bottom: 10px;
-    background: url("../img/background/line_dot_01.gif") repeat-x bottom ;
+    margin-bottom: 20px;
 }
-.pagecond_area {
+/*.pagecond_area {
     margin-bottom: 20px;
     padding: 10px;
-}
-.pagenumber_area {
-    margin: 20px 0;
 }
 .pagecond_area {
     border: 1px solid #ccc;
@@ -208,7 +201,7 @@ div#undercolumn_error .message_area .error {
     width: 100%;
     text-align: left;
 }
-.pagenumber_area .navi li {
+*//*.pagenumber_area .navi li {
     display: inline;
 }
 .pagenumber_area .change {
@@ -216,14 +209,17 @@ div#undercolumn_error .message_area .error {
     text-align: right;
     white-space: nowrap;
 }
-
+*/
 
 /* レイアウト
 ----------------------------------------------- */
+div.list_area > a.thumbnail {
+    position: relative;
+}
 .soldout {
     position: absolute;
-    top: 30px;
-    left: 10px;
+    top: 25px;
+    left: 0;
 }
 @media (max-width: 767px) {
     .soldout {
@@ -235,7 +231,6 @@ div#undercolumn_error .message_area .error {
         margin-top: 7px;
     }
     #product-list-wrap {
-        padding: 0 15px;
         padding-bottom: 20px;
     }
     div.list_area {
@@ -271,15 +266,81 @@ div#undercolumn_error .message_area .error {
 }
 @media (min-width:768px){
     div.list_area {
-        padding-left: 7px;
-        padding-right: 7px;
+        padding-left: 4px;
+        padding-right: 4px;
     }
-    div.list_area .thumbnail{
-        height: 325px;
+    div.list_area:nth-child(3n+1) {
+        padding-left: 0;
+        padding-right: 8px;
+    }
+    div.list_area:nth-child(3n) {
+        padding-left: 8px;
+        padding-right: 0;
+    }
+    div.list_area > a.thumbnail {
+        padding: 0;
+        height: 275px;
         overflow: hidden;
+    }
+    div.caption {
+        height: 115px;
+        overflow: hidden;
+    }
+    div.caption > div.listcomment {
+        display: none;
     }
     .picture {
         padding: 9px;
+    }
+}
+@media (min-width: 992px) {
+    div.list_area {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+    div.list_area:nth-child(3n+1),
+    div.list_area:nth-child(3n) {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+    div.list_area:nth-child(4n+1) {
+        padding-left: 0;
+        padding-right: 7px;
+    }
+    div.list_area:nth-child(4n) {
+        padding-left: 7px;
+        padding-right: 0;
+    }
+    div.list_area > a.thumbnail {
+        height: 315px;
+    }
+    div.caption {
+        height: 135px;
+    }
+    div.caption > div.listcomment {
+        display: inline-block;
+    }
+}
+@media (min-width: 1200px) {
+    div.list_area {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    div.list_area:nth-child(3n+1),
+    div.list_area:nth-child(3n) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    div.list_area:nth-child(4n+1) {
+        padding-left: 0;
+        padding-right: 10px;
+    }
+    div.list_area:nth-child(4n) {
+        padding-left: 10px;
+        padding-right: 0;
+    }
+    div.list_area > a.thumbnail {
+        height: 330px;
     }
 }
 div.list_area {

@@ -79,76 +79,69 @@
     </form>
 
     <!--★タイトル★-->
-    <h2 class="title"><!--{$tpl_subtitle|h}--></h2>
+    <h2 class="title"><!--{$tpl_subtitle|h}--> <small><span class="attention"><!--{$tpl_linemax}-->件</span>の商品</small></h2>
 
     <!--▼検索条件-->
     <!--{if $tpl_subtitle == "検索結果"}-->
-        <ul class="pagecond_area">
+        <ul class="pagecond_area list-unstyled alert alert-warning">
             <li><strong>商品カテゴリ：</strong><!--{$arrSearch.category|h}--></li>
         <!--{if $arrSearch.maker|strlen >= 1}--><li><strong>メーカー：</strong><!--{$arrSearch.maker|h}--></li><!--{/if}-->
-            <li><strong>商品名：</strong><!--{$arrSearch.name|h}--></li>
+            <li><strong>キーワード：</strong><!--{$arrSearch.name|h}--></li>
         </ul>
     <!--{/if}-->
     <!--▲検索条件-->
 
     <!--▼ページナビ(本文)-->
     <!--{capture name=page_navi_body}-->
-        <div class="pagenumber_area clearfix">
-            <div class="change btn-group">
-                <!--{if $orderby != 'price'}-->
-                    <a href="javascript:fnChangeOrderby('price');" class="btn btn-default">価格順</a>
-                <!--{else}-->
-                    <strong class="btn btn-default active">価格順</strong>
-                <!--{/if}-->
-                <!--{if $orderby != "date"}-->
-                        <a href="javascript:fnChangeOrderby('date');" class="btn btn-default">新着順</a>
-                <!--{else}-->
-                    <strong class="btn btn-default active">新着順</strong>
-                <!--{/if}-->
-                <div class="disp_number btn-group">
-                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        表示件数 <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                    <!--{foreach from=$arrPRODUCTLISTMAX item="dispnum" key="num"}-->
-                        <!--{if $num == $disp_number}-->
-                            <li><a href="javascript:fnChangeDispNumber(<!--{$num}-->);"><strong><!--{$dispnum}--></strong></a></li>
-                        <!--{else}-->
-                            <li><a href="javascript:fnChangeDispNumber(<!--{$num}-->);"><!--{$dispnum}--></a></li>
-                        <!--{/if}-->
-                    <!--{/foreach}-->
-                    </ul>
-                </div>
-            </div>
-            <div class="navi"><!--{$tpl_strnavi}--></div>
-        </div>
+    <!--{* ページナビ上部及び下部に移動 *}-->
     <!--{/capture}-->
     <!--▲ページナビ(本文)-->
 
     <!--{foreach from=$arrProducts item=arrProduct name=arrProducts}-->
 
         <!--{if $smarty.foreach.arrProducts.first}-->
-            <!--▼件数-->
-            <div>
-                <span class="attention"><!--{$tpl_linemax}-->件</span>の商品がございます。
-            </div>
-            <!--▲件数-->
-
             <!--▼ページナビ(上部)-->
             <form name="page_navi_top" id="page_navi_top" action="?">
                 <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
                 <!--{if $tpl_linemax > 0}--><!--{$smarty.capture.page_navi_body|smarty:nodefaults}--><!--{/if}-->
             </form>
+            <div class="pagenumber_area clearfix">
+                <div class="change btn-group btn-group-justified">
+                    <!--{if $orderby != 'price'}-->
+                        <a href="javascript:fnChangeOrderby('price');" class="btn btn-default">価格順</a>
+                    <!--{else}-->
+                        <strong class="btn btn-default active">価格順</strong>
+                    <!--{/if}-->
+                    <!--{if $orderby != "date"}-->
+                            <a href="javascript:fnChangeOrderby('date');" class="btn btn-default">新着順</a>
+                    <!--{else}-->
+                        <strong class="btn btn-default active">新着順</strong>
+                    <!--{/if}-->
+                    <div class="disp_number btn-group">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            表示件数 <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                        <!--{foreach from=$arrPRODUCTLISTMAX item="dispnum" key="num"}-->
+                            <!--{if $num == $disp_number}-->
+                                <li><a href="javascript:fnChangeDispNumber(<!--{$num}-->);"><strong><!--{$dispnum}--></strong></a></li>
+                            <!--{else}-->
+                                <li><a href="javascript:fnChangeDispNumber(<!--{$num}-->);"><!--{$dispnum}--></a></li>
+                            <!--{/if}-->
+                        <!--{/foreach}-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <!--▲ページナビ(上部)-->
             <!--▼商品wrap-->
-            <div id="product-list-wrap" class="row">
+            <div id="product-list-wrap" class="clearfix">
         <!--{/if}-->
 
                 <!--{assign var=id value=$arrProduct.product_id}-->
                 <!--{assign var=arrErr value=$arrProduct.arrErr}-->
                 <!--▼商品-->
                 <div class="list_area clearfix col-sm-4 col-md-3">
-                    <a name="product<!--{$id|h}-->"></a>
                     <a href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$arrProduct.product_id|u}-->" class="thumbnail">
                     <!--★画像★-->
                         <img src="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrProduct.main_image|sfNoImageMainList|h}-->" alt="<!--{$arrProduct.name|h}-->" class="picture col-xs-5 col-sm-12" />
@@ -215,6 +208,8 @@
                 <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
                 <!--{if $tpl_linemax > 0}--><!--{$smarty.capture.page_navi_body|smarty:nodefaults}--><!--{/if}-->
             </form>
+            <div class="navi pagination hidden-xs"><!--{$tpl_strnavi}--></div>
+            <!--{include file= "products/pager.tpl"}-->
             <!--▲ページナビ(下部)-->
         <!--{/if}-->
 
