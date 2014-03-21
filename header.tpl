@@ -114,27 +114,27 @@
             <ul class="nav navbar-nav">
                 <li class="col-xs-3">
                     <a href="#" class="btn btn-link" data-toggle="offcanvas">
-                        <span class="glyphicon glyphicon-list-alt text-size-lg"></span><br />
+                        <span class="glyphicon glyphicon-list-alt fa-2x"></span><br />
                         <small>カテゴリ</small>
                     </a>
                 </li>
                 <li class="col-xs-3">
                     <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/login.php" class="btn btn-link">
-                        <span class="glyphicon glyphicon-user text-size-lg"></span><br />
+                        <span class="glyphicon glyphicon-user fa-2x"></span><br />
                         <small>MYページ</small>
                     </a>
                 </li>
                 <li class="col-xs-3">
                     <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/favorite.php" class="btn btn-link">
-                        <span class="glyphicon glyphicon-star-empty text-size-lg"></span><br />
+                        <span class="glyphicon glyphicon-star-empty fa-2x"></span><br />
                         <small>お気に入り</small>
                     </a>
                 </li>
                 <li class="col-xs-3">
                     <a href="<!--{$smarty.const.CART_URL}-->" class="btn btn-link">
-                        <span class="glyphicon glyphicon-shopping-cart text-size-lg"></span>
-                        <span class="badge bg-red" data-role="cart-total-quantity"></span><br />
+                        <span class="glyphicon glyphicon-shopping-cart fa-flip-horizontal fa-2x"></span><br />
                         <small>カート</small>
+                        <span class="cart-total-quantity badge bg-red" data-role="cart-total-quantity"></span>
                     </a>
                 </li>
             </ul>

@@ -376,6 +376,11 @@ div#header_navi ul li.entry {
     padding-left: 0;
     padding-right: 0;
 }
+#mobile-nav .cart-total-quantity {
+    position: absolute;
+    top: 2%;
+    left: 55%;
+}
 
 /* ==============================================
  フッター
