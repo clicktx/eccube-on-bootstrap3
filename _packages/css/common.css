@@ -299,13 +299,16 @@ h2.title {
 #main_column .sub_area h3,
 #undercolumn_login .login_area h3,
 #undercolumn_shopping h3,
-#mypagecolumn h3,
-#undercolumn_cart h3 {
+#mypagecolumn h3 {
     margin: 0 0 10px 0;
     padding: 5px 0 10px;
     color: #f60;
     background: url("../img/background/line_01.gif") repeat-x left bottom;
     font-size: 120%;
+}
+#undercolumn_cart h3 {
+    margin: 0;
+    padding: 0;
 }
 
 div#undercolumn_login .login_area h4 {

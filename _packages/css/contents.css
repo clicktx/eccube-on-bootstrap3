@@ -321,7 +321,7 @@ div#undercolumn_error .message_area .error {
         height: 315px;
     }
     #product-list-wrap div.caption {
-        height: 135px;
+        height: 125px;
     }
     #product-list-wrap div.caption > div.listcomment {
         display: inline-block;
@@ -796,6 +796,9 @@ div#whobought_area h2 {
 /*********************************************** */
 /* 現在のカートの中
 ----------------------------------------------- */
+#undercolumn_cart #quantity_level{
+    display: inline-block;
+}
 div#undercolumn_cart .point_announce {
 /*    padding: 20px;
     margin-bottom: 20px;
@@ -806,24 +809,24 @@ div#undercolumn_cart .point_announce {
     line-height: 140%;*/
 }
 div#undercolumn_cart .totalmoney_area {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
 
 div#undercolumn_cart p {
-    margin: 10px 5px;
+    /*margin: 10px 5px;*/
 }
 
 div#undercolumn ul#quantity_level li {
-    padding: 3px;
-    display: inline;
+/*    padding: 3px;
+    display: inline;*/
 }
 
 div#undercolumn .empty {
-    text-align: left;
+    /*text-align: left;*/
 }
 
 div.form_area {
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
 }
 
 
