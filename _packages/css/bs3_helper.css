@@ -46,6 +46,16 @@
 .margin-left-lg {
     margin-left: 20px !important;
 }
+.padding-none {
+  padding: 0;
+}
+.padding-left-none {
+  padding-left: 0;
+}
+.padding-right-none {
+  padding-right: 0;
+}
+
 /* カラー
 ----------------------------------------------- */
 .white {

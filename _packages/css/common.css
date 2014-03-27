@@ -231,7 +231,11 @@ select,
 textarea {
     font-size: 16px !important;
 }
-
+label.col-xs-1,
+label.col-sm-1,
+label.col-md-1 {
+    width: 1%;
+}
 /*select {
     border: solid 1px #ccc;
 }
