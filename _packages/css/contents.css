@@ -354,7 +354,8 @@ div.list_area {
     width: 100%;
     overflow: auto;*/
 }
-div.list_area > a:hover {
+div.list_area > a:hover,
+div.list_area > a:focus {
     text-decoration: none;
 }
 div.list_area .status_icon {

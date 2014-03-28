@@ -94,6 +94,38 @@
             $((navigator.userAgent.indexOf("Opera") != -1) ? document.compatMode == 'BackCompat' ? 'body' : 'html' :'html,body').animate({scrollTop:0}, 'slow');
             return false;
         });
+        //jkhl
+        var elementsArray = $("#product-list-wrap div a, #detailarea a, #detailarea select");
+        var activeElementNo = -1;
+        var activeFunction = function(n){ $(elementsArray[n]).focus(); }
+        $(document).keypress(function(e){
+            switch (e.keyCode){
+                case 106: // j
+                    if ((elementsArray.length -1) > activeElementNo){ activeFunction(++activeElementNo) }
+                    break;
+                case 107: // k
+                    if (activeElementNo > 0){ activeFunction(--activeElementNo) }
+                    break;
+                case 104: // h
+                    history.back();
+                    break;
+                case 108: // l
+                    history.forward();
+                    break;
+                case 48: // 0
+                    activeFunction(activeElementNo=0);
+                    break;
+                case 36: // $
+                    activeFunction(activeElementNo=(elementsArray.length -1));
+                    break;
+                case 47: // '/'
+                    $("#search").focus();
+                    break;
+                case 72: // H
+                    window.location.href = '<!--{$smarty.const.TOP_URL}-->';
+                    break;
+            };
+        });
     });
 //]]></script>
 
