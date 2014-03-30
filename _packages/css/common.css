@@ -439,13 +439,13 @@ div#header_navi ul li.entry {
 div#complete_area {
     margin-bottom: 20px;
 }
-div#complete_area .message,
+/*div#complete_area .message,
 div#undercolumn_entry .message {
     margin-bottom: 20px;
     line-height: 150%;
     font-weight: bold;
     font-size: 120%;
-}
+}*/
 div#complete_area .shop_information {
     margin-top: 40px;
     padding: 20px 0 0 0;

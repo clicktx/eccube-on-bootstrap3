@@ -49,6 +49,18 @@
 .padding-none {
   padding: 0;
 }
+.padding-xs {
+  padding: 5px;
+}
+.padding-sm {
+  padding: 10px;
+}
+.padding-md {
+  padding: 20px;
+}
+.padding-lg {
+  padding: 40px;
+}
 .padding-left-none {
   padding-left: 0;
 }

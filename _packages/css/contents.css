@@ -130,7 +130,7 @@ div#mycontents_area .message_area p {
 /* ==============================================
 ▼会員登録
 =============================================== */
-div#undercolumn_entry {
+/*div#undercolumn_entry {
     width: 100%;
 }
 
@@ -141,7 +141,7 @@ div#undercolumn_entry .kiyaku_text {
     width: 94%;
     background: #fff;
 }
-
+*/
 
 /* ==============================================
 ▼ログイン
