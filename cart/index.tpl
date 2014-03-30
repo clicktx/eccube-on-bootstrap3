@@ -174,7 +174,7 @@
                 <a href="<!--{$tpl_prev_url|h}-->" class="btn btn-default btn-block">お買い物を続ける</a>
             <!--{/if}-->
         <!--{else}-->
-            <p class="empty"><span class="attention">※ 現在カート内に商品はございません。</span></p>
+            <p class="empty alert alert-warning">※ 現在カート内に商品はございません。</p>
         <!--{/if}-->
     </div>
 </div>
