@@ -25,8 +25,12 @@
 
     <div id="undercolumn_contact">
 
-        <p>内容によっては回答をさしあげるのにお時間をいただくこともございます。<br />
-        また、休業日は翌営業日以降の対応となりますのでご了承ください。</p>
+        <div class="alert alert-warning">内容によっては回答をさしあげるのにお時間をいただくこともございます。<br />
+        また、休業日は翌営業日以降の対応となりますのでご了承ください。</div>
+        <div class="alert alert-info fade in">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+          <strong>必須項目</strong> 「<span class="attention">※</span>」印は入力必須項目です。
+        </div>
 
         <form name="form1" id="form1" class="form-horizontal" method="post" action="?">
             <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
@@ -144,7 +148,7 @@
             </div>
             <div class="form-group">
                 <label for="email" class="col-sm-3 col-md-2 control-label">
-                    メールアドレス
+                    メールアドレス<span class="attention">※</span>
                 </label>
                 <div class="col-sm-9">
                     <div class="form-group">
