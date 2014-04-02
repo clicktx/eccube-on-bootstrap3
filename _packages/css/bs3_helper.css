@@ -64,10 +64,33 @@
 .padding-left-none {
   padding-left: 0;
 }
+.padding-left-xs {
+  padding-left: 5px;
+}
+.padding-left-sm {
+  padding-left: 10px;
+}
+.padding-left-md {
+  padding-left: 20px;
+}
+.padding-left-lg {
+  padding-left: 40px;
+}
 .padding-right-none {
   padding-right: 0;
 }
-
+.padding-right-xs {
+  padding-right: 5px;
+}
+.padding-right-sm {
+  padding-right: 10px;
+}
+.padding-right-md {
+  padding-right: 20px;
+}
+.padding-right-lg {
+  padding-right: 40px;
+}
 /* カラー
 ----------------------------------------------- */
 .white {
