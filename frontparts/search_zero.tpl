@@ -25,7 +25,7 @@
     <div id="undercolumn_error">
         <div class="message_area">
             <!--★エラーメッセージ-->
-            <p class="error">
+            <p class="alert alert-danger">
                 <!--{if $smarty.get.mode == "search"}-->
                     該当件数<strong>0件</strong>です。<br />
                     他の検索キーワードより再度検索をしてください。
