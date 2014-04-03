@@ -199,16 +199,16 @@ div#undercolumn_login .login_area .inputbox .btn_area {
 /* ==============================================
 ▼エラー
 =============================================== */
-div#undercolumn_error .message_area {
+/*div#undercolumn_error .message_area {
     width: 80%;
     margin: 30px auto;
     padding: 30px;
     border: 1px solid #ccc;
     text-align: center;
-}
+}*/
 
 div#undercolumn_error .message_area .error {
-    padding: 120px 0;
+    padding: 20% 10%;
 }
 
 

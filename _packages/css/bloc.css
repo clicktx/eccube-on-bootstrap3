@@ -169,61 +169,21 @@
     http://stackoverflow.com/questions/18281636/what-replaces-nav-lists-in-bootstrap-3
     https://gist.github.com/jimbojsb/6754116
 */
-.nav-list {
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 0;
+#category_area li > a {
+    padding: 5px 10px;
 }
- 
-.nav-list > li > a,
-.nav-list .nav-header {
-  margin-left: -25px;
-  margin-right: -25px;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+#category_area li.level2 > a {
+    padding-left: 15px;
 }
- 
-.nav-list > li > a {
-  padding: 3px 10px;
+#category_area li.level3 > a {
+    padding-left: 20px;
 }
- 
-.nav-list > .active > a,
-.nav-list > .active > a:hover,
-.nav-list > .active > a:focus {
-  color: white;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
-  background-color: #428bca;
+#category_area li.level4 > a {
+    padding-left: 25px;
 }
- 
-.nav-list [class^="icon-"],
-.nav-list [class*=" icon-"] {
-  margin-right: 2px;
+#category_area li.level5 > a {
+    padding-left: 30px;
 }
- 
-.nav-list .divider {
-  *width: 100%;
-  height: 1px;
-  margin: ((1.428571429 / 2) - 1) 1px; /*8px 1px*/
-  *margin: -5px 0 5px;
-  overflow: hidden;
-  background-color: #428bca;
-  border-bottom: 1px solid white;
-}
- 
-.nav-header {
-  display: block;
-  padding: 3px 15px;
-  font-size: 11px;
-  font-weight: bold;
-  line-height: 1.428571429;
-  color: #999;
-  text-shadow: 0 1px 0 rgba(255,255,255,.5);
-  text-transform: uppercase;
-}
-/*Space them out when they follow another list item (link)*/
-.nav li + .nav-header {
-  margin-top: 9px;
-}
-
 
 /*#container #category_area .block_body {
     background-color: #fffaf0;
