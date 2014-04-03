@@ -90,15 +90,21 @@
         // tooltip
         $('[data-toggle=tooltip]').tooltip();
         // pagetop
-        $("a[href^=#top]").click(function(){
+        var pageTop = function(){
             $((navigator.userAgent.indexOf("Opera") != -1) ? document.compatMode == 'BackCompat' ? 'body' : 'html' :'html,body').animate({scrollTop:0}, 'slow');
             return false;
-        });
-        //jkhl
+        }
+        $("a[href^=#top]").click(pageTop);
+
+        // jkhl
         var elementsArray = $("#product-list-wrap div a, #detailarea a, #detailarea select");
+        if (elementsArray.length == 0){
+            elementsArray = $("#category_area a:visible");
+        }
         var activeElementNo = -1;
         var activeFunction = function(n){ $(elementsArray[n]).focus(); }
         $(document).keypress(function(e){
+            if (document.activeElement.type == 'text'){ return }
             switch (e.keyCode){
                 case 106: // j
                     if ((elementsArray.length -1) > activeElementNo){ activeFunction(++activeElementNo) }
@@ -115,14 +121,28 @@
                 case 48: // 0
                     activeFunction(activeElementNo=0);
                     break;
+                case 94: // ^
+                    activeFunction(activeElementNo=0);
+                    break;
                 case 36: // $
                     activeFunction(activeElementNo=(elementsArray.length -1));
                     break;
+                case 71: // G
+                    activeFunction(activeElementNo=(elementsArray.length -1));
+                    break;
                 case 47: // '/'
-                    $("#search").focus();
+                    $("#header-search").focus();return false;
+                    break;
+                case 63: // ?
+                    $("#header-search").focus();return false;
                     break;
                 case 72: // H
-                    window.location.href = '<!--{$smarty.const.TOP_URL}-->';
+                    pageTop();
+                    // window.location.href = '<!--{$smarty.const.TOP_URL}-->';
+                    break;
+                case 76: // L
+                    break;
+                default:
                     break;
             };
         });
