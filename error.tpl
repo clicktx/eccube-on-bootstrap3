@@ -33,7 +33,7 @@
                 <div class="col-sm-10 col-sm-push-1 col-md-4 col-md-push-4">
                     <div class="btn_area">
                         <!--{if $return_top}-->
-                            <a href="<!--{$smarty.const.TOP_URL}-->"><img class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_toppage.jpg" alt="トップページへ" /></a>
+                            <a href="<!--{$smarty.const.TOP_URL}-->" class="btn btn-default btn-block">トップページへ</a>
                         <!--{else}-->
                             <a href="javascript:history.back()" class="btn btn-default btn-block">戻る</a>
                         <!--{/if}-->
