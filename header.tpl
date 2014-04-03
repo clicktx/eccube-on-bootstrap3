@@ -53,16 +53,12 @@
                 <!--{* ▲HeaderInternal COLUMN *}-->
                 </div>
                 <div id="header_navi" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">about</a></li>
-                    </ul>
-                    <form class="navbar-form hidden-xs hidden-sm" role="search" name="search_form" id="header_search_form" method="get" action="<!--{$smarty.const.ROOT_URLPATH}-->
+                    <form class="navbar-form navbar-left hidden-xs hidden-sm" role="search" name="search_form" id="header_search_form" method="get" action="<!--{$smarty.const.ROOT_URLPATH}-->
                         products/list.php">
                         <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
                         <input type="hidden" name="mode" value="search" />
                         <div class="form-group">
-                          <input type="text" class="form-control" name="name" maxlength="50" value="<!--{$smarty.get.name|h}-->" placeholder="キーワードを入力">
+                          <input type="text" id="header-search" class="form-control" name="name" maxlength="50" value="<!--{$smarty.get.name|h}-->" placeholder="キーワードを入力">
                         </div>
                         <button type="submit" class="btn btn-default hidden-xs hidden-sm">検索</button>
                     </form>
@@ -112,7 +108,7 @@
                     </span>
                     <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
                     <input type="hidden" name="mode" value="search" />
-                    <input type="text" name="name" class="form-control input-clear" value="<!--{$smarty.get.name|h}-->" placeholder="キーワードを入力" />
+                    <input type="text" class="form-control input-clear" name="name" value="<!--{$smarty.get.name|h}-->" placeholder="キーワードを入力" />
                 </div>
             </form>
         </div>
