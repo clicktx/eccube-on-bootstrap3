@@ -328,6 +328,9 @@ div#undercolumn_error .message_area .error {
     #product-list-wrap .picture {
         padding: 9px;
     }
+    .dropdown-menu {
+        font-size: 16px;
+    }
 }
 @media (min-width: 992px) {
     #product-list-wrap div.list_area {
@@ -355,6 +358,9 @@ div#undercolumn_error .message_area .error {
     }
     #product-list-wrap div.caption > div.listcomment {
         display: inline-block;
+    }
+    .dropdown-menu {
+        font-size: 14px;
     }
 }
 @media (min-width: 1200px) {

@@ -57,34 +57,42 @@
                         <li><a href="#">HOME</a></li>
                         <li><a href="#">about</a></li>
                     </ul>
-
+                    <form class="navbar-form hidden-xs hidden-sm" role="search" name="search_form" id="header_search_form" method="get" action="<!--{$smarty.const.ROOT_URLPATH}-->
+                        products/list.php">
+                        <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
+                        <input type="hidden" name="mode" value="search" />
+                        <div class="form-group">
+                          <input type="text" class="form-control" name="name" maxlength="50" value="<!--{$smarty.get.name|h}-->" placeholder="キーワードを入力">
+                        </div>
+                        <button type="submit" class="btn btn-default hidden-xs hidden-sm">検索</button>
+                    </form>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="mypage dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                aaaa <br>
                                 <span class="glyphicon glyphicon-user"></span> アカウントサービス<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="dropdown-header">
-                                    ログインまたは新規登録
-                                </li>
-                                <li>
-                                    <button href="#" class="btn btn btn-danger">ログイン</button>
+                                    アカウントサービス
                                 </li>
                                 <li>
                                     <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/login.php"><span class="glyphicon glyphicon-user"></span> MYページ</a>
+                                </li>
+                                <li>
+                                    <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/login.php"><span class="fa fa-calendar"></span> 購入履歴</a>
+                                </li>
+                                <li>
+                                    <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/favorite.php"><span class="fa fa-star"></span> お気に入り</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="entry">
                             <a href="<!--{$smarty.const.ROOT_URLPATH}-->entry/kiyaku.php">
-                                bbb <br>
                                 <span class="glyphicon glyphicon-ok"></span> 会員登録
                             </a>
                         </li>
                         <li>
                             <a href="<!--{$smarty.const.CART_URL}-->">
-                                ccc <br>
                                 <span class="glyphicon glyphicon-shopping-cart"></span> カート<span class="badge bg-red" data-role="cart-total-quantity"></span>
                             </a>
                         </li>
@@ -95,7 +103,7 @@
     </div>
 
     <!-- for small mobile -->
-    <section id="mobile-nav" class="visible-xs">
+    <section id="mobile-nav" class="visible-xs visible-sm">
         <div class="container margin-bottom-lg">
             <form ame="search_form" method="get" action="<!--{$smarty.const.ROOT_URLPATH}-->products/list.php">
                 <div class="input-group">
@@ -108,8 +116,7 @@
                 </div>
             </form>
         </div>
-
-        <nav class="navbar navbar-default" role="navigation">
+        <nav class="navbar navbar-default hidden-sm" role="navigation">
           <div class="container text-center">
             <ul class="nav navbar-nav">
                 <li class="col-xs-3">
@@ -142,7 +149,5 @@
         </nav>
     </section>
     <!-- for small mobile -->
-
-
 <!--{/strip}-->
 <!--▲HEADER-->
