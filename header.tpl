@@ -65,9 +65,25 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="mypage dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <span class="glyphicon glyphicon-user"></span> アカウントサービス<span class="caret"></span>
+                                こんにちは
+                                <!--{if $smarty.session.customer.customer_id}-->
+                                、<!--{$smarty.session.customer.name01}--><!--{$smarty.session.customer.name02}-->さん
+                                <!--{else}-->
+                                。ログイン
+                                <!--{/if}-->
+                                <br />
+                                <span class="text-size-md">
+                                    <span class="glyphicon glyphicon-user"></span> アカウントサービス<span class="caret"></span>
+                                </span>
                             </a>
                             <ul class="dropdown-menu">
+                                <!--{if !$smarty.session.customer.customer_id}-->
+                                <li class="dropdown-header">
+                                    <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/login.php" class="btn btn-default">ログイン</a>
+                                    <span>はじめてのご利用ですか？<a href="<!--{$smarty.const.ROOT_URLPATH}-->entry/kiyaku.php">新規登録はこちら</a></span>
+                                </li>
+                                <li class="divider"></li>
+                                <!--{/if}-->
                                 <li class="dropdown-header">
                                     アカウントサービス
                                 </li>
@@ -80,16 +96,36 @@
                                 <li>
                                     <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/favorite.php"><span class="fa fa-star"></span> お気に入り</a>
                                 </li>
+                                <li class="divider"></li>
+                                <!--{if $smarty.session.customer.customer_id}-->
+                                <li class="dropdown-header">
+                                    <!--{$smarty.session.customer.name01}--><!--{$smarty.session.customer.name02}-->さんではありませんか？
+                                </li>
+                                <li>
+                                    <a href="<!--{$smarty.const.HTTPS_URL}-->frontparts/login_check.php?mode=logout"><span class="glyphicon glyphicon-log-out"></span> ログアウト</a>
+                                </li>
+                                <!--{else}-->
+                                <li>
+                                    <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/login.php"><span class="glyphicon glyphicon-log-in"></span> ログイン</a>
+                                </li>
+                                <!--{/if}-->
                             </ul>
                         </li>
-                        <li class="entry">
+                        <li class="entry hidden-xs hidden-sm">
                             <a href="<!--{$smarty.const.ROOT_URLPATH}-->entry/kiyaku.php">
-                                <span class="glyphicon glyphicon-ok"></span> 会員登録
+                                <br />
+                                <span class="text-size-md">
+                                    <span class="glyphicon glyphicon-ok"></span> 会員登録
+                                </span>
+
                             </a>
                         </li>
-                        <li>
+                        <li class="hidden-xs">
                             <a href="<!--{$smarty.const.CART_URL}-->">
-                                <span class="glyphicon glyphicon-shopping-cart"></span> カート<span class="badge bg-red" data-role="cart-total-quantity"></span>
+                                <br />
+                                <span class="text-size-md">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span> カート<span class="badge bg-red" data-role="cart-total-quantity"></span>
+                                </span>
                             </a>
                         </li>
                     </ul>

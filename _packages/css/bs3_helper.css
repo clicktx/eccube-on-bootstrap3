@@ -2,12 +2,14 @@
 
 /* フォント
 ----------------------------------------------- */
-/*.smallは標準*/
 .text-size-xs {
     font-size: 50% !important;
 }
 .text-size-sm {
     font-size: 80% !important;
+}
+.text-size-md {
+    font-size: 120% !important;
 }
 .text-size-lg {
     font-size: 150% !important;
