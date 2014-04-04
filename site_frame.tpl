@@ -104,7 +104,7 @@
         var activeElementNo = -1;
         var activeFunction = function(n){ $(elementsArray[n]).focus(); }
         $(document).keypress(function(e){
-            if (document.activeElement.type == 'text'){ return }
+            if ( $("input:focus").length ){ return }
             switch (e.keyCode){
                 case 106: // j
                     if ((elementsArray.length -1) > activeElementNo){ activeFunction(++activeElementNo) }
