@@ -21,26 +21,7 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 *}-->
-<!--{if $arrErr}-->
-<script>
-    $(function(){
-        var formErrors = $(".has-error input, .has-error select, .has-error textarea");
-        $(formErrors[0]).focus();        
-        //for iOS
-        $('#my-alert').on('click', function(){
-            $(formErrors[0]).focus();
-        });
-    });
-</script>
-<div id="my-alert" class="alert alert-danger fade in hidden-md hidden-lg">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-    <h4>入力項目に誤りが有ります</h4>
-    <p>該当箇所を修正して下さい。</p>
-    <p>
-        <button type="button" class="btn btn-danger btn-block">エラー項目へ移動</button>
-    </p>
-</div>
-<!--{/if}-->
+
 <!--{strip}-->
             <!--{assign var=errCnt value=0}-->
             <div class="form-group">
@@ -87,7 +68,7 @@
                     会社名
                 </label>
                 <div class="col-sm-9<!--{if $arrErr[$key1]}--> has-error<!--{/if}-->">
-                    <input type="text" id="<!--{$key1}-->" class="box300 form-control" name="<!--{$key1}-->" value="<!--{$arrForm[$key1].value|h}-->" maxlength="<!--{$arrForm[$key1].length}-->" style="<!--{$arrErr[$key1]|sfGetErrorColor}-->; ime-mode: active;" placeholder="会社名　部署" />
+                    <input type="text" id="<!--{$key1}-->" class="box300 form-control" name="<!--{$key1}-->" value="<!--{$arrForm[$key1].value|h}-->" maxlength="<!--{$arrForm[$key1].length}-->" style="<!--{$arrErr[$key1]|sfGetErrorColor}-->; ime-mode: active;" placeholder="会社名　部署名" />
                     <span class="attention"><!--{$arrErr[$key1]}--></span>
                 </div>
             </div>
@@ -338,7 +319,7 @@
                         <div class="col-md-7<!--{if $arrErr[$key1]}--> has-error<!--{/if}-->">
                             <div class="form-group">
                                 <div class="col-xs-4 col-sm-4 padding-right-xs<!--{if $arrErr[$key1]}--> has-error<!--{/if}-->">
-                                    <select class="form-control" name="<!--{$key1}-->" style="<!--{$errBirth|sfGetErrorColor}-->">
+                                    <select id="<!--{$key1}-->" class="form-control" name="<!--{$key1}-->" style="<!--{$errBirth|sfGetErrorColor}-->">
                                     <!--{html_options options=$arrYear selected=$arrForm[$key1].value|default:''}-->
                                     </select>
                                 </div>
@@ -393,7 +374,7 @@
                 <div class="col-sm-9">
                     <div class="form-group">
                         <div class="col-md-7<!--{if $arrErr[$key1]}--> has-error<!--{/if}-->">
-                            <select class="form-control" name="<!--{$key1}-->" style="<!--{$arrErr[$key1]|sfGetErrorColor}-->">
+                            <select id="<!--{$key1}-->" class="form-control" name="<!--{$key1}-->" style="<!--{$arrErr[$key1]|sfGetErrorColor}-->">
                                 <option value="" selected="selected">質問を選択してください</option>
                                 <!--{html_options options=$arrReminder selected=$arrForm[$key1].value}-->
                             </select>
@@ -434,3 +415,29 @@
         <!--{/if}-->
     <!--{/if}-->
 <!--{/strip}-->
+
+<!--{if $arrErr && $flgFields != 2}-->
+<script>
+    $(function(){
+        var formErrors = $(".has-error input, .has-error select, .has-error textarea");
+        $(formErrors[0]).focus();
+        //for iOS
+        $('.form-error-alert').on('click', function(){
+            $(formErrors[0]).focus();
+            $(".form-error-alert").alert('close');
+        });
+        $("input, select, textarea").click(function(){
+            console.log("form:focus");
+            $(".form-error-alert").alert('close');
+        });
+    });
+</script>
+<div class="form-error-alert alert alert-danger fade in hidden-md hidden-lg">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <h4>入力項目に誤りが有ります</h4>
+    <p>該当箇所を修正して下さい。</p>
+    <p>
+        <button type="button" class="btn btn-danger btn-block">エラー項目へ移動</button>
+    </p>
+</div>
+<!--{/if}-->
