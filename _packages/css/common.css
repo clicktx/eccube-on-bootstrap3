@@ -38,7 +38,7 @@
     width: 980px;
     background: #fff;
     text-align: left;*/
-    min-height: 600px;
+    min-height: 700px; /*offcanvas対策 カテゴリ数が増えると増やさなくてはいけない？*/
 }
 
 
