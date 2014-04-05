@@ -36,7 +36,10 @@
 <!--CONTENTS-->
 <div id="undercolumn">
     <div id="undercolumn_shopping">
-        <p class="flow_area"><img src="<!--{$TPL_URLPATH}-->img/picture/img_flow_03.jpg" alt="購入手続きの流れ" /></p>
+        <p class="flow_area">
+            <!--{include file="`$smarty.const.TEMPLATE_REALDIR`shopping/process/step3.tpl"}-->
+            <img src="<!--{$TPL_URLPATH}-->img/picture/img_flow_03.jpg" alt="購入手続きの流れ" />
+        </p>
         <h2 class="title"><!--{$tpl_title|h}--></h2>
 
         <p class="information">下記ご注文内容で送信してもよろしいでしょうか？<br />

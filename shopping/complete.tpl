@@ -23,6 +23,7 @@
 <div id="undercolumn">
     <div id="undercolumn_shopping">
         <p class="flow_area">
+            <!--{include file="`$smarty.const.TEMPLATE_REALDIR`shopping/process/step4.tpl"}-->
             <img src="<!--{$TPL_URLPATH}-->img/picture/img_flow_04.jpg" alt="購入手続きの流れ" />
         </p>
         <h2 class="title"><!--{$tpl_title|h}--></h2>
