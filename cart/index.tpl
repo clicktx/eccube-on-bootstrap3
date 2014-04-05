@@ -159,19 +159,26 @@
                         </div><!--{* list-group *}-->
 
                         <div class="panel-footer">
+                            <div class="row">
+                                <div class="col-md-3 hidden-xs hidden-sm">
+                                    <!--{if $tpl_prev_url != ""}-->
+                                        <a href="<!--{$tpl_prev_url|h}-->" class="btn btn-default btn-block">お買い物を続ける</a>
+                                    <!--{/if}-->
+                                </div>
                             <!--{if strlen($tpl_error) == 0}-->
-                                <div class="row">
-                                    <div class="btn_area col-md-6 col-md-push-3">
-                                        <button class="btn btn-success btn-block btn-lg" name="confirm">ご購入手続きへ</button>
-                                    </div>
+                                <div class="btn_area col-md-4 col-md-push-5">
+                                    <button class="btn btn-success btn-block" name="confirm">ご購入手続きへ</button>
                                 </div>
                             <!--{/if}-->
+                            </div>
                         </div><!--{*panel-footer*}-->
                     </div>
                 </form>
             <!--{/foreach}-->
             <!--{if $tpl_prev_url != ""}-->
+            <div class="hidden-md hidden-lg">
                 <a href="<!--{$tpl_prev_url|h}-->" class="btn btn-default btn-block">お買い物を続ける</a>
+            </div>
             <!--{/if}-->
         <!--{else}-->
             <p class="empty alert alert-warning">※ 現在カート内に商品はございません。</p>
