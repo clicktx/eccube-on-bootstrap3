@@ -23,7 +23,7 @@
 <div id="undercolumn">
     <div id="undercolumn_entry">
         <h2 class="title"><!--{$tpl_title|h}--></h2>
-        <div class="col-sm-12">
+        <div class="col-sm-12 margin-bottom-lg">
             <p class="message alert alert-warning">【重要】 会員登録をされる前に、下記ご利用規約をよくお読みください。</p>
             <p class="margin-bottom-xl">規約には、本サービスを使用するに当たってのあなたの権利と義務が規定されております。<br />
                 「同意して会員登録へ」ボタンをクリックすると、あなたが本規約の全ての条件に同意したことになります。
@@ -35,9 +35,15 @@
 
         <form name="form1" id="form1" method="post" action="?">
             <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
-            <div class="btn_area">
-                <div class="col-sm-6 col-md-4 col-md-push-2 margin-bottom-sm"><a href="<!--{$smarty.const.TOP_URL}-->" class="btn btn-default btn-block">同意しない</a></div>
-                <div class="col-sm-6 col-md-4 col-md-push-2 margin-bottom-sm"><a href="<!--{$smarty.const.ENTRY_URL}-->" class="btn btn-success btn-block">同意して会員登録へ</a></div>
+            <div class="btn_area padding-md">
+                <div class="jumbotron padding-md col-sm-12">
+                    <div class="col-sm-6 margin-bottom-sm">
+                        <a href="<!--{$smarty.const.TOP_URL}-->" class="btn btn-default btn-block">同意しない</a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="<!--{$smarty.const.ENTRY_URL}-->" class="btn btn-success btn-block">同意して会員登録へ</a>
+                    </div>
+                </div>
             </div>
         </form>
     </div>
