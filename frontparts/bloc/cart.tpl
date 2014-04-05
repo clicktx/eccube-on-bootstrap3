@@ -46,7 +46,7 @@
                     <!--{if $arrCartList.0.TotalQuantity > 0 and $arrCartList.0.free_rule > 0 and !$isMultiple and !$hasDownload}-->
                     <p class="postage">
                         <!--{if $arrCartList.0.deliv_free > 0}-->
-                            <span class="fa-stack fa-sm">
+                            <span class="fa-stack">
                               <i class="fa fa-circle fa-stack-2x orange"></i>
                               <i class="fa fa-jpy fa-stack-1x fa-inverse"></i>
                             </span>
