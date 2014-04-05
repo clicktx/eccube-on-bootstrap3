@@ -31,7 +31,7 @@
             <input type="hidden" name="url" value="<!--{$smarty.server.REQUEST_URI|h}-->" />
             <div class="row">
                 <div class="login_area col-md-6">
-                    <h3><span class="fa fa-arrow-circle-right"></span> 会員登録がお済みのお客様</h3>
+                    <h3><span class="fa fa-arrow-circle-right"></span> アカウントをお持ちの方</h3>
                     <p class="inputtext margin-bottom-lg">
                         会員の方は、登録時に入力されたメールアドレスとパスワードでログインしてください。
                     </p>
@@ -42,6 +42,9 @@
                         <!--{assign var=key2 value="login_pass"}-->
                         <input type="password" class="box300 form-control" name="<!--{$key2}-->" maxlength="<!--{$arrForm[$key2].length}-->" style="<!--{$arrErr[$key2]|sfGetErrorColor}-->" required="" placeholder="パスワード" />
                         <span class="attention"><!--{$arrErr[$key1]}--><!--{$arrErr[$key2]}--></span>
+                        <small>
+                            <a href="<!--{$smarty.const.HTTPS_URL}-->forgot/<!--{$smarty.const.DIR_INDEX_PATH}-->" onclick="eccube.openWindow('<!--{$smarty.const.HTTPS_URL}-->forgot/<!--{$smarty.const.DIR_INDEX_PATH}-->','forget','600','460',{scrollbars:'no',resizable:'no'}); return false;" target="_blank"><span class="fa fa-question-circle"></span>パスワードを忘れた方はこちら</a>
+                        </small>
 
                         <!--{assign var=key value="login_memory"}-->
                         <label class="checkbox">
@@ -50,12 +53,13 @@
                         <button class="btn btn-lg btn-primary btn-block" type="submit">ログイン</button>
                     </div>
                     <div class="alert alert-warning margin-bottom-xl">
-                        <p>※パスワードを忘れた方は<a href="<!--{$smarty.const.HTTPS_URL}-->forgot/<!--{$smarty.const.DIR_INDEX_PATH}-->" onclick="eccube.openWindow('<!--{$smarty.const.HTTPS_URL}-->forgot/<!--{$smarty.const.DIR_INDEX_PATH}-->','forget','600','460',{scrollbars:'no',resizable:'no'}); return false;" target="_blank">こちら</a>からパスワードの再発行を行ってください。</p>
-                        <p>※メールアドレスを忘れた方は、お手数ですが、<a href="<!--{$smarty.const.ROOT_URLPATH}-->contact/<!--{$smarty.const.DIR_INDEX_PATH}-->">お問い合わせページ</a>からお問い合わせください。</p>
+                        <p>
+                            ※メールアドレスを忘れた方は、お手数ですが、<a href="<!--{$smarty.const.ROOT_URLPATH}-->contact/<!--{$smarty.const.DIR_INDEX_PATH}-->">お問い合わせページ</a>からお問い合わせください。
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h3><span class="fa fa-arrow-circle-right"></span> まだ会員登録されていないお客様</h3>
+                    <h3><span class="fa fa-arrow-circle-right"></span> アカウントの作成</h3>
                     <div class="inputtext margin-bottom-xl">
                         <p>会員登録をすると便利なMyページをご利用いただけます。</p>
                         <p>また、ログインするだけで、毎回お名前や住所などを入力することなくスムーズにお買い物をお楽しみいただけます。</p>
