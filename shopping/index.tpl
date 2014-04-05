@@ -29,7 +29,7 @@
                     <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
                     <input type="hidden" name="mode" value="login" />
 
-                    <h3><span class="fa fa-arrow-circle-right"></span> 会員登録がお済みのお客様</h3>
+                    <h3><span class="fa fa-arrow-circle-right"></span> アカウントをお持ちの方</h3>
                     <p class="inputtext margin-bottom-lg">
                         会員の方は、登録時に入力されたメールアドレスとパスワードでログインしてください。
                     </p>
@@ -55,31 +55,30 @@
             </div>
 
             <div class="login_area col-md-6">
-                <h3><span class="fa fa-arrow-circle-right"></span> まだ会員登録されていないお客様</h3>
-                <h4>会員登録をする</h4>
+                <h3><span class="fa fa-arrow-circle-right"></span> ゲスト購入</h3>
+                <p class="inputtext">アカウントをお持ちでない方はこちらからお進みください。アカウントを作成せずにご注文いただくことができます。</p>
+                <form name="member_form2" id="member_form2" method="post" action="?">
+                    <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
+                    <input type="hidden" name="mode" value="nonmember" />
+                    <div class="inputbox">
+                        <div class="jumbotron padding-md">
+                            <button id="buystep" class="btn btn-lg btn-primary btn-block" name="buystep">
+                                ゲスト購入手続きへ
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <h3><span class="fa fa-arrow-circle-right"></span> 会員登録後にご購入</h3>
                 <p class="inputtext">会員登録をすると便利なMyページをご利用いただけます。<br />
                     また、ログインするだけで、毎回お名前や住所などを入力することなくスムーズにお買い物をお楽しみいただけます。
                 </p>
                 <div class="inputbox">
                     <div class="jumbotron padding-md">
                         <a href="<!--{$smarty.const.ROOT_URLPATH}-->entry/kiyaku.php" class="btn btn-lg btn-danger btn-block">
-                            会員登録後にご購入
+                            会員登録画面へ
                         </a>
                     </div>
                 </div>
-                <h4>会員登録をせずに購入手続きへ進む</h4>
-                <p class="inputtext">会員登録をせずに購入手続きをされたい方は、下記よりお進みください。</p>
-                <form name="member_form2" id="member_form2" method="post" action="?">
-                    <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
-                    <input type="hidden" name="mode" value="nonmember" />
-                    <div class="inputbox">
-                        <div class="jumbotron padding-md">
-                            <button id="buystep" class="btn btn-lg btn-success btn-block" name="buystep">
-                                ご購入手続きへ
-                            </button>
-                        </div>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
