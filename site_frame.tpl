@@ -93,7 +93,11 @@
         var pageTop = function(){
             $((navigator.userAgent.indexOf("Opera") != -1) ? document.compatMode == 'BackCompat' ? 'body' : 'html' :'html,body').animate({scrollTop:0}, 'slow');
             return false;
-        }
+        };
+        var pageBottom = function(){
+            $((navigator.userAgent.indexOf("Opera") != -1) ? document.compatMode == 'BackCompat' ? 'body' : 'html' :'html,body').animate({scrollTop: $(document).height()-$(window).height()}, 'slow');
+            return false;
+        };
         $("a[href^=#top]").click(pageTop);
 
         // jkhl
@@ -118,16 +122,19 @@
                 case 108: // l
                     history.forward();
                     break;
+                case 72: // H
+                    activeFunction(activeElementNo=0);
+                    break;
                 case 48: // 0
                     activeFunction(activeElementNo=0);
                     break;
                 case 94: // ^
                     activeFunction(activeElementNo=0);
                     break;
-                case 36: // $
+                case 76: // L
                     activeFunction(activeElementNo=(elementsArray.length -1));
                     break;
-                case 71: // G
+                case 36: // $
                     activeFunction(activeElementNo=(elementsArray.length -1));
                     break;
                 case 47: // '/'
@@ -136,11 +143,14 @@
                 case 63: // ?
                     $("#header-search").focus();return false;
                     break;
-                case 72: // H
+                case 103: // g
                     pageTop();
-                    // window.location.href = '<!--{$smarty.const.TOP_URL}-->';
                     break;
-                case 76: // L
+                case 71: // G
+                    pageBottom();
+                    break;
+                case 45: // -
+                    window.location.href = '<!--{$smarty.const.TOP_URL}-->';
                     break;
                 default:
                     break;
