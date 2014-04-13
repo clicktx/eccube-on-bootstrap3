@@ -45,10 +45,8 @@
 <!--{/if}-->
 <link rel="shortcut icon" href="<!--{$TPL_URLPATH}-->img/common/favicon.ico" />
 <link rel="icon" type="image/vnd.microsoft.icon" href="<!--{$TPL_URLPATH}-->img/common/favicon.ico" />
-<link rel="stylesheet" href="<!--{$smarty.const.ROOT_URLPATH}-->js/jquery.colorbox/colorbox.css" type="text/css" media="all" />
-<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/import.css" type="text/css" media="all" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="<!--{$smarty.const.HTTP_URL}-->rss/<!--{$smarty.const.DIR_INDEX_PATH}-->" />
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="<!--{$TPL_URLPATH}-->/js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="<!--{$smarty.const.ROOT_URLPATH}-->js/eccube.js"></script>
 <!-- #2342 次期メジャーバージョン(2.14)にてeccube.legacy.jsは削除予定.モジュール、プラグインの互換性を考慮して2.13では残します. -->
 <script type="text/javascript" src="<!--{$smarty.const.ROOT_URLPATH}-->js/eccube.legacy.js"></script>
@@ -62,7 +60,10 @@
 <!--{/if}-->
 
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->/bootstrap/3.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->/bootstrap/3.1.0/css/bootstrap.min.css" />
+<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->/css/font-awesome.css" />
+<link rel="stylesheet" href="<!--{$smarty.const.ROOT_URLPATH}-->js/jquery.colorbox/colorbox.css" type="text/css" media="all" />
+<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/import.css" type="text/css" media="all" />
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -72,12 +73,89 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-<script src="<!--{$TPL_URLPATH}-->/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="<!--{$TPL_URLPATH}-->bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="<!--{$TPL_URLPATH}-->js/jquery.plugin.js"></script>
 
 <script type="text/javascript">//<![CDATA[
     <!--{$tpl_javascript}-->
     $(function(){
         <!--{$tpl_onload}-->
+        // off canvas button
+        $('[data-toggle=offcanvas]').click(function() {
+            $('.row-offcanvas').toggleClass('active');
+            return false;
+        });
+        // input clear
+        $(".input-clear").inputClear();
+        // tooltip
+        $('[data-toggle=tooltip]').tooltip();
+        // pagetop
+        var pageTop = function(){
+            $((navigator.userAgent.indexOf("Opera") != -1) ? document.compatMode == 'BackCompat' ? 'body' : 'html' :'html,body').animate({scrollTop:0}, 'slow');
+            return false;
+        };
+        var pageBottom = function(){
+            $((navigator.userAgent.indexOf("Opera") != -1) ? document.compatMode == 'BackCompat' ? 'body' : 'html' :'html,body').animate({scrollTop: $(document).height()-$(window).height()}, 'slow');
+            return false;
+        };
+        $("a[href^=#top]").click(pageTop);
+
+        // jkhl
+        var elementsArray = $("#product-list-wrap div a, #detailarea a, #detailarea select");
+        if (elementsArray.length == 0){
+            elementsArray = $("#category_area a:visible");
+        }
+        var activeElementNo = -1;
+        var activeFunction = function(n){ $(elementsArray[n]).focus(); }
+        $(document).keypress(function(e){
+            if ( $("input:focus").length ){ return }
+            switch (e.keyCode){
+                case 106: // j
+                    if ((elementsArray.length -1) > activeElementNo){ activeFunction(++activeElementNo) }
+                    break;
+                case 107: // k
+                    if (activeElementNo > 0){ activeFunction(--activeElementNo) }
+                    break;
+                case 104: // h
+                    history.back();
+                    break;
+                case 108: // l
+                    history.forward();
+                    break;
+                case 72: // H
+                    activeFunction(activeElementNo=0);
+                    break;
+                case 48: // 0
+                    activeFunction(activeElementNo=0);
+                    break;
+                case 94: // ^
+                    activeFunction(activeElementNo=0);
+                    break;
+                case 76: // L
+                    activeFunction(activeElementNo=(elementsArray.length -1));
+                    break;
+                case 36: // $
+                    activeFunction(activeElementNo=(elementsArray.length -1));
+                    break;
+                case 47: // '/'
+                    $("#header-search").focus();return false;
+                    break;
+                case 63: // ?
+                    $("#header-search").focus();return false;
+                    break;
+                case 103: // g
+                    pageTop();
+                    break;
+                case 71: // G
+                    pageBottom();
+                    break;
+                case 45: // -
+                    window.location.href = '<!--{$smarty.const.TOP_URL}-->';
+                    break;
+                default:
+                    break;
+            };
+        });
     });
 //]]></script>
 

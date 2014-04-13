@@ -24,10 +24,14 @@
     <div id="undercolumn_entry">
         <h2 class="title"><!--{$tpl_title|h}--></h2>
         <!--{if $smarty.const.CUSTOMER_CONFIRM_MAIL}-->
-            <p>ご登録されますと、まずは仮会員となります。<br />
+            <p class="alert alert-warning">ご登録されますと、まずは仮会員となります。<br />
                 入力されたメールアドレスに、ご連絡が届きますので、本会員になった上でお買い物をお楽しみください。</p>
         <!--{/if}-->
-        <form name="form1" id="form1" method="post" action="?">
+        <div class="alert alert-info fade in">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <strong>必須項目</strong> 「<span class="attention">※</span>」印は入力必須項目です。
+        </div>
+        <form name="form1" id="form1" class="form-horizontal" method="post" action="?">
             <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
             <input type="hidden" name="mode" value="confirm" />
 
@@ -35,12 +39,10 @@
             <!--{include file="`$smarty.const.TEMPLATE_REALDIR`frontparts/form_personal_input.tpl" flgFields=3 emailMobile=false prefix=""}-->
             </table>
 
-            <div class="btn_area">
-                <ul>
-                    <li>
-                        <input type="image" class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_confirm.jpg" alt="確認ページへ" name="confirm" id="confirm" />
-                    </li>
-                </ul>
+            <div class="btn_area form-group">
+                <div class="col-sm-12 col-md-4 col-md-push-2">
+                    <button id="next" class="btn btn-success btn-block">確認ページヘ</button>
+                </div>
             </div>
 
         </form>

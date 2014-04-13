@@ -1,0 +1,245 @@
+@charset 'utf-8';
+
+/* フォント
+----------------------------------------------- */
+.text-size-xs {
+    font-size: 50% !important;
+}
+.text-size-sm {
+    font-size: 80% !important;
+}
+.text-size-md {
+    font-size: 120% !important;
+}
+.text-size-lg {
+    font-size: 150% !important;
+}
+.text-size-xl {
+    font-size: 200% !important;
+}
+
+/* ブロック要素マージン
+----------------------------------------------- */
+.margin-none {
+    margin: 0 !important;
+}
+.margin-xs {
+  margin: 5px !important;
+}
+.margin-sm {
+  margin: 10px !important;
+}
+.margin-md {
+  margin: 15px !important;
+}
+.margin-lg {
+  margin: 20px !important;
+}
+.margin-xl {
+  margin: 40px !important;
+}
+.margin-top-none {
+    margin-top: 0 !important;
+}
+.margin-top-xs {
+    margin-top: 5px !important;
+}
+.margin-top-sm {
+    margin-top: 10px !important;
+}
+.margin-top-md {
+    margin-top: 15px !important;
+}
+.margin-top-lg {
+    margin-top: 20px !important;
+}
+.margin-top-xl {
+    margin-top: 40px !important;
+}
+.margin-bottom-none {
+    margin-bottom: 0 !important;
+}
+.margin-bottom-xs {
+    margin-bottom: 5px !important;
+}
+.margin-bottom-sm {
+    margin-bottom: 10px !important;
+}
+.margin-bottom-md {
+    margin-bottom: 15px !important;
+}
+.margin-bottom-lg {
+    margin-bottom: 20px !important;
+}
+.margin-bottom-xl {
+    margin-bottom: 40px !important;
+}
+.margin-left-none {
+    margin-left: 0 !important;
+}
+.margin-left-xs {
+    margin-left: 5px !important;
+}
+.margin-left-sm {
+    margin-left: 10px !important;
+}
+.margin-left-md {
+    margin-left: 15px !important;
+}
+.margin-left-lg {
+    margin-left: 20px !important;
+}
+.margin-left-xl {
+    margin-left: 40px !important;
+}
+.margin-right-none {
+    margin-right: 0 !important;
+}
+.margin-right-xs {
+    margin-right: 5px !important;
+}
+.margin-right-sm {
+    margin-right: 10px !important;
+}
+.margin-right-md {
+    margin-right: 15px !important;
+}
+.margin-right-lg {
+    margin-right: 20px !important;
+}
+.margin-right-xl {
+    margin-right: 40px !important;
+}
+.padding-none {
+  padding: 0 !important;
+}
+.padding-xs {
+  padding: 5px !important;
+}
+.padding-sm {
+  padding: 10px !important;
+}
+.padding-md {
+  padding: 15px !important;
+}
+.padding-lg {
+  padding: 20px !important;
+}
+.padding-xl {
+  padding: 40px !important;
+}
+.padding-top-none {
+  padding-top: 0 !important;
+}
+.padding-top-xs {
+  padding-top: 5px !important;
+}
+.padding-top-sm {
+  padding-top: 10px !important;
+}
+.padding-top-md {
+  padding-top: 15px !important;
+}
+.padding-top-lg {
+  padding-top: 20px !important;
+}
+.padding-top-xl {
+  padding-top: 40px !important;
+}
+.padding-bottom-none {
+  padding-bottom: 0 !important;
+}
+.padding-bottom-xs {
+  padding-bottom: 5px !important;
+}
+.padding-bottom-sm {
+  padding-bottom: 10px !important;
+}
+.padding-bottom-md {
+  padding-bottom: 15px !important;
+}
+.padding-bottom-lg {
+  padding-bottom: 20px !important;
+}
+.padding-bottom-xl {
+  padding-bottom: 40px !important;
+}
+.padding-left-none {
+  padding-left: 0 !important;
+}
+.padding-left-xs {
+  padding-left: 5px !important;
+}
+.padding-left-sm {
+  padding-left: 10px !important;
+}
+.padding-left-md {
+  padding-left: 15px !important;
+}
+.padding-left-lg {
+  padding-left: 20px !important;
+}
+.padding-left-xl {
+  padding-left: 40px !important;
+}
+.padding-right-none {
+  padding-right: 0 !important;
+}
+.padding-right-xs {
+  padding-right: 5px !important;
+}
+.padding-right-sm {
+  padding-right: 10px !important;
+}
+.padding-right-md {
+  padding-right: 15px !important;
+}
+.padding-right-lg {
+  padding-right: 20px !important;
+}
+.padding-right-xl {
+  padding-right: 40px !important;
+}
+/* カラー
+----------------------------------------------- */
+.white {
+    color: #ffffff;
+}
+.light-yellow {
+    color: #fcf8e3;
+}
+.yellow {
+    color: #e7bf40;
+}
+.orange {
+    color: #f0ad4e;
+}
+.red {
+    color: #d44950;
+}
+.blue {
+    color: #2f6f9f;
+}
+.light-blue {
+    color: #4f9fcf;
+}
+.light-gray {
+    color: lightgray;
+}
+/* バックグラウンドカラー
+----------------------------------------------- */
+.bg-red {
+    background-color: #d44950;
+}
+
+/************************************************
+ for Font Awesome
+************************************************ */
+.fa-rotate-45 {
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.707,M12=0.707,M21=-0.707,M22=0.707,Dx=-2,Dy=8);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}

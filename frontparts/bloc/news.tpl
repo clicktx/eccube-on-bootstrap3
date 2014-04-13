@@ -23,24 +23,43 @@
 <!--{strip}-->
     <div class="block_outer">
         <div id="news_area">
-            <h2><img src="<!--{$TPL_URLPATH}-->img/title/tit_bloc_news.png" alt="新着情報" /><span class="rss"><a href="<!--{$smarty.const.ROOT_URLPATH}-->rss/<!--{$smarty.const.DIR_INDEX_PATH}-->" target="_blank"><img src="<!--{$TPL_URLPATH}-->img/button/btn_rss.jpg" alt="RSS" /></a></span></h2>
+            <div class="page-header">
+                <h2>
+                    新着情報
+                    <div class="pull-right">
+                        <a href="<!--{$smarty.const.ROOT_URLPATH}-->rss/<!--{$smarty.const.DIR_INDEX_PATH}-->" class="btn btn-xs btn-warning"><span class="fa fa-rss"></span> RSS</a>
+                    </div>
+                </h2>
+            </div>
             <div class="block_body">
-                <div class="news_contents">
+                <div class="panel-group" id="news-area-accordion">
+                    <div class="panel panel-default">
                 <!--{section name=data loop=$arrNews}-->
                 <!--{assign var="date_array" value="-"|explode:$arrNews[data].cast_news_date}-->
-                <dl class="newslist">
-                    <dt><!--{$date_array[0]}-->年<!--{$date_array[1]}-->月<!--{$date_array[2]}-->日</dt>
-                    <dt>
-                        <a
-                            <!--{if $arrNews[data].news_url}--> href="<!--{$arrNews[data].news_url}-->" <!--{if $arrNews[data].link_method eq "2"}--> target="_blank"
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <small class="show margin-bottom-sm"><!--{$date_array[0]}-->年<!--{$date_array[1]}-->月<!--{$date_array[2]}-->日</small>
+                                <a href="#news-collapse<!--{$smarty.section.data.index}-->" data-toggle="collapse" data-parent="#news-area-accordion">
+                                    <!--{$arrNews[data].news_title|h|nl2br}-->
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="news-collapse<!--{$smarty.section.data.index}-->" class="panel-collapse collapse <!--{if $smarty.section.data.index == 0}-->in<!--{/if}-->">
+                            <div class="panel-body">
+                                <p>
+                                    <!--{$arrNews[data].news_comment|h|nl2br}-->
+                                </p>
+                                <!--{if $arrNews[data].news_url}-->
+                                <p>
+                                    <a href="<!--{$arrNews[data].news_url}-->"<!--{if $arrNews[data].link_method eq "2"}--> target="_blank"<!--{/if}-->
+                                    >詳しくはこちら<!--{if $arrNews[data].link_method eq "2"}--><span class="glyphicon glyphicon-new-window"></span><!--{/if}--></a>
+
+                                </p>
                                 <!--{/if}-->
-                            <!--{/if}-->
-                        >
-                            <!--{$arrNews[data].news_title|h|nl2br}--></a>
-                    </dt>
-                    <dd class="mini"><!--{$arrNews[data].news_comment|h|nl2br}--></dd>
-                </dl>
+                            </div>
+                        </div>
                 <!--{/section}-->
+                    </div>
                 </div>
             </div>
         </div>

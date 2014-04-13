@@ -3,112 +3,125 @@
 /************************************************
  共通設定
 ************************************************ */
-body {
+/*body {
     color: #666;
     font-family: Verdana,Arial,Helvetica,sans-serif;
     background-color: #f5f5f5;
     font-size: 72.5%;
     line-height: 150%;
     letter-spacing: 0.1em;
-}
+}*/
 
 /* 写真 */
-img.picture {
+/*img.picture {
     border: 1px solid #ccc;
-}
+}*/
 
+/*.block {
+    margin-bottom: 20px;
+}*/
 
 /* ==============================================
  フレーム
 =============================================== */
 /* 全体を包括 */
-.frame_outer {
+/*.frame_outer {
     margin: 0 auto;
     width: 100%;
     text-align: center;
-}
+}*/
 
 /* コンテンツ */
 #container {
-    margin: 0 auto;
+/*    margin: 0 auto;
     padding: 0 0 30px;
     width: 980px;
     background: #fff;
-    text-align: left;
+    text-align: left;*/
+    min-height: 700px; /*offcanvas対策 カテゴリ数が増えると増やさなくてはいけない？*/
 }
 
 
 /* ==============================================
  カラム指定
 =============================================== */
+.col-wrap {
+    /*bs3 leftカラムとmainカラムの幅を調整する*/
+    padding-left: 0;
+    padding-right: 0;
+}
 
 /* メイン部
 ----------------------------------------------- */
+
 #main_column {
-    padding: 10px 0 0;
+    /*padding: 10px 0 0;*/
+    padding-bottom: 40px; /*bs3*/
 }
 
 /* 1カラム時 */
-#main_column.colnum1 {
+/*#main_column.colnum1 {
     margin: 0 auto;
     width: 80%;
-}
+}*/
 
 /* 2カラム時 (共通) */
-#main_column.colnum2 {
+/*#main_column.colnum2 {
     width: 78%;
-}
+}*/
 
 /* 2カラム時 (メイン部が左) */
-#main_column.colnum2.left {
+/*#main_column.colnum2.left {
     padding-left: 1.5%;
     float: left;
-}
+}*/
 
 /* 2カラム時 (メイン部が右) */
-#main_column.colnum2.right {
+/*#main_column.colnum2.right {
     padding-right: 1.5%;
     float: right;
-}
+}*/
 
 /* 3カラム時 */
-#main_column.colnum3 {
+/*#main_column.colnum3 {
     padding-left: 0.5%;
     width: 59%;
     float: left;
-}
+}*/
 
 /* サイドカラム
 ----------------------------------------------- */
-.side_column {
+/*.side_column {
     padding: 10px 0 0;
-}
+}*/
 #leftcolumn {
-    float: left;
-    width: 20%;
+/*    float: left;
+    width: 20%;*/
+    padding-bottom: 40px; /*bs3*/
 }
 #rightcolumn {
-    float: right;
-    width: 20%;
+    /*float: right;
+    width: 20%;*/
+    padding-bottom: 40px; /*bs3*/
 }
 
 /* 他
 ----------------------------------------------- */
 /* ヘッダーとフッターの上下 */
-#topcolumn,
+/*#topcolumn,
 #bottomcolumn,
 #footerbottomcolumn {
     margin: 0px;
     background: #fff;
     text-align: left;
     clear: both;
-}
+}*/
 
 /* 下層コンテンツ */
-#undercolumn {
+/*#undercolumn {
     width: 100%;
     margin: 0 0 30px 0;
-}
+}*/
 
 
 /* ==============================================
@@ -116,24 +129,24 @@ img.picture {
 =============================================== */
 /* フロート回り込み解除
 ----------------------------------------------- */
-.clearfix:after {
+/*.clearfix:after {
     display: block;
     clear: both;
     height: 0px;
     line-height: 0px;
     visibility: hidden;
     content: ".";
-}
-.clearfix {
-    display: block; /* for IE8 */
-}
-.clear {
+}*/
+/*.clearfix {*/
+    /*display: block;*/ /* for IE8 */
+/*}*/
+/*.clear {
     clear: both;
 }
-
+*/
 /* リンク指定
 ----------------------------------------------- */
-a:link,
+/*a:link,
 a:visited {
     color: #39c;
     text-decoration: none;
@@ -143,26 +156,29 @@ a[href]:hover {
     color: #f60;
     text-decoration: underline;
 }
-
+*/
 
 /* フォント
 ----------------------------------------------- */
 h1,
-h2,
-h3,
+h2 {
+    font-size: 150%;
+}
+h3 {
+    font-size: 125%;
+}
 h4,
 h5 {
     font-size: 100%;
-    line-height: 150%;
 }
 .sale_price {
-    color: #f00;
+    color: #d44950;
 }
 .normal_price {
     font-size: 90%;
 }
 .point {
-    color: #f00;
+    color: #d44950;
     font-weight: bold;
 }
 .user_name {
@@ -173,10 +189,10 @@ h5 {
 }
 
 .attention {
-    color: #f00;
+    color: #d44950;
 }
 .attentionSt {
-    color: #f00;
+    color: #d44950;
     font-weight: bold;
 }
 .st {
@@ -186,6 +202,11 @@ h5 {
     font-size: 90%;
 }
 
+/* カラー
+----------------------------------------------- */
+.price {
+    color: #d44950;
+}
 
 /* 行揃え
 ----------------------------------------------- */
@@ -205,7 +226,17 @@ h5 {
 
 /* フォーム
 ----------------------------------------------- */
-select {
+input,
+select,
+textarea {
+    font-size: 16px !important;
+}
+label.col-xs-1,
+label.col-sm-1,
+label.col-md-1 {
+    width: 1%;
+}
+/*select {
     border: solid 1px #ccc;
 }
 input[type='text'],
@@ -249,42 +280,45 @@ input[type='password'] {
 }
 .box380 {
     width: 380px;
-}
+}*/
 
 /* フォームが縦に重なり合う場合に併用する余白 */
 .top { /* FIXME 簡素な単語は、単独で、込み入った指定に使用しない */
-    margin-bottom: 5px;
+    /*margin-bottom: 5px;*/
 }
 
 
 /* タイトル
 ----------------------------------------------- */
 h2.title {
-    margin-bottom: 10px;
+/*    margin-bottom: 10px;
     padding: 8px;
     border-top: solid 1px #ebeced;
     color: #f60;
     background: url("../img/background/bg_tit_sub_01.jpg") repeat-x left bottom;
     background-color: #fef3d8;
-    font-size: 170%;
+    font-size: 170%;*/
 }
 
-#main_column .sub_area h3,
+/*#main_column .sub_area h3,
 #undercolumn_login .login_area h3,
 #undercolumn_shopping h3,
-#mypagecolumn h3,
-#undercolumn_cart h3 {
+#mypagecolumn h3 {
     margin: 0 0 10px 0;
     padding: 5px 0 10px;
     color: #f60;
     background: url("../img/background/line_01.gif") repeat-x left bottom;
     font-size: 120%;
 }
+#undercolumn_cart h3 {
+    margin: 0;
+    padding: 0;
+}
 
 div#undercolumn_login .login_area h4 {
     padding-left: 15px;
     background: url("../img/icon/ico_arrow_05.gif") no-repeat left;
-}
+}*/
 
 
 /* ==============================================
@@ -302,11 +336,11 @@ div#undercolumn_login .login_area h4 {
     width: 980px;*/
 }
 #header_utility {
-    float: right;
-    width: 580px;
+/*    float: right;
+    width: 580px;*/
 }
 #errorHeader {
-    color: #F00;
+    color: #d44950;
     font-weight: bold;
     font-size: 12px;
     background-color: #FEB;
@@ -318,58 +352,68 @@ div#undercolumn_login .login_area h4 {
 /* ロゴ
 ----------------------------------------------- */
 #logo_area {
-    padding-left: 10px;
+/*    padding-left: 10px;
     float: left;
     width: 390px;
-    text-align: left;
+    text-align: left;*/
 }
 #site_description {
-    font-size: 90%;
+    /*font-size: 90%;*/
 }
 
 
 /* ヘッダーナビ
 ----------------------------------------------- */
 div#header_navi {
-    float: right;
+/*    float: right;
     width: 409px;
-    height: 38px;
+    height: 38px;*/
 }
 div#header_navi ul li {
-    display: block;
-    float: left;
+/*    display: block;
+    float: left;*/
 }
 div#header_navi ul li.mypage,
 div#header_navi ul li.entry {
-    margin-top: 6px;
+    /*margin-top: 6px;*/
 }
 
+/*for mobile*/
+#mobile-nav .nav>li>a{
+    padding-left: 0;
+    padding-right: 0;
+}
+#mobile-nav .cart-total-quantity {
+    position: absolute;
+    top: 2%;
+    left: 55%;
+}
 
 /* ==============================================
  フッター
 =============================================== */
 #footer_wrap {
-    margin: 0 auto;
+/*    margin: 0 auto;
     width: 980px;
     height: 80px;
-    background: #fff;
+    background: #fff;*/
 }
 #footer {
-    margin: auto;
+/*    margin: auto;
     padding-top: 10px;
     border-top: solid 1px #ccc;
-    width: 950px;
+    width: 950px;*/
 }
 #pagetop {
-    width: 210px;
+/*    width: 210px;
     float: right;
-    text-align: right;
+    text-align: right;*/
 }
 #copyright {
-    width: 740px;
+/*    width: 740px;
     float: left;
     text-align: left;
-    font-size: 97%;
+    font-size: 97%;*/
 }
 
 
@@ -379,14 +423,14 @@ div#header_navi ul li.entry {
 /* ボタン
 ----------------------------------------------- */
 .btn_area {
-    margin-top: 10px;
+/*    margin-top: 10px;
     width: 100%;
-    text-align: center;
+    text-align: center;*/
 }
 
 .btn_area li {
-    padding-right: 10px;
-    display: inline;
+/*    padding-right: 10px;
+    display: inline;*/
 }
 
 
@@ -395,13 +439,13 @@ div#header_navi ul li.entry {
 div#complete_area {
     margin-bottom: 20px;
 }
-div#complete_area .message,
+/*div#complete_area .message,
 div#undercolumn_entry .message {
     margin-bottom: 20px;
     line-height: 150%;
     font-weight: bold;
     font-size: 120%;
-}
+}*/
 div#complete_area .shop_information {
     margin-top: 40px;
     padding: 20px 0 0 0;
