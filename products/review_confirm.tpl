@@ -67,7 +67,7 @@
             </table>
             <div class="btn_area margin-top-lg ">
                 <button id="back" class="btn btn-default col-xs-4 col-sm-3 margin-left-sm" onclick="mode.value='return';">戻る</button>
-                <button id="send" class="btn btn-primary col-xs-6 col-sm-3 margin-left-sm" >完了ページヘ</button>
+                <button id="send" class="btn btn-primary col-xs-6 col-sm-5 margin-left-sm">完了ページヘ</button>
             </div>
         </form>
     </div>
