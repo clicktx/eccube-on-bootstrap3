@@ -182,7 +182,7 @@
             </div>
             <div class="btn_area form-group">
                 <div class="col-sm-9 col-sm-push-3 col-md-4 col-md-push-2">
-                    <button class="btn btn-success btn-block">確認ページヘ</button>
+                    <button class="btn btn-primary btn-block">確認ページヘ</button>
                 </div>
             </div>
 

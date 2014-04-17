@@ -298,6 +298,10 @@ h2.title {
     background: url("../img/background/bg_tit_sub_01.jpg") repeat-x left bottom;
     background-color: #fef3d8;
     font-size: 170%;*/
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding: 5px 7px;
+    border-left: 5px solid #eee;
 }
 
 /*#main_column .sub_area h3,
@@ -446,7 +450,7 @@ div#undercolumn_entry .message {
     font-weight: bold;
     font-size: 120%;
 }*/
-div#complete_area .shop_information {
+/*div#complete_area .shop_information {
     margin-top: 40px;
     padding: 20px 0 0 0;
     border-top: solid 1px #ccc;
@@ -455,7 +459,7 @@ div#complete_area .shop_information .name {
     margin-bottom: 10px;
     font-weight: bold;
     font-size: 140%;
-}
+}*/
 
 
 /* Tipsy

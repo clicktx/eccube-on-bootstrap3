@@ -23,8 +23,8 @@
 <div id="undercolumn">
     <h2 class="title"><!--{$tpl_title|h}--></h2>
     <div id="undercolumn_contact">
-        <p>下記入力内容で送信してもよろしいでしょうか？<br />
-            よろしければ、一番下の「完了ページへ」ボタンをクリックしてください。</p>
+        <p class="margin-bottom-lg">下記入力内容で送信してもよろしいでしょうか？<br />
+            よろしければ、一番下の「送信する」ボタンをクリックしてください。</p>
         <form name="form1" id="form1" method="post" action="?">
             <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
             <input type="hidden" name="mode" value="complete" />
@@ -33,7 +33,7 @@
                     <input type="hidden" name="<!--{$key}-->" value="<!--{$item.value|h}-->" />
                 <!--{/if}-->
             <!--{/foreach}-->
-            <table summary="お問い合わせ内容確認">
+            <table summary="お問い合わせ内容確認" class="table margin-bottom-xl">
                 <col width="30%" />
                 <col width="70%" />
                 <tr>
@@ -74,14 +74,8 @@
                 </tr>
             </table>
             <div class="btn_area">
-                <ul>
-                    <li>
-                        <a href="?" onclick="eccube.setModeAndSubmit('return', '', ''); return false;"> <img class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_back.jpg" alt="戻る" /></a>
-                    </li>
-                    <li>
-                        <input type="image" class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_complete.jpg" alt="送信" name="send" id="send" />
-                    </li>
-                </ul>
+                <a href="?" onclick="eccube.setModeAndSubmit('return', '', ''); return false;" class="btn btn-default col-xs-4 col-sm-3 margin-left-sm">戻る</a>
+                <button class="btn btn-primary col-xs-7 col-sm-5 margin-left-sm">送信する</button>
             </div>
 
         </form>
