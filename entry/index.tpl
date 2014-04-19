@@ -41,7 +41,7 @@
 
             <div class="btn_area form-group">
                 <div class="col-sm-12 col-md-4 col-md-push-2">
-                    <button id="next" class="btn btn-success btn-block">確認ページヘ</button>
+                    <button id="next" class="btn btn-primary btn-block">確認ページヘ</button>
                 </div>
             </div>
 

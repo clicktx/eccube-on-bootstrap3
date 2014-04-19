@@ -24,23 +24,28 @@
     <div id="undercolumn_entry">
         <h2 class="title"><!--{$tpl_title|h}--></h2>
         <div id="complete_area">
-            <p class="message">本登録が完了いたしました。<br />
-                それではショッピングをお楽しみください。</p>
-
-            <p>今後ともご愛顧賜りますようよろしくお願い申し上げます。</p>
-
-            <div class="shop_information">
-                <p class="name"><!--{$arrSiteInfo.company_name|h}--></p>
-                <p>TEL：<!--{$arrSiteInfo.tel01}-->-<!--{$arrSiteInfo.tel02}-->-<!--{$arrSiteInfo.tel03}--> <!--{if $arrSiteInfo.business_hour != ""}-->（受付時間/<!--{$arrSiteInfo.business_hour}-->）<!--{/if}--><br />
-                    E-mall：<a href="mailto:<!--{$arrSiteInfo.email02|escape:'hex'}-->"><!--{$arrSiteInfo.email02|escape:'hexentity'}--></a></p>
+            <p class="message alert alert-info margin-bottom-xl">本登録が完了いたしました。</p>
+            <div class="col-sm-12 margin-bottom-lg">
+                <p>
+                    それではショッピングをお楽しみください。
+                </p>
+                <p>
+                    今後ともご愛顧賜りますよう、よろしくお願い申し上げます。
+                </p>
+                <address class="shop_information">
+                    <strong class="text-size-lg"><!--{$arrSiteInfo.company_name|h}--></strong><br />
+                    TEL：<!--{$arrSiteInfo.tel01}-->-<!--{$arrSiteInfo.tel02}-->-<!--{$arrSiteInfo.tel03}-->
+                    <!--{if $arrSiteInfo.business_hour != ""}-->
+                    (受付時間/<!--{$arrSiteInfo.business_hour}-->)
+                    <!--{/if}--><br />
+                    E-mail：<a href="mailto:<!--{$arrSiteInfo.email02|escape:'hex'}-->"><!--{$arrSiteInfo.email02|escape:'hexentity'}--></a>
+                </address>
             </div>
 
-            <div class="btn_area">
-                <ul>
-                    <li>
-                        <a href="<!--{$smarty.const.TOP_URL}-->"><img class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_toppage.jpg" alt="トップページへ" /></a>
-                    </li>
-                </ul>
+            <div class="btn_area row">
+                <div class="col-sm-12 col-md-6">
+                    <a href="<!--{$smarty.const.TOP_URL}-->" class="btn btn-default btn-block">トップページへ</a>
+                </div>
             </div>
         </div>
     </div>

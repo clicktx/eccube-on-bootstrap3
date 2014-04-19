@@ -32,21 +32,19 @@
                 <input type="hidden" name="<!--{$key|h}-->" value="<!--{$item.value|h}-->" />
             <!--{/foreach}-->
 
-            <table summary="入力内容確認">
-                <!--{include file="`$smarty.const.TEMPLATE_REALDIR`frontparts/form_personal_confirm.tpl" flgFields=3 emailMobile=false prefix=""}-->
-            </table>
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <table class="table table-bordered" summary="入力内容確認">
+                        <!--{include file="`$smarty.const.TEMPLATE_REALDIR`frontparts/form_personal_confirm.tpl" flgFields=3 emailMobile=false prefix=""}-->
+                    </table>
+                </div>
+            </div>
 
-            <div class="btn_area">
-                <ul>
-                    <li>
-                        <a href="?" onclick="eccube.setModeAndSubmit('return', '', ''); return false;">
-                            <img class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_back.jpg" alt="戻る" />
-                        </a>
-                    </li>
-                    <li>
-                        <input type="image" class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_entry.jpg" alt="会員登録をする" name="send" id="send" />
-                    </li>
-                </ul>
+            <div class="btn_area row">
+                <div class="col-sm-12">
+                    <a href="?" onclick="eccube.setModeAndSubmit('return', '', ''); return false;" class="btn btn-default col-xs-4 col-sm-3 margin-left-md">戻る</a>
+                    <button class="btn btn-primary col-xs-6 col-sm-5 margin-left-sm">会員登録をする</button>
+                </div>
             </div>
 
         </form>

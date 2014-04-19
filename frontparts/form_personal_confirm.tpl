@@ -47,7 +47,11 @@
         <th>会社名</th>
         <td>
             <!--{assign var=key1 value="`$prefix`company_name"}-->
-            <!--{$arrForm[$key1].value|h}-->
+            <!--{if $arrForm[$key1].value|h}-->
+                <!--{$arrForm[$key1].value|h}-->
+            <!--{else}-->
+                未登録
+            <!--{/if}-->
         </td>
     </tr>
     <!--{if $smarty.const.FORM_COUNTRY_ENABLE}-->
