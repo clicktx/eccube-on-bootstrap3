@@ -27,13 +27,13 @@
         <!--{if $smarty.const.USE_POINT !== false || count($arrProductsClass) > 0}-->
             <!--★ポイント案内★-->
             <!--{if $smarty.const.USE_POINT !== false}-->
-                <div class="point_announce">
+                <div class="point_announce alert alert-warning">
                     <!--{if $tpl_login}-->
                         <span class="user_name"><!--{$tpl_name|h}--> 様</span>の、現在の所持ポイントは「<span class="point"><!--{$tpl_user_point|number_format|default:0|h}--> pt</span>」です。<br />
                     <!--{else}-->
                         ポイント制度をご利用になられる場合は、会員登録後ログインしてくださいますようお願い致します。<br />
                     <!--{/if}-->
-                    ポイントは商品購入時に<span class="price">1pt＝<!--{$smarty.const.POINT_VALUE|h}-->円</span>として使用することができます。<hr />
+                    ポイントは商品購入時に<span class="price">1pt＝<!--{$smarty.const.POINT_VALUE|h}-->円</span>として使用することができます。
                 </div>
             <!--{/if}-->
         <!--{/if}-->
@@ -41,7 +41,9 @@
         <p class="totalmoney_area">
             <!--{* カートの中に商品がある場合にのみ表示 *}-->
             <!--{if count($cartKeys) > 1}-->
-                <div class="attentionSt alert alert-danger"><!--{foreach from=$cartKeys item=key name=cartKey}--><!--{$arrProductType[$key]|h}--><!--{if !$smarty.foreach.cartKey.last}-->、<!--{/if}--><!--{/foreach}-->は同時購入できません。<br />
+                <div class="alert alert-danger">
+                    <span class="fa fa-warning"></span>
+                    <!--{foreach from=$cartKeys item=key name=cartKey}--><!--{$arrProductType[$key]|h}--><!--{if !$smarty.foreach.cartKey.last}-->、<!--{/if}--><!--{/foreach}-->は同時購入できません。
                     お手数ですが、個別に購入手続きをお願い致します。
                 </div>
             <!--{/if}-->
@@ -68,7 +70,7 @@
                     <div class="form_area panel panel-default">
                         <!--{if count($cartKeys) > 1}-->
                             <div class="panel-heading">
-                                <h3 class="panel-heading"><!--{$arrProductType[$key]|h}--></h3>
+                                <h3 class="margin-none padding-none"><!--{$arrProductType[$key]|h}--></h3>
                             </div>
                             <!--{assign var=purchasing_goods_name value=$arrProductType[$key]}-->
                         <!--{else}-->
@@ -177,7 +179,7 @@
             <!--{/foreach}-->
             <!--{if $tpl_prev_url != ""}-->
             <div class="hidden-md hidden-lg">
-                <a href="<!--{$tpl_prev_url|h}-->" class="btn btn-default btn-block">お買い物を続ける</a>
+                <a href="<!--{$tpl_prev_url|h}-->" class="btn btn-default btn-block btn-sm">お買い物を続ける</a>
             </div>
             <!--{/if}-->
         <!--{else}-->

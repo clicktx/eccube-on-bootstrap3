@@ -866,10 +866,10 @@ div.form_area {
 }*/
 
 .delete-cart a:hover, .delete-cart a:visited {
-    color: #999;
+    color: #777;
 }
 .delete-cart a:hover {
-    color: #666;
+    color: #333;
 }
 
 /* お客様情報入力
