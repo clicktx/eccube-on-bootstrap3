@@ -31,14 +31,14 @@ div#undercolumn_order {
 
 /* お問い合わせ
 ----------------------------------------------- */
-div#undercolumn_contact {
+/*div#undercolumn_contact {
     margin: 0 auto;
     width: 100%;
 }
 
 .zipimg img {
     vertical-align: middle;
-}
+}*/
 
 
 /* ==============================================
@@ -405,40 +405,40 @@ div.list_area h3 {
     font-weight: bold;
 }
 
-div.listphoto {
-    /*float: left;*/
-}
+/*div.listphoto {
+    float: left;
+}*/
 
 /* メインカラム用 1カラム時*/
-#main_column.colnum1 div.listrightbloc {
-/*    float: right;
-    width: 74%;*/
-}
+/*#main_column.colnum1 div.listrightbloc {
+    float: right;
+    width: 74%;
+}*/
 
 /* メインカラム用 2カラム時*/
-#main_column.colnum2 div.listrightbloc {
-/*    float: right;
-    width: 80%;*/
-}
+/*#main_column.colnum2 div.listrightbloc {
+    float: right;
+    width: 80%;
+}*/
 
 /* メインカラム用 3カラム時*/
-#main_column.colnum3 div.listrightbloc {
-/*    float: right;
-    width: 74%;*/
-}
+/*#main_column.colnum3 div.listrightbloc {
+    float: right;
+    width: 74%;
+}*/
 
 
 /* 商品情報 各種設定
 ----------------------------------------------- */
 /* 商品ステータス */
-div.listrightbloc ul.status_icon {
-/*    margin-bottom: 10px;
-    width: 100%;*/
-}
-div.listrightbloc ul.status_icon li {
-/*    margin-right: 5px;
-    float: left;*/
-}
+/*div.listrightbloc ul.status_icon {
+    margin-bottom: 10px;
+    width: 100%;
+}*/
+/*div.listrightbloc ul.status_icon li {
+    margin-right: 5px;
+    float: left;
+}*/
 
 /* 商品名 */
 div.listrightbloc h3 {
@@ -448,69 +448,68 @@ div.listrightbloc h3 {
 }
 
 /* コメント */
-div.listrightbloc .listcomment {
-/*    margin: 0 0 10px 0;
-    text-align: left;*/
-}
+/*div.listrightbloc .listcomment {
+    margin: 0 0 10px 0;
+    text-align: left;
+}*/
 
 /* 商品詳細を見る */
-div.listrightbloc .detail_btn {
-    /*margin-bottom: 20px;*/
-}
+/*div.listrightbloc .detail_btn {
+    margin-bottom: 20px;
+}*/
 
 /* 価格 */
-div.listrightbloc .pricebox {
-    /*margin: 0 0 10px 0;*/
-}
+/*div.listrightbloc .pricebox {
+    margin: 0 0 10px 0;
+}*/
 
 /* 買い物かご */
-div.listrightbloc .cart_area {
-/*    padding: 10px;
+/*div.listrightbloc .cart_area {
+    padding: 10px;
     border: 1px solid #cef0f4;
     background-color: #ecf5ff;
-    width: 94%;*/
-}
+    width: 94%;
+}*/
 
 /* 規格 */
-div.listrightbloc .classlist {
-/*    margin-bottom: 10px;
+/*div.listrightbloc .classlist {
+    margin-bottom: 10px;
     padding-bottom: 10px;
-    background: url("../img/background/line_dot_02.gif") repeat-x bottom ;*/
+    background: url("../img/background/line_dot_02.gif") repeat-x bottom ;
 }
 div.listrightbloc dl {
-    /*width: 100%;*/
+    width: 100%;
 }
 div.listrightbloc dt {
-/*    display: inline-block;
-    vertical-align: top;*/
+    display: inline-block;
+    vertical-align: top;
 }
 div.listrightbloc dd {
-/*    padding-bottom: 10px;
-    display: inline-block;*/
+    padding-bottom: 10px;
+    display: inline-block;
 }
 div.listrightbloc dd p.attention {
-    /*margin-top: 5px;*/
-}
+    margin-top: 5px;
+}*/
 
 /* カートに入れる */
-div.listrightbloc .cartin {
-/*    margin: 0;
-    float :right;*/
+/*div.listrightbloc .cartin {
+    margin: 0;
+    float :right;
 }
 div.listrightbloc .cartin .quantity {
- /*   padding: 3px 10px 0 0;
+    padding: 3px 10px 0 0;
     width: 150px;
     float :left;
-    text-align: right;*/
+    text-align: right;
 }
 div.listrightbloc .cartin .quantity .box {
-    /*width: 70px;*/
+    width: 70px;
 }
 div.listrightbloc .cartin_btn {
- /*   width: 160px;
-    float :left;*/
-}
-
+    width: 160px;
+    float :left;
+}*/
 
 /* ==============================================
 ▼商品詳細
@@ -579,73 +578,73 @@ body {
   }
 }
 /* 1カラム用 */
-#main_column.colnum1 div#detailphotobloc {
-    /*width: 37%;
-    float: left;*/
+/*#main_column.colnum1 div#detailphotobloc {
+    width: 37%;
+    float: left;
 }
 #main_column.colnum1 #detailrightbloc {
-    /*width: 63%;
-    float: right;*/
+    width: 63%;
+    float: right;
 }
 #main_column.colnum1 div.subtext {
-    /*margin-bottom: 20px;
+    margin-bottom: 20px;
     float: left;
-    width: 69%;*/
+    width: 69%;
 }
 #main_column.colnum1 div.subphotoimg {
-    /*float: right;
+    float: right;
     width: 25%;
-    text-align: right;*/
+    text-align: right;
 }
 #main_column.colnum1 p.subtext {
-    /*margin-bottom: 20px;*/
-}
+    margin-bottom: 20px;
+}*/
 
 /* 2カラム用 */
-#main_column.colnum2 div#detailphotobloc {
-    /*float: left;
-    width: 37%;*/
+/*#main_column.colnum2 div#detailphotobloc {
+    float: left;
+    width: 37%;
 }
 #main_column.colnum2 #detailrightbloc {
-    /*float: right;
-    width: 63%;*/
+    float: right;
+    width: 63%;
 }
 #main_column.colnum2 div.subtext {
-    /*margin-bottom: 20px;
+    margin-bottom: 20px;
     float: left;
-    width: 73%;*/
+    width: 73%;
 }
 #main_column.colnum2 p.subtext {
-    /*margin-bottom: 20px;*/
+    margin-bottom: 20px;
 }
 #main_column.colnum2 div.subphotoimg {
-    /*float: right;
+    float: right;
     width: 25%;
-    text-align: right;*/
-}
+    text-align: right;
+}*/
 
 /* 3カラム用 */
-#main_column.colnum3 div#detailphotobloc {
-    /*float: left;
-    width: 49%;*/
+/*#main_column.colnum3 div#detailphotobloc {
+    float: left;
+    width: 49%;
 }
 #main_column.colnum3 #detailrightbloc {
-    /*float: right;
-    width: 50%;*/
+    float: right;
+    width: 50%;
 }
 #main_column.colnum3 div.subtext {
-    /*margin-bottom: 20px;
+    margin-bottom: 20px;
     float: left;
-    width: 63%;*/
+    width: 63%;
 }
 #main_column.colnum3 p.subtext {
-    /*margin-bottom: 20px;*/
+    margin-bottom: 20px;
 }
 #main_column.colnum3 div.subphotoimg {
-    /*float: right;
+    float: right;
     width: 35%;
-    text-align: right;*/
-}
+    text-align: right;
+}*/
 
 /* 商品情報 各種設定
 ----------------------------------------------- */
@@ -836,40 +835,46 @@ div#whobought_area h2 {
 #undercolumn_cart #quantity_level{
     display: inline-block;
 }
-div#undercolumn_cart .point_announce {
-/*    padding: 20px;
+/*div#undercolumn_cart .point_announce {
+    padding: 20px;
     margin-bottom: 20px;
     border: solid 1px #ffcc62;
     background: #fffaf0;
     font-size: 120%;
     text-align: center;
-    line-height: 140%;*/
+    line-height: 140%;
 }
 div#undercolumn_cart .totalmoney_area {
-    /*margin-bottom: 20px;*/
+    margin-bottom: 20px;
 }
 
 div#undercolumn_cart p {
-    /*margin: 10px 5px;*/
+    margin: 10px 5px;
 }
 
 div#undercolumn ul#quantity_level li {
-/*    padding: 3px;
-    display: inline;*/
+    padding: 3px;
+    display: inline;
 }
 
 div#undercolumn .empty {
-    /*text-align: left;*/
+    text-align: left;
 }
 
 div.form_area {
-    /*margin-bottom: 30px;*/
-}
+    margin-bottom: 30px;
+}*/
 
+.delete-cart a:hover, .delete-cart a:visited {
+    color: #999;
+}
+.delete-cart a:hover {
+    color: #666;
+}
 
 /* お客様情報入力
 ----------------------------------------------- */
-div#undercolumn_customer {
+/*div#undercolumn_customer {
 }
 
 .flow_area {
@@ -879,12 +884,12 @@ div#undercolumn_customer {
 div#undercolumn_customer th em {
     color: #000;
     font-weight: bold;
-}
+}*/
 
 
 /* お支払い方法・お届け時間等の指定
 ----------------------------------------------- */
-div#undercolumn_shopping .pay_area {
+/*div#undercolumn_shopping .pay_area {
     margin: 0 auto 30px;
     width: 100%;
 }
@@ -917,12 +922,12 @@ div#undercolumn_shopping .point_area p {
 
 div#undercolumn_shopping .point_area .point_announce li {
     margin-bottom: 5px;
-}
+}*/
 
 
 /* お届け先の指定
 ----------------------------------------------- */
-#address_area {
+/*#address_area {
     margin-bottom: 10px;
     width: 100%;
 }
@@ -954,7 +959,7 @@ div#undercolumn_shopping .point_area .point_announce li {
 #address_area p.addbtn {
     font-weight: bold;
     font-size: 10px;
-}
+}*/
 
 
 /* ==============================================
