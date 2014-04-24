@@ -28,7 +28,7 @@
         <div class="alert alert-warning">内容によっては回答をさしあげるのにお時間をいただくこともございます。<br />
         また、休業日は翌営業日以降の対応となりますのでご了承ください。</div>
         <div class="alert alert-info fade in">
-          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
           <strong>必須項目</strong> 「<span class="attention">※</span>」印は入力必須項目です。
         </div>
 
@@ -77,7 +77,7 @@
                     <div class="form-group">
                         <label class="control-label col-xs-1 padding-right-none">〒</label>
                         <div class="col-xs-3 col-sm-3 col-md-2<!--{if $arrErr.zip01}--> has-error<!--{/if}-->">
-                            <input type="tel" name="zip01" id="zip01" class="box60 form-control" value="<!--{$arrForm.zip01.value|default:$arrData.zip01|h}-->" maxlength="<!--{$smarty.const.ZIP01_LEN}-->" style="<!--{$arrErr.zip01|sfGetErrorColor}-->; ime-mode: disabled;" placeholder="123" />
+                            <input type="tel" name="zip01" id="zip01" class="box60 form-control padding-sm" value="<!--{$arrForm.zip01.value|default:$arrData.zip01|h}-->" maxlength="<!--{$smarty.const.ZIP01_LEN}-->" style="<!--{$arrErr.zip01|sfGetErrorColor}-->; ime-mode: disabled;" placeholder="123" />
                         </div>
                         <label class="control-label col-xs-1 padding-none">-</label>
                         <div class="col-xs-4 col-sm-4 col-md-3<!--{if $arrErr.zip02}--> has-error<!--{/if}-->">
@@ -90,12 +90,17 @@
                         </div>
                     </div>
                     <span class="attention"><!--{$arrErr.zip01}--><!--{$arrErr.zip02}--></span>
-                    <p class="zipimg">
+                    <p class="zipimg hidden-xs">
                         <a href="javascript:eccube.getAddress('<!--{$smarty.const.INPUT_ZIP_URLPATH}-->', 'zip01', 'zip02', 'pref', 'addr01');" class="btn btn-primary btn-xs">
                             住所自動入力
                         </a>
                         <span class="mini">&nbsp;郵便番号を入力後、クリックしてください。</span>
                     </p>
+                    <div class="visible-xs">
+                        <a href="javascript:eccube.getAddress('<!--{$smarty.const.INPUT_ZIP_URLPATH}-->', 'zip01', 'zip02', 'pref', 'addr01');" class="btn btn-default btn-block btn-sm">
+                            郵便番号から住所自動入力
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="form-group">
@@ -132,7 +137,7 @@
                 <div class="col-sm-9">
                     <div class="form-group">
                         <div class="col-xs-3<!--{if $arrErr.tel01}--> has-error<!--{/if}-->">
-                            <input type="tel" id="tel01" class="box60 form-control" name="tel01" value="<!--{$arrForm.tel01.value|default:$arrData.tel01|h}-->" maxlength="<!--{$smarty.const.TEL_ITEM_LEN}-->" style="<!--{$arrErr.tel01|sfGetErrorColor}-->; ime-mode: disabled;" />
+                            <input type="tel" id="tel01" class="box60 form-control padding-xs" name="tel01" value="<!--{$arrForm.tel01.value|default:$arrData.tel01|h}-->" maxlength="<!--{$smarty.const.TEL_ITEM_LEN}-->" style="<!--{$arrErr.tel01|sfGetErrorColor}-->; ime-mode: disabled;" />
                         </div>
                         <label class="control-label col-xs-1 padding-none">-</label>
                         <div class="col-xs-4<!--{if $arrErr.tel02}--> has-error<!--{/if}-->">

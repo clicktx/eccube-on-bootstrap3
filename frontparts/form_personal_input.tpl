@@ -120,11 +120,11 @@
                     <div class="form-group">
                         <label class="control-label col-xs-1 padding-right-none">〒</label>
                         <div class="col-xs-3 col-sm-3 col-md-2<!--{if $arrErr[$key1]}--> has-error<!--{/if}-->">
-                            <input type="tel" id="<!--{$key1}-->" class="box60 form-control" name="<!--{$key1}-->" value="<!--{$arrForm[$key1].value|h}-->" maxlength="<!--{$arrForm[$key1].length}-->" style="<!--{$arrErr[$key1]|sfGetErrorColor}-->; ime-mode: disabled;" placeholder="123" />
+                            <input type="tel" id="<!--{$key1}-->" class="box60 form-control padding-sm" name="<!--{$key1}-->" value="<!--{$arrForm[$key1].value|h}-->" maxlength="<!--{$arrForm[$key1].length}-->" style="<!--{$arrErr[$key1]|sfGetErrorColor}-->; ime-mode: disabled;" placeholder="123" />
                         </div>
                         <label class="control-label col-xs-1 padding-none">-</label>
                         <div class="col-xs-4 col-sm-4 col-md-3<!--{if $arrErr[$key2]}--> has-error<!--{/if}-->">
-                            <input type="tel" class="box60 form-control" name="<!--{$key2}-->" value="<!--{$arrForm[$key2].value|h}-->" maxlength="<!--{$arrForm[$key2].length}-->" style="<!--{$arrErr[$key2]|sfGetErrorColor}-->; ime-mode: disabled;" placeholder="4567" />
+                            <input type="tel" class="box60 form-control padding-sm" name="<!--{$key2}-->" value="<!--{$arrForm[$key2].value|h}-->" maxlength="<!--{$arrForm[$key2].length}-->" style="<!--{$arrErr[$key2]|sfGetErrorColor}-->; ime-mode: disabled;" placeholder="4567" />
                         </div>
                         <div class="col-xs-4 col-sm-4 padding-none">
                             <p class="top">
@@ -133,12 +133,17 @@
                         </div>
                     </div>
                     <span class="attention"><!--{$arrErr[$key1]}--><!--{$arrErr[$key2]}--></span>
-                    <p class="zipimg">
+                    <p class="zipimg hidden-xs">
                         <a href="javascript:eccube.getAddress('<!--{$smarty.const.INPUT_ZIP_URLPATH}-->', '<!--{$key1}-->', '<!--{$key2}-->', '<!--{$key3}-->', '<!--{$key4}-->');" class="btn btn-primary btn-xs">
                             住所自動入力
                         </a>
                         <span class="mini">&nbsp;郵便番号を入力後、クリックしてください。</span>
                     </p>
+                    <div class="visible-xs">
+                        <a href="javascript:eccube.getAddress('<!--{$smarty.const.INPUT_ZIP_URLPATH}-->', '<!--{$key1}-->', '<!--{$key2}-->', '<!--{$key3}-->', '<!--{$key4}-->');" class="btn btn-default btn-block btn-sm">
+                            郵便番号から住所自動入力
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="form-group">
@@ -180,7 +185,7 @@
                 <div class="col-sm-9">
                     <div class="form-group">
                         <div class="col-xs-3<!--{if $arrErr[$key1]}--> has-error<!--{/if}-->">
-                            <input type="tel" id="<!--{$key1}-->" class="box60 form-control" name="<!--{$key1}-->" value="<!--{$arrForm[$key1].value|h}-->" maxlength="<!--{$arrForm[$key1].length}-->" style="<!--{$arrErr[$key1]|sfGetErrorColor}-->; ime-mode: disabled;" />
+                            <input type="tel" id="<!--{$key1}-->" class="box60 form-control padding-xs" name="<!--{$key1}-->" value="<!--{$arrForm[$key1].value|h}-->" maxlength="<!--{$arrForm[$key1].length}-->" style="<!--{$arrErr[$key1]|sfGetErrorColor}-->; ime-mode: disabled;" />
                         </div>
                         <label class="control-label col-xs-1 padding-none">-</label>
                         <div class="col-xs-4<!--{if $arrErr[$key2]}--> has-error<!--{/if}-->">
@@ -204,7 +209,7 @@
                 <div class="col-sm-9">
                     <div class="form-group">
                         <div class="col-xs-3<!--{if $arrErr[$key1]}--> has-error<!--{/if}-->">
-                            <input type="tel" id="<!--{$key1}-->" class="box60 form-control" name="<!--{$key1}-->" value="<!--{$arrForm[$key1].value|h}-->" maxlength="<!--{$arrForm[$key1].length}-->" style="<!--{$arrErr[$key1]|sfGetErrorColor}-->; ime-mode: disabled;" />
+                            <input type="tel" id="<!--{$key1}-->" class="box60 form-control padding-xs" name="<!--{$key1}-->" value="<!--{$arrForm[$key1].value|h}-->" maxlength="<!--{$arrForm[$key1].length}-->" style="<!--{$arrErr[$key1]|sfGetErrorColor}-->; ime-mode: disabled;" />
                         </div>
                         <label class="control-label col-xs-1 padding-none">-</label>
                         <div class="col-xs-4<!--{if $arrErr[$key2]}--> has-error<!--{/if}-->">
