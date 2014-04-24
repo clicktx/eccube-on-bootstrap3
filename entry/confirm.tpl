@@ -39,11 +39,15 @@
                     </table>
                 </div>
             </div>
-
-            <div class="btn_area row">
-                <div class="col-sm-12">
-                    <a href="?" onclick="eccube.setModeAndSubmit('return', '', ''); return false;" class="btn btn-default col-xs-4 col-sm-3 margin-left-md">戻る</a>
-                    <button class="btn btn-primary col-xs-6 col-sm-5 margin-left-sm">会員登録をする</button>
+            <div class="btn_area row padding-left-md padding-right-md">
+                <div class="col-sm-3 padding-right-none hidden-xs">
+                    <a href="?" onclick="eccube.setModeAndSubmit('return', '', ''); return false;" class="btn btn-default btn-block">戻る</a>
+                </div>
+                <div class="col-sm-6">
+                    <button name="send_button" id="send_button" class="btn btn-primary btn-block">会員登録する</button>
+                </div>
+                <div class="col-xs-12 visible-xs margin-top-sm">
+                    <a href="?" onclick="eccube.setModeAndSubmit('return', '', ''); return false;" class="btn btn-default btn-sm btn-block">戻る</a>
                 </div>
             </div>
 
