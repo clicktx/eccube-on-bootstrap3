@@ -118,7 +118,7 @@
                                 </div>
 
                                 <div class="delete-cart col-sm-4 col-md-4 text-right">
-                                    <a href="?" onclick="eccube.fnFormModeSubmit('form<!--{$key|h}-->', 'delete', 'cart_no', '<!--{$item.cart_no|h}-->'); return false;">
+                                    <a class="btn-delete" href="?" onclick="eccube.fnFormModeSubmit('form<!--{$key|h}-->', 'delete', 'cart_no', '<!--{$item.cart_no|h}-->'); return false;">
                                         <span class="fa fa-times-circle fa-lg"></span><span class="hidden-xs"> <small>カートから削除</small></span>
                                     </a>
                                 </div>

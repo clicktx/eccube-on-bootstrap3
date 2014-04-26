@@ -865,10 +865,10 @@ div.form_area {
     margin-bottom: 30px;
 }*/
 
-.delete-cart a:hover, .delete-cart a:visited {
+.btn-delete, .btn-delete:visited {
     color: #777;
 }
-.delete-cart a:hover {
+.btn-delete:hover {
     color: #333;
 }
 
@@ -889,6 +889,11 @@ div#undercolumn_customer th em {
 
 /* お支払い方法・お届け時間等の指定
 ----------------------------------------------- */
+div#undercolumn_shopping .deliv-heading {
+    padding: 10px 15px;
+    display: block;
+    background-color: #f5f5f5;
+}
 /*div#undercolumn_shopping .pay_area {
     margin: 0 auto 30px;
     width: 100%;
