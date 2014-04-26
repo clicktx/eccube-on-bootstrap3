@@ -23,7 +23,7 @@
 <div id="undercolumn">
     <div id="undercolumn_shopping">
         <p class="flow_area">
-            <img src="<!--{$TPL_URLPATH}-->img/picture/img_flow_01.jpg" alt="購入手続きの流れ" />
+            <!--{include file="`$smarty.const.TEMPLATE_REALDIR`shopping/process/step1.tpl"}-->
         </p>
         <h2 class="title"><!--{$tpl_title|h}--></h2>
 
@@ -32,26 +32,29 @@
                 <p>下記一覧よりお届け先住所を選択して、「選択したお届け先に送る」ボタンをクリックしてください。</p>
                 <!--{if $tpl_addrmax < $smarty.const.DELIV_ADDR_MAX}-->
                     <p>一覧にご希望の住所が無い場合は、「新しいお届け先を追加する」より追加登録してください。</p>
+                    <p class="mini attention">※最大<!--{$smarty.const.DELIV_ADDR_MAX|h}-->件まで登録できます。</p>
                 <!--{/if}-->
-                <p class="mini attention">※最大<!--{$smarty.const.DELIV_ADDR_MAX|h}-->件まで登録できます。</p>
             </div>
             <!--{if $smarty.const.USE_MULTIPLE_SHIPPING !== false}-->
-                <div class="add_multiple">
-                    <p>この商品を複数の<br />お届け先に送りますか？</p>
-                    <a href="javascript:;" onclick="eccube.setModeAndSubmit('multiple', '', ''); return false">
-                        <img class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_several_address.jpg" alt="お届け先を複数指定する" />
-                    </a>
+                <div class="add_multiple row margin-bottom-lg">
+                    <div class="hidden-xs">
+                        <div class="col-sm-12">この商品を複数のお届け先に送りますか？</div>
+                        <div class="col-sm-12 col-md-4">
+                            <a class="btn btn-default btn-block" href="javascript:;" onclick="eccube.setModeAndSubmit('multiple', '', ''); return false">
+                                複数のお届け先に送る
+                            </a>
+                        </div>
+                    </div>
+                    <div class="visible-xs navbar navbar-default padding-top-sm margin-top-lg padding-bottom-sm">
+                        <div class="col-xs-12">
+                            <a class="btn btn-default btn-block" href="javascript:;" onclick="eccube.setModeAndSubmit('multiple', '', ''); return false">
+                                複数のお届け先に送る
+                            </a>
+                        </div>
+                    </div>
                 </div>
             <!--{/if}-->
         </div>
-
-        <!--{if $tpl_addrmax < $smarty.const.DELIV_ADDR_MAX}-->
-            <p class="addbtn">
-                <a href="<!--{$smarty.const.ROOT_URLPATH}-->mypage/delivery_addr.php" onclick="eccube.openWindow('<!--{$smarty.const.ROOT_URLPATH}-->mypage/delivery_addr.php?page=<!--{$smarty.server.SCRIPT_NAME|h}-->','new_deiv','600','640'); return false;">
-                    <img class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_add_address.jpg" alt="新しいお届け先を追加する" />
-                </a>
-            </p>
-        <!--{/if}-->
 
         <form name="form1" id="form1" method="post" action="?">
             <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
@@ -61,29 +64,16 @@
             <!--{if $arrErr.deli != ""}-->
                 <p class="attention"><!--{$arrErr.deli}--></p>
             <!--{/if}-->
-            <table summary="お届け先の指定">
-                <col width="10%" />
-                <col width="20%" />
-                <col width="50%" />
-                <col width="10%" />
-                <col width="10%" />
-                <tr>
-                    <th class="alignC">選択</th>
-                    <th class="alignC">住所種類</th>
-                    <th class="alignC">お届け先</th>
-                    <th class="alignC">変更</th>
-                    <th class="alignC">削除</th>
-                </tr>
+
+            <div class="list-group">
                 <!--{section name=cnt loop=$arrAddr}-->
-                    <tr>
-                        <td class="alignC">
+                    <div class="list-group-item padding-none">
+                        <h4 class="deliv-heading list-group-item-heading">
                             <!--{if $smarty.section.cnt.first}-->
                                 <input type="radio" name="deliv_check" id="chk_id_<!--{$smarty.section.cnt.iteration}-->" value="-1" <!--{if $arrForm.deliv_check.value == "" || $arrForm.deliv_check.value == -1}--> checked="checked"<!--{/if}--> />
                             <!--{else}-->
                                 <input type="radio" name="deliv_check" id="chk_id_<!--{$smarty.section.cnt.iteration}-->" value="<!--{$arrAddr[cnt].other_deliv_id}-->"<!--{if $arrForm.deliv_check.value == $arrAddr[cnt].other_deliv_id}--> checked="checked"<!--{/if}--> />
                             <!--{/if}-->
-                        </td>
-                        <td class="alignC">
                             <label for="chk_id_<!--{$smarty.section.cnt.iteration}-->">
                                 <!--{if $smarty.section.cnt.first}-->
                                     会員登録住所
@@ -91,8 +81,22 @@
                                     追加登録住所
                                 <!--{/if}-->
                             </label>
-                        </td>
-                        <td>
+
+                            <div class="pull-right">
+                                <!--{if !$smarty.section.cnt.first}-->
+                                    <a class="btn btn-default btn-xs" href="<!--{$smarty.const.ROOT_URLPATH}-->mypage/delivery_addr.php" onclick="eccube.openWindow('<!--{$smarty.const.ROOT_URLPATH}-->mypage/delivery_addr.php?page=<!--{$smarty.server.SCRIPT_NAME|h}-->&amp;other_deliv_id=<!--{$arrAddr[cnt].other_deliv_id}-->','new_deiv','600','640'); return false;">変更</a>
+                                <!--{/if}-->
+
+                                <!--{if !$smarty.section.cnt.first}-->
+                                    <a class="btn btn-link btn-delete" href="?" onclick="eccube.setModeAndSubmit('delete', 'other_deliv_id', '<!--{$arrAddr[cnt].other_deliv_id}-->'); return false">
+                                        <span class="fa fa-times-circle fa-lg"></span>
+                                        <span class="hidden-xs"> 削除</span>
+                                    </a>
+                                <!--{/if}-->
+                            </div>
+                        </h4>
+
+                        <div class="list-group-item-text padding-md padding-top-xs">
                             <!--{assign var=key1 value=$arrAddr[cnt].pref}-->
                             <!--{assign var=key2 value=$arrAddr[cnt].country_id}-->
                             <!--{if $smarty.const.FORM_COUNTRY_ENABLE}-->
@@ -100,36 +104,32 @@
                             <!--{/if}-->
                             <!--{$arrPref[$key1]|h}--><!--{$arrAddr[cnt].addr01|h}--><!--{$arrAddr[cnt].addr02|h}--><br />
                             <!--{$arrAddr[cnt].company_name|h}--> <!--{$arrAddr[cnt].name01|h}--> <!--{$arrAddr[cnt].name02|h}-->
-                        </td>
-                        <td class="alignC">
-                            <!--{if !$smarty.section.cnt.first}-->
-                                <a href="<!--{$smarty.const.ROOT_URLPATH}-->mypage/delivery_addr.php" onclick="eccube.openWindow('<!--{$smarty.const.ROOT_URLPATH}-->mypage/delivery_addr.php?page=<!--{$smarty.server.SCRIPT_NAME|h}-->&amp;other_deliv_id=<!--{$arrAddr[cnt].other_deliv_id}-->','new_deiv','600','640'); return false;">変更</a>
-                                <!--{else}-->
-                                    -
-                                <!--{/if}-->
-                        </td>
-                        <td class="alignC">
-                            <!--{if !$smarty.section.cnt.first}-->
-                                <a href="?" onclick="eccube.setModeAndSubmit('delete', 'other_deliv_id', '<!--{$arrAddr[cnt].other_deliv_id}-->'); return false">削除</a>
-                                <!--{else}-->
-                                    -
-                                <!--{/if}-->
-                        </td>
-                    </tr>
+                        </div>
+                    </div>
                 <!--{/section}-->
-            </table>
+                <!--{if $tpl_addrmax < $smarty.const.DELIV_ADDR_MAX}-->
+                <div class="list-group-item">
+                    <div class="row">
+                        <div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0">
+                            <a class="btn btn-default btn-block" href="<!--{$smarty.const.ROOT_URLPATH}-->mypage/delivery_addr.php" onclick="eccube.openWindow('<!--{$smarty.const.ROOT_URLPATH}-->mypage/delivery_addr.php?page=<!--{$smarty.server.SCRIPT_NAME|h}-->','new_deiv','600','640'); return false;">
+                                新しいお届け先を追加する
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--{/if}-->
+            </div>
 
-            <div class="btn_area">
-                <ul>
-                    <li>
-                        <a href="<!--{$smarty.const.CART_URL}-->">
-                            <img class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_back.jpg" alt="戻る" />
-                        </a>
-                    </li>
-                    <li>
-                        <input type="image" class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_next.jpg" alt="選択したお届け先に送る" name="send_button" id="send_button" />
-                    </li>
-                </ul>
+            <div class="btn_area row">
+                <div class="col-sm-3 padding-right-none hidden-xs">
+                    <a href="<!--{$smarty.const.CART_URL}-->" class="btn btn-default btn-block">戻る</a>
+                </div>
+                <div class="col-sm-6">
+                    <button name="send_button" id="send_button" class="btn btn-primary btn-block">選択したお届け先に送る</button>
+                </div>
+                <div class="col-xs-12 visible-xs margin-top-sm">
+                    <a href="<!--{$smarty.const.CART_URL}-->" class="btn btn-default btn-sm btn-block">戻る</a>
+                </div>
             </div>
 
         </form>
