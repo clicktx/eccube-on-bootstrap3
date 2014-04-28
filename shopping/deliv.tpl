@@ -28,30 +28,19 @@
         <h2 class="title"><!--{$tpl_title|h}--></h2>
 
         <div id="address_area" class="clearfix">
-            <div class="information">
-                <p>下記一覧よりお届け先住所を選択して、「選択したお届け先に送る」ボタンをクリックしてください。</p>
+            <div class="information margin-bottom-xl">
+                <p>下記一覧よりお届け先住所を選択して下さい。</p>
                 <!--{if $tpl_addrmax < $smarty.const.DELIV_ADDR_MAX}-->
-                    <p>一覧にご希望の住所が無い場合は、「新しいお届け先を追加する」より追加登録してください。</p>
+                    <p>一覧にご希望の住所が無い場合は、新しいお届け先を追加登録してください。</p>
                     <p class="mini attention">※最大<!--{$smarty.const.DELIV_ADDR_MAX|h}-->件まで登録できます。</p>
                 <!--{/if}-->
             </div>
             <!--{if $smarty.const.USE_MULTIPLE_SHIPPING !== false}-->
-                <div class="add_multiple row margin-bottom-lg">
-                    <div class="hidden-xs">
-                        <div class="col-sm-12">この商品を複数のお届け先に送りますか？</div>
-                        <div class="col-sm-12 col-md-4">
-                            <a class="btn btn-default btn-block" href="javascript:;" onclick="eccube.setModeAndSubmit('multiple', '', ''); return false">
-                                複数のお届け先に送る
-                            </a>
-                        </div>
-                    </div>
-                    <div class="visible-xs navbar navbar-default padding-top-sm margin-top-lg padding-bottom-sm">
-                        <div class="col-xs-12">
-                            <a class="btn btn-default btn-block" href="javascript:;" onclick="eccube.setModeAndSubmit('multiple', '', ''); return false">
-                                複数のお届け先に送る
-                            </a>
-                        </div>
-                    </div>
+                <div class="add_multiple list-group">
+                    <a href="javascript:;" onclick="eccube.setModeAndSubmit('multiple', '', ''); return false" class="list-group-item">
+                        <span class="hidden-xs">この商品を</span>複数のお届け先に送りますか？
+                        <span class="fa fa-angle-right pull-right"></span>
+                    </a>
                 </div>
             <!--{/if}-->
         </div>
@@ -88,7 +77,7 @@
                                 <!--{/if}-->
 
                                 <!--{if !$smarty.section.cnt.first}-->
-                                    <a class="btn btn-link btn-delete" href="?" onclick="eccube.setModeAndSubmit('delete', 'other_deliv_id', '<!--{$arrAddr[cnt].other_deliv_id}-->'); return false">
+                                    <a class="btn btn-link btn-delete padding-right-none" href="?" onclick="eccube.setModeAndSubmit('delete', 'other_deliv_id', '<!--{$arrAddr[cnt].other_deliv_id}-->'); return false">
                                         <span class="fa fa-times-circle fa-lg"></span>
                                         <span class="hidden-xs"> 削除</span>
                                     </a>
@@ -96,7 +85,7 @@
                             </div>
                         </h4>
 
-                        <div class="list-group-item-text padding-md padding-top-xs">
+                        <div class="list-group-item-text padding-md">
                             <!--{assign var=key1 value=$arrAddr[cnt].pref}-->
                             <!--{assign var=key2 value=$arrAddr[cnt].country_id}-->
                             <!--{if $smarty.const.FORM_COUNTRY_ENABLE}-->
@@ -111,7 +100,7 @@
                 <div class="list-group-item">
                     <div class="row">
                         <div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0">
-                            <a class="btn btn-default btn-block" href="<!--{$smarty.const.ROOT_URLPATH}-->mypage/delivery_addr.php" onclick="eccube.openWindow('<!--{$smarty.const.ROOT_URLPATH}-->mypage/delivery_addr.php?page=<!--{$smarty.server.SCRIPT_NAME|h}-->','new_deiv','600','640'); return false;">
+                            <a class="btn btn-default btn-block btn-sm" href="<!--{$smarty.const.ROOT_URLPATH}-->mypage/delivery_addr.php" onclick="eccube.openWindow('<!--{$smarty.const.ROOT_URLPATH}-->mypage/delivery_addr.php?page=<!--{$smarty.server.SCRIPT_NAME|h}-->','new_deiv','600','640'); return false;">
                                 新しいお届け先を追加する
                             </a>
                         </div>
