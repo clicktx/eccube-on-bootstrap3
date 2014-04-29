@@ -38,7 +38,7 @@
             <!--{if $smarty.const.USE_MULTIPLE_SHIPPING !== false}-->
                 <div class="add_multiple list-group">
                     <a href="javascript:;" onclick="eccube.setModeAndSubmit('multiple', '', ''); return false" class="list-group-item">
-                        <span class="hidden-xs">この商品を</span>複数のお届け先に送りますか？
+                        <strong><span class="hidden-xs">この商品を</span>複数のお届け先に送りますか？</strong>
                         <span class="fa fa-angle-right pull-right"></span>
                     </a>
                 </div>
