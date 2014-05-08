@@ -44,7 +44,7 @@
                     <dl class="formlist">
                         <!--{if $arrMakerList}-->
                         <dt>メーカー</dt>
-                        <dd><select name="maker_id" class="box145">
+                        <dd><select name="maker_id" class="box145 form-control">
                             <option label="全てのメーカー" value="">全てのメーカー</option>
                             <!--{html_options options=$arrMakerList selected=$maker_id}-->
                         </select>
