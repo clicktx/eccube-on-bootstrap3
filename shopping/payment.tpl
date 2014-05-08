@@ -133,7 +133,7 @@
                 <input type="hidden" name="<!--{$key}-->" value="<!--{$arrForm[$key].value|h}-->" id="deliv_id" />
             <!--{else}-->
             <div class="pay_area clearfix<!--{if $arrErr[$key] != ""}--> has-error<!--{/if}-->">
-                <h3 class="page-header"><span class="fa fa-arrow-circle-right"></span> 配送方法の指定</h3>
+                <h3 class="page-header"><span class="fa fa-arrow-circle-right"></span> 配送方法</h3>
                 <p>配送方法をご選択ください。</p>
 
                 <div class="col-sm-12">
@@ -154,7 +154,7 @@
 
             <!--{assign var=key value="payment_id"}-->
             <div class="pay_area<!--{if $arrErr[$key] != ""}--> has-error<!--{/if}-->">
-                <h3 class="page-header"><span class="fa fa-arrow-circle-right"></span> お支払方法の指定</h3>
+                <h3 class="page-header"><span class="fa fa-arrow-circle-right"></span> お支払方法</h3>
                 <p class="select-msg">お支払方法をご選択ください。</p>
                 <p class="non-select-msg">まずはじめに、配送方法を選択ください。</p>
 
@@ -183,56 +183,61 @@
 
             <!--{if $cartKey != $smarty.const.PRODUCT_TYPE_DOWNLOAD}-->
             <div class="pay_area02">
-                <h3 class="page-header"><span class="fa fa-arrow-circle-right"></span> お届け時間の指定</h3>
+                <h3 class="page-header"><span class="fa fa-arrow-circle-right"></span> お届け時間帯</h3>
                 <p class="select-msg">ご希望の方は、お届け時間を選択してください。</p>
                 <p class="non-select-msg">まずはじめに、配送方法を選択ください。</p>
                 <!--{foreach item=shippingItem name=shippingItem from=$arrShipping}-->
                 <!--{assign var=index value=$shippingItem.shipping_id}-->
-                <div class="delivdate top">
                     <!--{if $is_multiple}-->
-                        <span class="st">▼<!--{$shippingItem.shipping_name01}--><!--{$shippingItem.shipping_name02}-->
-                        <!--{$arrPref[$shippingItem.shipping_pref]}--><!--{$shippingItem.shipping_addr01}--><!--{$shippingItem.shipping_addr02}--></span><br/>
-                    <!--{/if}-->
-                    <!--★お届け日★-->
-                    <!--{assign var=key value="deliv_date`$index`"}-->
-                    <div class="form-group">
-                        <div class="row">
-                            <label for="" class="col-sm-3 col-md-2 control-label">
-                                お届け日：
-                            </label>
-                            <div class="col-sm-5">
-                                <!--{if !$arrDelivDate}-->
-                                    ご指定頂けません。
-                                <!--{else}-->
-                                    <select name="<!--{$key}-->" id="<!--{$key}-->" class="form-control" style="<!--{$arrErr[$key]|sfGetErrorColor}-->">
-                                        <option value="" selected="">指定なし</option>
-                                        <!--{assign var=shipping_date_value value=$arrForm[$key].value|default:$shippingItem.shipping_date}-->
-                                        <!--{html_options options=$arrDelivDate selected=$shipping_date_value}-->
-                                    </select>&nbsp;
+                        <div class="delivdate top panel panel-default">
+                            <div class="panel-heading text-bold">
+                                お届け先 <!--{$smarty.foreach.shippingItem.iteration}-->
+                            </div>
+                            <div class="panel-body">
+                                <!--{if $shippingItem.shipping_company_name}-->
+                                    <!--{$shippingItem.shipping_company_name|h}--><br />
                                 <!--{/if}-->
-                                <span class="attention"><!--{$arrErr[$key]}--></span>
+                                <!--{$shippingItem.shipping_name01}--><!--{$shippingItem.shipping_name02}--><br/>
+                                <small><!--{$arrPref[$shippingItem.shipping_pref]}--><!--{$shippingItem.shipping_addr01}--><!--{$shippingItem.shipping_addr02}--></small>
+                            </div>
+                            <div class="panel-footer">
+                    <!--{/if}-->
+                                <div class="delivdate row">
+                                    <div class="col-md-6 form-group">
+                                        <!--★お届け日★-->
+                                        <!--{assign var=key value="deliv_date`$index`"}-->
+                                        <label for="<!--{$key}-->" class="control-label">
+                                            お届け日：
+                                        </label>
+                                        <!--{if !$arrDelivDate}-->
+                                            ご指定頂けません。
+                                        <!--{else}-->
+                                            <select name="<!--{$key}-->" id="<!--{$key}-->" class="form-control" style="<!--{$arrErr[$key]|sfGetErrorColor}-->">
+                                                <option value="" selected="">指定なし</option>
+                                                <!--{assign var=shipping_date_value value=$arrForm[$key].value|default:$shippingItem.shipping_date}-->
+                                                <!--{html_options options=$arrDelivDate selected=$shipping_date_value}-->
+                                            </select>
+                                        <!--{/if}-->
+                                        <span class="attention"><!--{$arrErr[$key]}--></span>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <!--★お届け時間★-->
+                                        <!--{assign var=key value="deliv_time_id`$index`"}-->
+                                        <label for="<!--{$key}-->" class="control-label">
+                                            お届け時間：
+                                        </label>
+                                        <select name="<!--{$key}-->" id="<!--{$key}-->" class="form-control" style="<!--{$arrErr[$key]|sfGetErrorColor}-->">
+                                            <option value="" selected="">お届け時間：指定なし</option>
+                                            <!--{assign var=shipping_time_value value=$arrForm[$key].value|default:$shippingItem.time_id}-->
+                                            <!--{html_options options=$arrDelivTime selected=$shipping_time_value}-->
+                                        </select>
+                                        <span class="attention"><!--{$arrErr[$key]}--></span>
+                                    </div>
+                                </div>
+                    <!--{if $is_multiple}-->
                             </div>
                         </div>
-                    </div>
-
-                    <!--★お届け時間★-->
-                    <!--{assign var=key value="deliv_time_id`$index`"}-->
-                    <div class="form-group">
-                        <div class="row">
-                            <label for="" class="col-sm-3 col-md-2 control-label">
-                                お届け時間：
-                            </label>
-                            <div class="col-sm-5">
-                                <select name="<!--{$key}-->" id="<!--{$key}-->" class="form-control" style="<!--{$arrErr[$key]|sfGetErrorColor}-->">
-                                    <option value="" selected="">指定なし</option>
-                                    <!--{assign var=shipping_time_value value=$arrForm[$key].value|default:$shippingItem.time_id}-->
-                                    <!--{html_options options=$arrDelivTime selected=$shipping_time_value}-->
-                                </select>
-                                <span class="attention"><!--{$arrErr[$key]}--></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <!--{/if}-->
                 <!--{/foreach}-->
             </div>
             <!--{/if}-->
@@ -240,12 +245,12 @@
             <!-- ▼ポイント使用 -->
             <!--{if $tpl_login == 1 && $smarty.const.USE_POINT !== false}-->
                 <div class="point_area">
-                    <h3 class="page-header"><span class="fa fa-arrow-circle-right"></span> ポイント使用の指定</h3>
-                        <p>
+                    <h3 class="page-header"><span class="fa fa-arrow-circle-right"></span> ポイントのご利用</h3>
+                        <p class="text-size-md">
                             <span class="attention">1ポイントを<!--{$smarty.const.POINT_VALUE|number_format}-->円</span>として使用する事ができます。
                         </p>
                         <div class="point_announce">
-                            <p><span class="user_name"><!--{$name01|h}--> <!--{$name02|h}-->様</span>の、現在の所持ポイントは「<span class="point"><!--{$tpl_user_point|default:0|number_format}-->Pt</span>」です。<br />
+                            <p>現在の所持ポイントは「<span class="point"><!--{$tpl_user_point|default:0|number_format}-->Pt</span>」です。<br />
                                 今回ご購入合計金額：<span class="price"><!--{$arrPrices.subtotal|number_format}-->円</span> <span class="attention">(送料、手数料を含みません。)</span>
                             </p>
                             <ul class="list-group">
