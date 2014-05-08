@@ -93,7 +93,7 @@
                             <!--{foreach from=$cartItems[$key] item=item}-->
                             <div class="list-group-item clearfix" style="<!--{if $item.error}-->background-color: <!--{$smarty.const.ERR_COLOR|h}-->;<!--{/if}-->">
                                 
-                                <div class="col-xs-3 col-sm-3 col-md-3">
+                                <div class="col-xs-3 col-sm-3 col-md-2 padding-left-none padding-right-none">
                                 <!--{if $item.productsClass.main_image|strlen >= 1}-->
                                     <a class="expansion" target="_blank" href="<!--{$smarty.const.IMAGE_SAVE_URLPATH|h}--><!--{$item.productsClass.main_image|sfNoImageMainList|h}-->">
                                 <!--{/if}-->
@@ -102,7 +102,7 @@
                                     </a>
                                 <!--{/if}-->
                                 </div>
-                                <div class="col-xs-9 col-sm-5 col-md-5"><!--{* 商品名 *}-->
+                                <div class="col-xs-9 col-sm-5 col-md-7"><!--{* 商品名 *}-->
                                     <strong>
                                         <a href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$item.productsClass.product_id|u}-->"><!--{$item.productsClass.name|h}--></a>
                                     </strong>
@@ -117,13 +117,15 @@
                                     </div>
                                 </div>
 
-                                <div class="delete-cart col-sm-4 col-md-4 text-right">
-                                    <a class="btn-delete" href="?" onclick="eccube.fnFormModeSubmit('form<!--{$key|h}-->', 'delete', 'cart_no', '<!--{$item.cart_no|h}-->'); return false;">
-                                        <span class="fa fa-times-circle fa-lg"></span><span class="hidden-xs"> <small>カートから削除</small></span>
-                                    </a>
+                                <div class="row">
+                                    <div class="delete-cart col-sm-4 col-md-3 text-right padding-right-sm">
+                                        <a class="btn-delete" href="?" onclick="eccube.fnFormModeSubmit('form<!--{$key|h}-->', 'delete', 'cart_no', '<!--{$item.cart_no|h}-->'); return false;">
+                                            <span class="fa fa-times-circle fa-lg"></span><span class="hidden-xs"> <small>カートから削除</small></span>
+                                        </a>
+                                    </div>
                                 </div>
 
-                                <div class="col-xs-10 col-xs-push-2 col-sm-12 col-sm-push-0 col-md-9 text-right">
+                                <div class="col-xs-9 col-xs-push-3 col-sm-9 col-sm-push-3 col-md-10 col-md-push-2 text-right">
                                     <hr>
                                     <small>数量: </small><!--{$item.quantity|h}-->
                                     <div id="quantity_level">
