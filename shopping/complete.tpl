@@ -24,13 +24,12 @@
     <div id="undercolumn_shopping">
         <p class="flow_area">
             <!--{include file="`$smarty.const.TEMPLATE_REALDIR`shopping/process/step4.tpl"}-->
-            <img src="<!--{$TPL_URLPATH}-->img/picture/img_flow_04.jpg" alt="購入手続きの流れ" />
         </p>
         <h2 class="title"><!--{$tpl_title|h}--></h2>
 
         <!-- ▼その他決済情報を表示する場合は表示 -->
         <!--{if $arrOther.title.value}-->
-            <p><span class="attention">■<!--{$arrOther.title.name}-->情報</span><br />
+            <p class="alert alert-warning"><strong>■<!--{$arrOther.title.name}-->情報</strong><br />
                 <!--{foreach key=key item=item from=$arrOther}-->
                     <!--{if $key != "title"}-->
                         <!--{if $item.name != ""}-->
@@ -45,26 +44,25 @@
 
         <div id="complete_area">
             <p class="message"><!--{$arrInfo.shop_name|h}-->の商品をご購入いただき、ありがとうございました。</p>
-            <p>ただいま、ご注文の確認メールをお送りさせていただきました。<br />
-                万一、ご確認メールが届かない場合は、トラブルの可能性もありますので大変お手数ではございますがもう一度お問い合わせいただくか、お電話にてお問い合わせくださいませ。<br />
-                今後ともご愛顧賜りますようよろしくお願い申し上げます。</p>
+            <p>ただいま、ご注文の確認メールをお送りさせていただきました。</p>
+            <p>万一、ご確認メールが届かない場合は、トラブルの可能性もありますので大変お手数ではございますがもう一度お問い合わせいただくか、お電話にてお問い合わせくださいませ。</p>
+            <p>今後ともご愛顧賜りますようよろしくお願い申し上げます。</p>
 
             <div class="shop_information">
-                <p class="name"><!--{$arrInfo.shop_name|h}--></p>
+                <p class="name"><strong class="text-size-lg"><!--{$arrInfo.shop_name|h}--></strong></p>
                 <p>TEL：<!--{$arrInfo.tel01}-->-<!--{$arrInfo.tel02}-->-<!--{$arrInfo.tel03}--> <!--{if $arrInfo.business_hour != ""}-->（受付時間/<!--{$arrInfo.business_hour}-->）<!--{/if}--><br />
                 E-mail：<a href="mailto:<!--{$arrInfo.email02|escape:'hex'}-->"><!--{$arrInfo.email02|escape:'hexentity'}--></a>
                 </p>
             </div>
         </div>
 
-        <div class="btn_area">
-            <ul>
-                <li>
-                    <a href="<!--{$smarty.const.TOP_URL}-->">
-                        <img class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_toppage.jpg" alt="トップページへ" />
-                    </a>
-                </li>
-            </ul>
+        <div class="btn_area row">
+            <div class="col-md-6 padding-right-none hidden-xs">
+                <a href="<!--{$smarty.const.TOP_URL}-->" class="btn btn-default btn-block">トップページへ戻る</a>
+            </div>
+            <div class="col-xs-12 visible-xs margin-top-sm">
+                <a href="<!--{$smarty.const.TOP_URL}-->" class="btn btn-default btn-sm btn-block">トップページへ戻る</a>
+            </div>
         </div>
 
     </div>
