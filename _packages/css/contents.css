@@ -50,7 +50,7 @@ div#mypagecolumn {
     width: 100%;
 }
 
-div#mynavi_area {
+/*div#mynavi_area {
     width: 100%;
 }
 
@@ -78,23 +78,23 @@ div#mynavi_area div.point_announce {
 div#mynavi_area div.point_announce p {
     padding-left: 20px;
     background: url('../img/icon/ico_point.gif') no-repeat left ;
-}
+}*/
 
-div#mycontents_area p.inforamtion {
+/*div#mycontents_area p.inforamtion {
     margin-bottom: 20px;
-}
+}*/
 
-div#mypagecolumn h4 {
+/*div#mypagecolumn h4 {
     margin: 10px auto;
     border-bottom: 1px solid #999;
     text-align: left;
     font-size: 120%;
-}
+}*/
 
 
 /* 購入履歴一覧/詳細
 ----------------------------------------------- */
-div#mycontents_area div.mycondition_area {
+/*div#mycontents_area div.mycondition_area {
     margin: 0 auto 20px 0;
     padding: 10px;
     border: solid 1px #ccc;
@@ -111,12 +111,12 @@ div#mycontents_area div.mycondition_area .btn {
 }
 .add_address {
     margin-bottom: 20px;
-}
+}*/
 
 
 /* 会員登録内容変更/退会
 ----------------------------------------------- */
-div#mycontents_area .message_area {
+/*div#mycontents_area .message_area {
     margin: 30px auto;
     padding: 30px;
     border: 1px solid #ccc;
@@ -125,7 +125,7 @@ div#mycontents_area .message_area {
 
 div#mycontents_area .message_area p {
     margin-bottom: 20px;
-}
+}*/
 
 /* ==============================================
 ▼会員登録
@@ -441,11 +441,11 @@ div.list_area h3 {
 }*/
 
 /* 商品名 */
-div.listrightbloc h3 {
-/*    font-weight: bold;
-    font-size: 120%;*/
+/*div.listrightbloc h3 {
+    font-weight: bold;
+    font-size: 120%;
     margin: 0;
-}
+}*/
 
 /* コメント */
 /*div.listrightbloc .listcomment {

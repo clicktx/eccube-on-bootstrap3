@@ -24,43 +24,26 @@
 
 <div id="mynavi_area">
     <!--{strip}-->
-        <ul class="mynavi_list clearfix">
-
-            <!--{* 会員状態 *}-->
-            <!--{if $tpl_login}-->
-                <li><a href="./<!--{$smarty.const.DIR_INDEX_PATH}-->" class="<!--{if $tpl_mypageno == 'index'}--> selected<!--{/if}-->">
-                    購入履歴一覧</a></li>
-                <!--{if $smarty.const.OPTION_FAVORITE_PRODUCT == 1}-->
-                    <li><a href="favorite.php" class="<!--{if $tpl_mypageno == 'favorite'}--> selected<!--{/if}-->">
-                        お気に入り一覧</a></li>
-                <!--{/if}-->
-                <li><a href="change.php" class="<!--{if $tpl_mypageno == 'change'}--> selected<!--{/if}-->">
-                    会員登録内容変更</a></li>
-                <li><a href="delivery.php" class="<!--{if $tpl_mypageno == 'delivery'}--> selected<!--{/if}-->">
-                    お届け先追加・変更</a></li>
-                <li><a href="refusal.php" class="<!--{if $tpl_mypageno == 'refusal'}--> selected<!--{/if}-->">
-                    退会手続き</a></li>
-
-            <!--{* 退会状態 *}-->
-            <!--{else}-->
-                <li><a href="<!--{$smarty.const.TOP_URL}-->" class="<!--{if $tpl_mypageno == 'index'}--> selected<!--{/if}-->">
-                    購入履歴一覧</a></li>
-                <!--{if $smarty.const.OPTION_FAVORITE_PRODUCT == 1}-->
-                    <li><a href="<!--{$smarty.const.TOP_URL}-->" class="<!--{if $tpl_mypageno == 'favorite'}--> selected<!--{/if}-->">
-                        お気に入り一覧</a></li>
-                <!--{/if}-->
-                <li><a href="<!--{$smarty.const.TOP_URL}-->" class="<!--{if $tpl_mypageno == 'change'}--> selected<!--{/if}-->">
-                    会員登録内容変更</a></li>
-                <li><a href="<!--{$smarty.const.TOP_URL}-->" class="<!--{if $tpl_mypageno == 'delivery'}--> selected<!--{/if}-->">
-                    お届け先追加・変更</a></li>
-                <li><a href="<!--{$smarty.const.TOP_URL}-->" class="<!--{if $tpl_mypageno == 'refusal'}--> selected<!--{/if}-->">
-                    退会手続き</a></li>
-            <!--{/if}-->
-        </ul>
+        <div class="mynavi_list btn-group btn-group-justified margin-bottom-lg">
+          <a href="<!--{if $tpl_login}-->./<!--{$smarty.const.DIR_INDEX_PATH}--><!--{else}--><!--{$smarty.const.TOP_URL}--><!--{/if}-->" class="btn btn-default<!--{if $tpl_mypageno == 'index'}--> active<!--{/if}-->" role="button">購入履歴</a>
+          <a href="<!--{if $tpl_login}-->favorite.php<!--{else}--><!--{$smarty.const.TOP_URL}--><!--{/if}-->" class="btn btn-default<!--{if $tpl_mypageno == 'favorite'}--> active<!--{/if}-->" role="button">お気に入り</a>
+          <div class="btn-group">
+            <a href="#" class="btn btn-default dropdown-toggle<!--{if $tpl_mypageno == 'change' or $tpl_mypageno == 'delivery' or $tpl_mypageno == 'refusal'}--> active<!--{/if}-->" data-toggle="dropdown">
+              <span class="fa fa-cog"></span> 設定 <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+              <li><a href="<!--{if $tpl_login}-->change.php<!--{else}--><!--{$smarty.const.TOP_URL}--><!--{/if}-->">会員登録内容変更</a></li>
+              <li><a href="<!--{if $tpl_login}-->delivery.php<!--{else}--><!--{$smarty.const.TOP_URL}--><!--{/if}-->">お届け先追加・変更</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">退会手続き</li>
+              <li><a href="<!--{if $tpl_login}-->refusal.php<!--{else}--><!--{$smarty.const.TOP_URL}--><!--{/if}-->"><span class="fa fa-ban"></span> 退会手続き</a></li>
+            </ul>
+          </div>
+        </div>
 
         <!--▼現在のポイント-->
         <!--{if $point_disp !== false}-->
-            <div class="point_announce clearfix">
+            <div class="point_announce alert alert-warning">
                 <p>ようこそ&nbsp;／&nbsp;
                     <span class="user_name"><!--{$CustomerName1|h}--> <!--{$CustomerName2|h}-->様</span>
                     <!--{if $smarty.const.USE_POINT !== false}-->&nbsp;
