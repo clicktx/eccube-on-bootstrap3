@@ -209,7 +209,7 @@
                 <!--{if $tpl_linemax > 0}--><!--{$smarty.capture.page_navi_body|smarty:nodefaults}--><!--{/if}-->
             </form>
             <div class="navi pagination hidden-xs"><!--{$tpl_strnavi}--></div>
-            <!--{include file= "products/pager.tpl"}-->
+            <!--{include file= "pager.tpl"}-->
             <!--▲ページナビ(下部)-->
         <!--{/if}-->
 
