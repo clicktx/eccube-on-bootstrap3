@@ -43,7 +43,7 @@
             <!--{assign var=prev_pageno value=$prev_pageno-1}-->
         <!--{/if}-->
 
-        <ul class="pager visible-xs">
+        <ul class="pager padding-top-lg visible-xs">
             <li class="previous<!--{$prev_disabled}-->"><a href="?category_id=<!--{$arrSearchData.category_id}-->&pageno=<!--{$prev_pageno}-->" onclick="eccube.movePage('<!--{$prev_pageno}-->'); return false;"><span class="fa fa-angle-double-left"> 前のページ</span></a></li>
             <li class="next<!--{$next_disabled}-->"><a href="?category_id=<!--{$arrSearchData.category_id}-->&pageno=<!--{$next_pageno}-->" onclick="eccube.movePage('<!--{$next_pageno}-->'); return false;">次のページ <span class="fa fa-angle-double-right"></span></a></li>
         </ul>
