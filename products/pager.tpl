@@ -19,7 +19,9 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *}-->
-        <!--{**}-->
+        <!--{* $max_pageが取得できないので作成 *}-->
+        <!--{math equation=ceil(a/b) a=$tpl_linemax b=$smarty.const.SEARCH_PMAX assign=max_page}-->
+
         <!--{if !$tpl_pageno}--><!--{assign var=tpl_pageno value=1}--><!--{/if}-->
         <!--{* class=disabledの条件 *}-->
         <!--{if $tpl_pageno ==1 or $max_page == 1}-->
