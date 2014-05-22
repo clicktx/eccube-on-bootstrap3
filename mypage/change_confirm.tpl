@@ -27,8 +27,7 @@
     <!--{include file=$tpl_navi}-->
     <div id="mycontents_area">
         <h3><!--{$tpl_subtitle|h}--></h3>
-        <p>下記の内容で送信してもよろしいでしょうか？<br />
-            よろしければ、一番下の「完了ページへ」ボタンをクリックしてください。</p>
+        <p>入力内容をご確認下さい。</p>
 
         <form name="form1" id="form1" method="post" action="?">
             <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
@@ -39,21 +38,25 @@
                 <input type="hidden" name="<!--{$key|h}-->" value="<!--{$item.value|h}-->" />
                 <!--{/if}-->
             <!--{/foreach}-->
-            <table summary=" " class="delivname">
-                <!--{include file="`$smarty.const.TEMPLATE_REALDIR`frontparts/form_personal_confirm.tpl" flgFields=3 emailMobile=true prefix=""}-->
-            </table>
 
-            <div class="btn_area">
-                <ul>
-                    <li>
-                        <a href="?" onclick="eccube.setModeAndSubmit('return', '', ''); return false;">
-                            <img class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_back.jpg" alt="戻る" /></a>
-                    </li>
-                    <li>
-                        <input type="image" class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_complete.jpg" alt="送信" name="complete" id="complete" />
-                    </li>
-                </ul>
+                <div class="panel panel-default">
+                    <table summary=" " class="delivname table table-borderd">
+                        <!--{include file="`$smarty.const.TEMPLATE_REALDIR`frontparts/form_personal_confirm.tpl" flgFields=3 emailMobile=true prefix=""}-->
+                    </table>
+                </div>
+
+            <div class="btn_area row">
+                <div class="col-sm-3 padding-right-none hidden-xs">
+                    <a href="?" onclick="eccube.setModeAndSubmit('return', '', ''); return false;" class="btn btn-default btn-block">戻る</a>
+                </div>
+                <div class="col-sm-6">
+                    <button name="complete" id="complete" class="btn btn-primary btn-block">完了ページヘ</button>
+                </div>
+                <div class="col-xs-12 visible-xs margin-top-sm">
+                    <a href="?" onclick="eccube.setModeAndSubmit('return', '', ''); return false;" class="btn btn-default btn-sm btn-block">戻る</a>
+                </div>
             </div>
+
         </form>
     </div>
 </div>

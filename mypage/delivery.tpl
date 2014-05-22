@@ -33,9 +33,13 @@
         <!--{if $tpl_linemax < $smarty.const.DELIV_ADDR_MAX}-->
             <!--{* 退会時非表示 *}-->
             <!--{if $tpl_login}-->
-                <p class="add_address">
-                    <a href="<!--{$smarty.const.ROOT_URLPATH}-->mypage/delivery_addr.php" onclick="eccube.openWindow('./delivery_addr.php','delivadd','600','640',{menubar:'no'}); return false;" target="_blank"><img class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_add_address.jpg" alt="新しいお届け先を追加" /></a>
-                </p>
+                <div class="row padding-bottom-lg">
+                    <div class="add_address col-xs-12 col-md-4">
+                        <a href="<!--{$smarty.const.ROOT_URLPATH}-->mypage/delivery_addr.php" onclick="eccube.openWindow('./delivery_addr.php','delivadd','600','640',{menubar:'no'}); return false;" target="_blank" class="btn btn-default btn-block">
+                            新しいお届け先を追加
+                        </a>
+                    </div>
+                </div>
             <!--{/if}-->
         <!--{/if}-->
 
@@ -46,41 +50,37 @@
                 <input type="hidden" name="other_deliv_id" value="" />
                 <input type="hidden" name="pageno" value="<!--{$tpl_pageno}-->" />
 
-                <table summary="お届け先">
-                <col width="5%" />
-                <col width="25%" />
-                <col width="50%" />
-                <col width="10%" />
-                <col width="10%" />
-                    <tr>
-                        <th colspan="5">お届け先</th>
-                    </tr>
+                <div class="list-group">
                     <!--{section name=cnt loop=$arrOtherDeliv}-->
                         <!--{assign var=OtherPref value="`$arrOtherDeliv[cnt].pref`"}-->
                         <!--{assign var=OtherCountry value="`$arrOtherDeliv[cnt].country_id`"}-->
-                        <tr>
-                            <td class="alignC"><!--{$smarty.section.cnt.iteration}--></td>
-                            <td><label for="add<!--{$smarty.section.cnt.iteration}-->">お届け先住所</label></td>
-                            <td>
-                                <!--{if $smarty.const.FORM_COUNTRY_ENABLE}-->
-                                <!--{$arrCountry[$OtherCountry]|h}--><br/>
-                                <!--{/if}-->
-                                〒<!--{$arrOtherDeliv[cnt].zip01}-->-<!--{$arrOtherDeliv[cnt].zip02}--><br />
-                                <!--{$arrPref[$OtherPref]|h}--><!--{$arrOtherDeliv[cnt].addr01|h}--><!--{$arrOtherDeliv[cnt].addr02|h}--><br />
-                                <!--{$arrOtherDeliv[cnt].company_name|h}-->&nbsp;<!--{$arrOtherDeliv[cnt].name01|h}-->&nbsp;<!--{$arrOtherDeliv[cnt].name02|h}-->
-                            </td>
-                            <td class="alignC">
-                                <a href="./delivery_addr.php" onclick="eccube.openWindow('./delivery_addr.php?other_deliv_id=<!--{$arrOtherDeliv[cnt].other_deliv_id}-->','deliv_disp','600','640'); return false;">変更</a>
-                            </td>
-                            <td class="alignC">
-                                <a href="#" onclick="eccube.setModeAndSubmit('delete','other_deliv_id','<!--{$arrOtherDeliv[cnt].other_deliv_id}-->'); return false;">削除</a>
-                            </td>
-                        </tr>
+                        <div class="list-group-item">
+                            <div class="row">
+                                <div class="col-xs-7">
+                                    <label for="add<!--{$smarty.section.cnt.iteration}-->">お届け先住所<!--{$smarty.section.cnt.iteration}--></label><br />
+                                    <!--{if $smarty.const.FORM_COUNTRY_ENABLE}-->
+                                    <!--{$arrCountry[$OtherCountry]|h}--><br/>
+                                    <!--{/if}-->
+                                    〒<!--{$arrOtherDeliv[cnt].zip01}-->-<!--{$arrOtherDeliv[cnt].zip02}--><br />
+                                    <!--{$arrPref[$OtherPref]|h}--><!--{$arrOtherDeliv[cnt].addr01|h}--><!--{$arrOtherDeliv[cnt].addr02|h}--><br />
+                                    <!--{if $arrOtherDeliv[cnt].company_name}--><!--{$arrOtherDeliv[cnt].company_name|h}--><br /><!--{/if}-->
+                                    <!--{$arrOtherDeliv[cnt].name01|h}-->&nbsp;<!--{$arrOtherDeliv[cnt].name02|h}-->
+                                </div>
+                                <div class="col-xs-5 padding-right-none text-right">
+                                    <a href="./delivery_addr.php" onclick="eccube.openWindow('./delivery_addr.php?other_deliv_id=<!--{$arrOtherDeliv[cnt].other_deliv_id}-->','deliv_disp','600','640'); return false;" class="btn btn-default btn-xs">変更</a>
+                                    <a href="#" onclick="eccube.setModeAndSubmit('delete','other_deliv_id','<!--{$arrOtherDeliv[cnt].other_deliv_id}-->'); return false;" class="btn btn-delete">
+                                        <span class="fa fa-times-circle fa-lg"></span>
+                                        <span class="hidden-xs">削除</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     <!--{/section}-->
-                </table>
+                </div>
+
             </form>
         <!--{else}-->
-            <p class="delivempty"><strong>新しいお届け先はありません。</strong></p>
+            <p class="delivempty alert alert-info"><strong>登録済みのお届け先はありません。</strong></p>
         <!--{/if}-->
     </div>
 </div>

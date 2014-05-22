@@ -23,8 +23,6 @@
 *}-->
 
 <!--{strip}-->
-    <col width="30%" />
-    <col width="70%" />
     <tr>
         <th>お名前</th>
         <td>

@@ -23,12 +23,14 @@
 *}-->
 <!--{include file="`$smarty.const.TEMPLATE_REALDIR`popup_header.tpl" subtitle="エラー"}-->
 
-<div id="compbox">
+<div id="compbox" class="alert alert-danger margin-top-xl">
     <span class="red"><!--{$tpl_error}--></span><br />
 </div>
 
 <div class="button">
-    <a href="javascript:window.close()"><img class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_close.gif" alt="閉じる" /></a>
+    <a href="javascript:window.close()" class="btn btn-default">
+      閉じる
+    </a>
 </div>
 
 <!--{include file="`$smarty.const.TEMPLATE_REALDIR`popup_footer.tpl"}-->

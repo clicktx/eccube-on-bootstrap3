@@ -29,10 +29,9 @@
         <h3><!--{$tpl_subtitle|h}--></h3>
 
         <div id="complete_area">
-            <div class="message">
+            <div class="message alert alert-info margin-top-xl">
                 会員登録内容の変更が完了いたしました。<br />
             </div>
-            <p>今後ともご愛顧賜りますようよろしくお願い申し上げます。</p>
         </div>
     </div>
 </div>
