@@ -420,29 +420,3 @@
         <!--{/if}-->
     <!--{/if}-->
 <!--{/strip}-->
-
-<!--{if $arrErr && $flgFields != 2}-->
-<script>
-    $(function(){
-        var formErrors = $(".has-error input, .has-error select, .has-error textarea");
-        $(formErrors[0]).focus();
-        //for iOS
-        $('.form-error-alert').on('click', function(){
-            $(formErrors[0]).focus();
-            $(".form-error-alert").alert('close');
-        });
-        $("input, select, textarea").click(function(){
-            console.log("form:focus");
-            $(".form-error-alert").alert('close');
-        });
-    });
-</script>
-<div class="form-error-alert alert alert-danger fade in hidden-md hidden-lg">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-    <h4>入力項目に誤りが有ります</h4>
-    <p>該当箇所を修正して下さい。</p>
-    <p>
-        <button type="button" class="btn btn-danger btn-block">エラー項目へ移動</button>
-    </p>
-</div>
-<!--{/if}-->
