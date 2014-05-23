@@ -35,17 +35,18 @@
             <div id="complete_area">
                 <div class="message">退会手続きを実行してもよろしいでしょうか？</div>
                 <div class="message_area">
-                    <div class="btn_area">
-                        <p>退会手続きが完了した時点で、現在保存されている購入履歴や、<br />
+                    <p class="alert alert-danger">退会手続きが完了した時点で、現在保存されている購入履歴や、<br />
                         お届け先等の情報は全てなくなりますのでご注意ください。</p>
-                        <ul>
-                            <li>
-                                <a href="./refusal.php"><img class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_refuse_not.jpg" alt="いいえ、退会しません" /></a>
-                            </li>
-                            <li>
-                                <input type="image" src="<!--{$TPL_URLPATH}-->img/button/btn_refuse_do.jpg" alt="はい、退会します" class="hover_change_image" name="refuse_do" id="refuse_do" />
-                            </li>
-                        </ul>
+                    <div class="btn_area row">
+                        <div class="col-sm-7 padding-right-none hidden-xs">
+                            <a href="./refusal.php" class="btn btn-default btn-block">いいえ、退会しません</a>
+                        </div>
+                        <div class="col-sm-5">
+                            <button name="send_button" name="refuse_do" id="refuse_do" class="btn btn-danger btn-block">はい、退会します</button>
+                        </div>
+                        <div class="col-xs-12 visible-xs margin-top-sm">
+                            <a href="./refusal.php" class="btn btn-default btn-lg btn-block">いいえ、退会しません</a>
+                        </div>
                     </div>
                 </div>
             </div>
