@@ -35,7 +35,6 @@
               <li><a href="<!--{if $tpl_login}-->change.php<!--{else}--><!--{$smarty.const.TOP_URL}--><!--{/if}-->">会員登録内容変更</a></li>
               <li><a href="<!--{if $tpl_login}-->delivery.php<!--{else}--><!--{$smarty.const.TOP_URL}--><!--{/if}-->">お届け先追加・変更</a></li>
               <li class="divider"></li>
-              <li class="dropdown-header">退会手続き</li>
               <li><a href="<!--{if $tpl_login}-->refusal.php<!--{else}--><!--{$smarty.const.TOP_URL}--><!--{/if}-->"><span class="fa fa-ban"></span> 退会手続き</a></li>
             </ul>
           </div>
