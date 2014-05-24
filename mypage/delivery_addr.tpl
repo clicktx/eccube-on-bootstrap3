@@ -25,26 +25,20 @@
 
 <div id="window_area">
     <h2 class="title"><!--{$tpl_title|h}--></h2>
-    <p>下記項目にご入力ください。「<span class="attention">※</span>」印は入力必須項目です。<br />
-        入力後、一番下の「登録する」ボタンをクリックしてください。</p>
+    <p class="alert alert-info"><strong>必須項目</strong>「<span class="attention">※</span>」印は入力必須項目です。</p>
 
-    <form name="form1" id="form1" method="post" action="?" onsubmit="return false;">
+    <form name="form1" id="form1" class="form-horizontal" method="post" action="?" onsubmit="return false;">
         <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
         <input type="hidden" name="mode" value="edit" />
         <input type="hidden" name="other_deliv_id" value="<!--{$smarty.session.other_deliv_id|h}-->" />
         <input type="hidden" name="ParentPage" value="<!--{$ParentPage}-->" />
 
-        <table summary="お届け先登録">
-            <!--{include file="`$smarty.const.TEMPLATE_REALDIR`frontparts/form_personal_input.tpl" flgFields=1 emailMobile=false prefix=""}-->
-        </table>
-        <div class="btn_area">
-            <ul>
-                <li>
-                    <a class="btn-action" href="javascript:" onclick="eccube.setValueAndSubmit('form1', 'mode', 'edit'); return false;">
-                        <img class="hover_change_submit" src="<!--{$TPL_URLPATH}-->img/button/btn_add_address_complete.jpg" alt="登録する" />
-                    </a>
-                </li>
-            </ul>
+        <!--{include file="`$smarty.const.TEMPLATE_REALDIR`frontparts/form_personal_input.tpl" flgFields=1 emailMobile=false prefix=""}-->
+
+        <div class="btn_area form-group padding-bottom-lg">
+            <div class="col-sm-12 col-md-4 col-md-push-2">
+                <a class="btn-action btn btn-primary btn-block" href="javascript:" onclick="eccube.setValueAndSubmit('form1', 'mode', 'edit'); return false;">登録する</a>
+            </div>
         </div>
     </form>
 </div>
