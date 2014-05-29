@@ -1,10 +1,10 @@
 <!--{printXMLDeclaration}--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--{*
- * This file is part of EC-CUBE
+ * EC-CUBE on Bootstrap3. This file is part of EC-CUBE
  *
- * Copyright(c) 2000-2013 LOCKON CO.,LTD. All Rights Reserved.
+ * Copyright(c) 2014 clicktx. All Rights Reserved.
  *
- * http://www.lockon.co.jp/
+ * http://perl.no-tubo.net/
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
