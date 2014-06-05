@@ -68,7 +68,7 @@
                             </div>
                             <div class="col-xs-2 text-right">
                                 <a class="btn-delete" href="javascript:eccube.setModeAndSubmit('delete_favorite','product_id','<!--{$product_id|h}-->');">
-                                    <span class="fa fa-times-circle fa-lg"></span>
+                                    <span class="fa fa-trash-o fa-lg"></span>
                                     <span class="hidden-xs hidden-sm">削除</span>
                                 </a>
                             </div>
