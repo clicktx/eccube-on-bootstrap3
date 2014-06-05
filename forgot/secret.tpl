@@ -27,7 +27,7 @@
         ご登録時に入力した下記質問の答えを入力して「次へ」ボタンをクリックしてください。<br />
         ※下記質問の答えをお忘れになられた場合は、<a href="mailto:<!--{$arrSiteInfo.email02|escape:'hex'}-->"><!--{$arrSiteInfo.email02|escape:'hexentitiy'}--></a>までご連絡ください。<br />
     </p>
-    <p class="message">
+    <p class="message alert alert-danger">
         【重要】新しくパスワードを発行いたしますので、お忘れになったパスワードはご利用できなくなります。</p>
     </p>
     <form action="?" method="post" name="form1">
@@ -40,16 +40,23 @@
             <!--{/if}-->
         <!--{/foreach}-->
 
-        <div id="completebox">
-        <p>
-            <span class="attention"><!--{$arrErr.reminder}--><!--{$arrErr.reminder_answer}--></span>
-            <!--{$arrReminder[$arrForm.reminder]}-->：&nbsp;<!--★答え入力★--><input type="text" name="reminder_answer" value="" class="box300" style="<!--{$arrErr.reminder_answer|sfGetErrorColor}-->" /></p>
-            <span class="attention"><!--{$errmsg}--></span>
+        <div id="completebox" class="row">
+            <div class="col-xs-12">
+                <!--{$arrReminder[$arrForm.reminder]}--><!--★答え入力★-->
+            </div>
+            <div class="col-xs-12<!--{if $arrErr.reminder or $arrErr.reminder_answer or $errmsg}--> has-error<!--{/if}-->">
+                <input type="text" name="reminder_answer" value="" class="box300 form-control" style="<!--{$arrErr.reminder_answer|sfGetErrorColor}--><!--{$errmsg|sfGetErrorColor}-->" />
+                <span class="attention">
+                    <!--{$errmsg}-->
+                    <!--{$arrErr.reminder}-->
+                    <!--{$arrErr.reminder_answer}-->
+                </span>
+            </div>
         </div>
-        <div class="btn_area">
-            <ul>
-                <li><input type="image" class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_next.jpg" alt="次へ" name="next" id="next" />
-            </ul>
+        <div class="btn_area row">
+            <div class="col-sm-12 col-md-4">
+                <button name="next" id="next" class="btn-action btn btn-primary btn-block">パスワードを再発行</button>
+            </div>
         </div>
     </form>
 </div>

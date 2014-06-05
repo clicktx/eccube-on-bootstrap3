@@ -23,21 +23,26 @@
 
 <div id="window_area">
     <h2 class="title">パスワードを忘れた方</h2>
-    <p class="information">パスワードの発行が完了いたしました。ログインには下記のパスワードをご利用ください。<br />
+    <p class="information alert alert-info">パスワードの発行が完了いたしました。ログインには下記のパスワードをご利用ください。<br />
         ※下記パスワードは、MYページの「会員登録内容変更」よりご変更いただけます。</p>
-    <form action="?" method="post" name="form1">
-        <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
+
         <div id="forgot">
             <!--{if $smarty.const.FORGOT_MAIL != 1}-->
-                    <p><span class="attention"><!--{$arrForm.new_password}--></span></p>
+                    <p>
+                        <span class="attention"><!--{$arrForm.new_password}--></span>
+                    </p>
             <!--{else}-->
-            <p><span class="attention">ご登録メールアドレスに送付致しました。</span></p>
+            <p>
+                <span class="attention">ご登録メールアドレスに送付致しました。</span>
+            </p>
             <!--{/if}-->
         </div>
+    <form action="?" method="post" name="form1">
+        <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
         <div class="btn_area">
-            <ul>
-                <li><a href="javascript:window.close()"><img class="hover_change_image" src="<!--{$TPL_URLPATH}-->img/button/btn_close.jpg" alt="閉じる" /></a></li>
-            </ul>
+            <a href="javascript:window.close()" class="btn btn-default btn-block">
+                    閉じる
+            </a>
         </div>
     </form>
 </div>
