@@ -73,7 +73,7 @@
                 <label for="zip01" class="col-sm-3 col-md-2 control-label">
                     郵便番号
                 </label>
-                <div class="col-sm-9">
+                <div class="top col-sm-9">
                     <div class="form-group">
                         <label class="control-label col-xs-1 padding-right-none">〒</label>
                         <div class="col-xs-3 col-sm-3 col-md-2<!--{if $arrErr.zip01}--> has-error<!--{/if}-->">

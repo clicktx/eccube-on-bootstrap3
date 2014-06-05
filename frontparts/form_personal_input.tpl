@@ -116,7 +116,7 @@
                 <label for="<!--{$key1}-->" class="col-sm-3 col-md-2 control-label">
                     郵便番号<span class="attention">※</span>
                 </label>
-                <div class="col-sm-9">
+                <div class="top col-sm-9">
                     <div class="form-group">
                         <label class="control-label col-xs-1 padding-right-none">〒</label>
                         <div class="col-xs-3 col-sm-3 col-md-2<!--{if $arrErr[$key1]}--> has-error<!--{/if}-->">
