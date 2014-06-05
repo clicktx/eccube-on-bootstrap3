@@ -196,6 +196,9 @@
                             </div>
                             <!--▲買い物かご-->
                         </div>
+                        <div class="visible-xs btn-arrow">
+                            <span class="fa fa-angle-right"></span>
+                        </div>
                     </a>
                 </div>
                 <!--▲商品-->

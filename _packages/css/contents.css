@@ -121,7 +121,7 @@ div#undercolumn_error .message_area .error {
     }
     #product-list-wrap div.list_area a.thumbnail {
         margin: 0;
-        padding: 7px 0;
+        padding: 7px 14px 7px 0;
         background-color: transparent;
         border: none;
     }
