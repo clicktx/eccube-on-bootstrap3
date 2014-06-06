@@ -34,6 +34,12 @@ TwitterBootstrapを使った[EC-CUBE](http://www.ec-cube.net)用のデザイン�
 
 - [EC-CUBEでスマホ用と携帯用テンプレートを無効にする方法 | SPOT[スポット]](http://spot-web.jp/ec-cubeでスマホ用と携帯用テンプレートを無効にする/)
 
+##### プラグインでも対応できます【おすすめ！】
+
+- [スマートフォン・携帯アクセス制御プラグイン](http://www.ec-cube.net/products/detail.php?product_id=394)
+
+こちらのプラグインを利用するとスマートフォンからのアクセスの挙動をカスタマイズ出来ます。またガラケーの制御も同時に行えます。
+
 
 ## その他
 ### vi/vimキーバインド
