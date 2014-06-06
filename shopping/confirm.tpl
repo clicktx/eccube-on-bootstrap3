@@ -49,22 +49,6 @@
             <input type="hidden" name="mode" value="confirm" />
             <input type="hidden" name="uniqid" value="<!--{$tpl_uniqid}-->" />
 
-            <div class="btn_area row hidden-xs">
-                <div class="col-sm-3 padding-right-none hidden-xs">
-                    <a href="./payment.php" class="btn btn-default btn-block">戻る</a>
-                </div>
-                <div class="col-sm-6">
-                <!--{if $use_module}-->
-                <button name="next-top" id="next-top" class="btn btn-primary btn-block">次へ</button>
-                <!--{else}-->
-                    <button name="next-top" id="next-top" class="btn btn-primary btn-block">ご注文確定</button>
-                <!--{/if}-->
-                </div>
-                <div class="col-xs-12 visible-xs margin-top-sm">
-                    <a href="./payment.php" class="btn btn-default btn-sm btn-block">戻る</a>
-                </div>
-            </div>
-
             <h3 class="margin-top-xl"><span class="fa fa-arrow-circle-right"></span> ご注文内容</h3>
             <div class="list-group">
                 <!--{foreach from=$arrCartItems item=item}-->
