@@ -28,7 +28,7 @@
     </script>
 <!--{/if}-->
 <!--{strip}-->
-    <div class="block_outer">
+    <div class="block_outer hidden-xs">
         <div id="cart_area" class="panel panel-default">
             <div class="panel-heading">
                 <h2 class="panel-title">

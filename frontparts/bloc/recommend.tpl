@@ -21,8 +21,11 @@
  *}-->
 <script>
     $(function(){
-        // $.imageLoaded("#recommend_area .product_item").heightLine("refresh");
-        // $("#recommend_area .product_item").heightLine();
+        $('#owl-container').owlCarousel({
+            itemsDesktop: [1194,3]
+            ,itemsTablet: [768,3]
+            ,itemsMobile: [491,2]
+        });
     });
 </script>
 <!--{strip}-->
@@ -39,9 +42,9 @@
                         </small>
                     </h2>
                 </div>
-                <div class="block_body row">
+                <div id="owl-container" class="owl-carousel">
                     <!--{foreach from=$arrBestProducts item=arrProduct name="recommend_products"}-->
-                        <div class="product_item col-xs-6 col-sm-4 col-md-4">
+                        <div class="product_item col-xs-12 padding-xs">
                             <a href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$arrProduct.product_id|u}-->" class="thumbnail">
                                 <img src="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrProduct.main_image|sfNoImageMainList|h}-->" alt="<!--{$arrProduct.name|h}-->" class="img-responsive img-rounded" />
                                 <div class="caption">
