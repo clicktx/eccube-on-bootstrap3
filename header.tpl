@@ -128,6 +128,10 @@
                                 </span>
                             </a>
                         </li>
+                        <li class="visible-xs"><a href="<!--{$smarty.const.ROOT_URLPATH}-->abouts/<!--{$smarty.const.DIR_INDEX_PATH}-->">当サイトについて</a></li>
+                        <li class="visible-xs"><a href="<!--{$smarty.const.HTTPS_URL}-->contact/<!--{$smarty.const.DIR_INDEX_PATH}-->">お問い合わせ</a></li>
+                        <li class="visible-xs"><a href="<!--{$smarty.const.ROOT_URLPATH}-->order/<!--{$smarty.const.DIR_INDEX_PATH}-->">特定商取引法に基づく表示</a></li>
+                        <li class="visible-xs"><a href="<!--{$smarty.const.ROOT_URLPATH}-->guide/privacy.php">プライバシーポリシー</a></li>
                     </ul>
                 </div>
             </div>
