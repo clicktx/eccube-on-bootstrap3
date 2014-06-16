@@ -22,7 +22,9 @@
 <script>
     $(function(){
         $('#owl-container').owlCarousel({
-            itemsDesktop: [1194,3]
+            items: 4
+            ,itemsDesktop: [1199,3]
+            ,itemsDesktopSmall: [992,3]
             ,itemsTablet: [768,3]
             ,itemsMobile: [491,2]
         });
