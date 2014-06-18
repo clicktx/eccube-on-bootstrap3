@@ -113,7 +113,7 @@
                                         <div><small><!--{$item.productsClass.class_name2|h}-->：<!--{$item.productsClass.classcategory_name2|h}--></small></div>
                                     <!--{/if}-->
                                     <div>
-                                        <small>価格: </small><!--{$item.price_inctax|number_format|h}-->円
+                                        価格: <!--{$item.price_inctax|number_format|h}-->円
                                     </div>
                                 </div>
 
@@ -125,16 +125,18 @@
                                     </div>
                                 </div>
 
-                                <div class="col-xs-9 col-xs-push-3 col-sm-9 col-sm-push-3 col-md-10 col-md-push-2 text-right">
+                                <div class="col-xs-12 col-sm-9 col-sm-push-3 col-md-10 col-md-push-2 text-right">
                                     <hr>
-                                    <small>数量: </small><!--{$item.quantity|h}-->
-                                    <div id="quantity_level">
-                                        <a href="?" class="btn btn-default btn-xs" onclick="eccube.fnFormModeSubmit('form<!--{$key|h}-->','up','cart_no','<!--{$item.cart_no|h}-->'); return false">
-                                            <span class="fa fa-plus"></span>
-                                        </a>
-                                        <a href="?" class="btn btn-default btn-xs" onclick="eccube.fnFormModeSubmit('form<!--{$key|h}-->','down','cart_no','<!--{$item.cart_no|h}-->'); return false" <!--{if $item.quantity == 1}-->disabled="disabled"<!--{/if}-->>
-                                            <span class="fa fa-minus"></span>
-                                        </a>
+                                    <div class="pull-left">
+                                        数量: <!--{$item.quantity|h}-->
+                                        <div id="quantity_level" class="btn-group btn-group-sm">
+                                            <a href="?" class="btn btn-default btn" onclick="eccube.fnFormModeSubmit('form<!--{$key|h}-->','up','cart_no','<!--{$item.cart_no|h}-->'); return false">
+                                                <span class="fa fa-plus"></span>
+                                            </a>
+                                            <a href="?" class="btn btn-default btn" onclick="eccube.fnFormModeSubmit('form<!--{$key|h}-->','down','cart_no','<!--{$item.cart_no|h}-->'); return false" <!--{if $item.quantity == 1}-->disabled="disabled"<!--{/if}-->>
+                                                <span class="fa fa-minus"></span>
+                                            </a>
+                                        </div>
                                     </div>
                                     <small>小計: </small><!--{$item.total_inctax|number_format|h}-->円
                                 </div>

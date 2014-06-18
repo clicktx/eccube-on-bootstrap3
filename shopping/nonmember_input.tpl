@@ -19,6 +19,20 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *}-->
+<script>
+    $(function(){
+        var msf = $('#multiple-shippng-form');
+        msf.hide();
+        $('#deliv_label').click(function(){
+            var checkbox_val = $(this).prop("checked");
+            if (checkbox_val) {
+                msf.show("normal");
+            } else {
+                msf.hide("normal");
+            }
+        });
+    });
+</script>
 
 <div id="undercolumn">
     <div id="undercolumn_customer">
@@ -61,7 +75,9 @@
                         </div>
                     </div>
                 </div>
+        <div id="multiple-shippng-form">
             <!--{include file="`$smarty.const.TEMPLATE_REALDIR`frontparts/form_personal_input.tpl" flgFields=1 emailMobile=false prefix="shipping_"}-->
+        </div>
 
             <div class="btn_area margin-top-xl">
                 <div class="jumbotron padding-md col-sm-12">

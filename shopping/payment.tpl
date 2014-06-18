@@ -163,8 +163,8 @@
                 <!--{/if}-->
 
                 <div id="payment" class="clearfix">
-                    <div class="radio">
-                        <!--{section name=cnt loop=$arrPayment}-->
+                    <!--{section name=cnt loop=$arrPayment}-->
+                        <div class="radio">
                             <div class="col-xs-5 col-md-3">
                                 <input type="radio" id="pay_<!--{$smarty.section.cnt.iteration}-->" name="<!--{$key}-->"  value="<!--{$arrPayment[cnt].payment_id}-->" style="<!--{$arrErr[$key]|sfGetErrorColor}-->" <!--{$arrPayment[cnt].payment_id|sfGetChecked:$arrForm[$key].value}--> />
                                 <label for="pay_<!--{$smarty.section.cnt.iteration}-->"><!--{$arrPayment[cnt].payment_method|h}--><!--{if $arrPayment[cnt].note != ""}--><!--{/if}--></label>
@@ -176,8 +176,8 @@
                                 <!--{/if}-->
                             <!--{/if}-->
                             </div>
-                        <!--{/section}-->
-                    </div>
+                        </div>
+                    <!--{/section}-->
                 </div>
             </div>
 
