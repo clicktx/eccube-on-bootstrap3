@@ -171,7 +171,7 @@
 
                             <!--★商品名★-->
                             <h3>
-                                <!--{$arrProduct.name|h}-->
+                                <!--{$arrProduct.name|mb_substr:0:21|h}--><!--{if $arrProduct.name|mb_strlen > 21}-->..<!--{/if}-->
                             </h3>
                             <!--★価格★-->
                             <div class="pricebox">
