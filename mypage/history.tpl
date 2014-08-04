@@ -54,10 +54,10 @@
                     <div class="list-group-item">
                     <!--{foreach from=$tpl_arrOrderDetail item=orderDetail}-->
                         <div class="row">
-                            <div class="col-xs-3 col-md-2 padding-right-none">
+                            <div class="col-xs-3 col-sm-2 col-md-1 padding-right-none">
                                 <img src="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$orderDetail.main_list_image|sfNoImageMainList|h}-->" class="img-responsive" alt="<!--{$orderDetail.product_name|h}-->" />
                             </div>
-                            <div class="col-xs-9 col-md-10">
+                            <div class="col-xs-9 col-sm-10 col-md-11">
                                 <div>
                                     <a<!--{if $orderDetail.enable}--> href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$orderDetail.product_id|u}-->"<!--{/if}--> class="text-bold"><!--{$orderDetail.product_name|h}-->
                                     </a><br />
