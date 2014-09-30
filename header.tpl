@@ -141,7 +141,7 @@
     <!-- for small mobile -->
     <section id="mobile-nav" class="hidden-md hidden-lg">
         <div class="container margin-bottom-lg">
-            <form ame="search_form" method="get" action="<!--{$smarty.const.ROOT_URLPATH}-->products/list.php">
+            <form name="search_form" method="get" action="<!--{$smarty.const.ROOT_URLPATH}-->products/list.php">
                 <div class="input-group">
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-search"></span>
