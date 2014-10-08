@@ -96,61 +96,23 @@
         };
         $("a[href^=#top]").click(pageTop);
 
-        // jkhl
-        var elementsArray = $("#product-list-wrap div a, #detailarea a, #detailarea select");
-        if (elementsArray.length == 0){
-            elementsArray = $("#category_area a:visible");
-        }
-        var activeElementNo = -1;
-        var activeFunction = function(n){ $(elementsArray[n]).focus(); }
-        $(document).keypress(function(e){
-            if ( $("input:focus").length ){ return }
-            switch (e.keyCode){
-                case 106: // j
-                    if ((elementsArray.length -1) > activeElementNo){ activeFunction(++activeElementNo) }
-                    break;
-                case 107: // k
-                    if (activeElementNo > 0){ activeFunction(--activeElementNo) }
-                    break;
-                case 104: // h
-                    history.back();
-                    break;
-                case 108: // l
-                    history.forward();
-                    break;
-                case 72: // H
-                    activeFunction(activeElementNo=0);
-                    break;
-                case 48: // 0
-                    activeFunction(activeElementNo=0);
-                    break;
-                case 94: // ^
-                    activeFunction(activeElementNo=0);
-                    break;
-                case 76: // L
-                    activeFunction(activeElementNo=(elementsArray.length -1));
-                    break;
-                case 36: // $
-                    activeFunction(activeElementNo=(elementsArray.length -1));
-                    break;
-                case 47: // '/'
-                    $("#header-search").focus();return false;
-                    break;
-                case 63: // ?
-                    $("#header-search").focus();return false;
-                    break;
-                case 103: // g
-                    pageTop();
-                    break;
-                case 71: // G
-                    pageBottom();
-                    break;
-                case 45: // -
-                    window.location.href = '<!--{$smarty.const.TOP_URL}-->';
-                    break;
-                default:
-                    break;
-            };
+        // vimize
+        $().vimize({
+            homePagePath: '/',
+            searchBoxSelector: 'input#header-search',
+            selectors: {
+                0: '#category_area a',
+                1: '#product-list-wrap a, .navi a, #main_column a',
+            },
+            defaultSelectors: 1,
+            command: {
+                CAT: function(){
+                    window.location.href = 'https://www.google.co.jp/search?tbm=isch&q=cat';
+                }
+            },
+            commandError: function(e){
+                alert(e);
+            }
         });
     });
 //]]></script>
