@@ -206,8 +206,8 @@
                                     <div class="classlist margin-bottom-lg">
                                         <!--▼規格1-->
                                         <div class="clearfix form-group<!--{if $arrErr.classcategory_id1 != ""}--> has-error<!--{/if}-->">
-                                            <label for="classcategory_id1" class="col-sm-3 control-label"><!--{$tpl_class_name1|h}-->：</label>
-                                            <div class="col-sm-9">
+                                            <label for="classcategory_id1" class="col-sm-5 control-label"><!--{$tpl_class_name1|h}-->：</label>
+                                            <div class="col-sm-7">
                                                 <select id="classcategory_id1" class="form-control" name="classcategory_id1" style="<!--{$arrErr.classcategory_id1|sfGetErrorColor}-->">
                                                 <!--{html_options options=$arrClassCat1 selected=$arrForm.classcategory_id1.value}-->
                                                 </select>
@@ -220,8 +220,8 @@
                                         <!--{if $tpl_classcat_find2}-->
                                         <!--▼規格2-->
                                         <div class="clearfix form-group<!--{if $arrErr.classcategory_id2 != ""}--> has-error<!--{/if}-->">
-                                            <label for="classcategory_id2" class="col-sm-3 control-label"><!--{$tpl_class_name2|h}-->：</label>
-                                            <div class="col-sm-9">
+                                            <label for="classcategory_id2" class="col-sm-5 control-label"><!--{$tpl_class_name2|h}-->：</label>
+                                            <div class="col-sm-7">
                                                 <select id="classcategory_id2" class="form-control" name="classcategory_id2" style="<!--{$arrErr.classcategory_id2|sfGetErrorColor}-->">
                                                 </select>
                                                 <!--{if $arrErr.classcategory_id2 != ""}-->
