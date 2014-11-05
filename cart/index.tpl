@@ -91,7 +91,7 @@
                             </div>
 
                             <!--{foreach from=$cartItems[$key] item=item}-->
-                            <div class="list-group-item clearfix" style="<!--{if $item.error}-->background-color: <!--{$smarty.const.ERR_COLOR|h}-->;<!--{/if}-->">
+                            <div class="list-group-item clearfix cart-items" style="<!--{if $item.error}-->background-color: <!--{$smarty.const.ERR_COLOR|h}-->;<!--{/if}-->">
 
                                 <div class="col-xs-3 col-sm-3 col-md-2 padding-left-none padding-right-none">
                                 <!--{if $item.productsClass.main_image|strlen >= 1}-->
