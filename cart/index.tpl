@@ -93,35 +93,36 @@
                             <!--{foreach from=$cartItems[$key] item=item}-->
                             <div class="list-group-item clearfix cart-items" style="<!--{if $item.error}-->background-color: <!--{$smarty.const.ERR_COLOR|h}-->;<!--{/if}-->">
 
-                                <div class="col-xs-3 col-sm-3 col-md-2 padding-left-none padding-right-none">
-                                <!--{if $item.productsClass.main_image|strlen >= 1}-->
-                                    <a class="expansion" target="_blank" href="<!--{$smarty.const.IMAGE_SAVE_URLPATH|h}--><!--{$item.productsClass.main_image|sfNoImageMainList|h}-->">
-                                <!--{/if}-->
-                                        <img src="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$item.productsClass.main_list_image|sfNoImageMainList|h}-->" class="img-responsive" alt="<!--{$item.productsClass.name|h}-->" />
-                                        <!--{if $item.productsClass.main_image|strlen >= 1}-->
-                                    </a>
-                                <!--{/if}-->
-                                </div>
-                                <div class="col-xs-9 col-sm-5 col-md-7"><!--{* 商品名 *}-->
-                                    <strong>
-                                        <a href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$item.productsClass.product_id|u}-->"><!--{$item.productsClass.name|h}--></a>
-                                    </strong>
-                                    <!--{if $item.productsClass.classcategory_name1 != ""}-->
-                                        <div><small><!--{$item.productsClass.class_name1|h}-->：<!--{$item.productsClass.classcategory_name1|h}--></small></div>
-                                    <!--{/if}-->
-                                    <!--{if $item.productsClass.classcategory_name2 != ""}-->
-                                        <div><small><!--{$item.productsClass.class_name2|h}-->：<!--{$item.productsClass.classcategory_name2|h}--></small></div>
-                                    <!--{/if}-->
-                                    <div>
-                                        価格: <!--{$item.price_inctax|number_format|h}-->円
-                                    </div>
-                                </div>
-
                                 <div class="row">
-                                    <div class="delete-cart col-sm-4 col-md-3 text-right padding-right-sm">
+                                    <div class="delete-cart col-xs-12 text-right">
                                         <a class="btn-delete" href="?" onclick="eccube.fnFormModeSubmit('form<!--{$key|h}-->', 'delete', 'cart_no', '<!--{$item.cart_no|h}-->'); return false;">
                                             <span class="fa fa-trash-o fa-lg"></span><span class="hidden-xs"> <small>カートから削除</small></span>
                                         </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-3 col-sm-3 col-md-2 padding-right-none">
+                                    <!--{if $item.productsClass.main_image|strlen >= 1}-->
+                                        <a class="expansion" target="_blank" href="<!--{$smarty.const.IMAGE_SAVE_URLPATH|h}--><!--{$item.productsClass.main_image|sfNoImageMainList|h}-->">
+                                    <!--{/if}-->
+                                            <img src="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$item.productsClass.main_list_image|sfNoImageMainList|h}-->" class="img-responsive" alt="<!--{$item.productsClass.name|h}-->" />
+                                            <!--{if $item.productsClass.main_image|strlen >= 1}-->
+                                        </a>
+                                    <!--{/if}-->
+                                    </div>
+                                    <div class="col-xs-9 col-sm-9 col-md-10"><!--{* 商品名 *}-->
+                                        <strong class="item-title">
+                                            <a href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$item.productsClass.product_id|u}-->"><!--{$item.productsClass.name|h}--></a>
+                                        </strong>
+                                        <!--{if $item.productsClass.classcategory_name1 != ""}-->
+                                            <div><small><!--{$item.productsClass.class_name1|h}-->：<!--{$item.productsClass.classcategory_name1|h}--></small></div>
+                                        <!--{/if}-->
+                                        <!--{if $item.productsClass.classcategory_name2 != ""}-->
+                                            <div><small><!--{$item.productsClass.class_name2|h}-->：<!--{$item.productsClass.classcategory_name2|h}--></small></div>
+                                        <!--{/if}-->
+                                        <div>
+                                            価格: <!--{$item.price_inctax|number_format|h}-->円
+                                        </div>
                                     </div>
                                 </div>
 
