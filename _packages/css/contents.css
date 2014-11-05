@@ -125,11 +125,6 @@ div#undercolumn_error .message_area .error {
         background-color: transparent;
         border: none;
     }
-    #undercolumn_cart .delete-cart {
-        position: absolute;
-        top: 8px;
-        right: 0;
-    }
 }
 @media (min-width:768px){
     #product-list-wrap div.list_area {
@@ -340,6 +335,13 @@ div#whobought_area h2 {
 }
 .btn-delete:hover {
     color: #333;
+}
+#undercolumn_cart .item-title {
+    display: block;
+    margin-top: 5px;
+}
+#undercolumn_cart .delete-cart {
+    /*margin-top: -5px;*/
 }
 
 /* お支払い方法・お届け時間等の指定
