@@ -91,8 +91,8 @@
                             </div>
 
                             <!--{foreach from=$cartItems[$key] item=item}-->
-                            <div class="list-group-item clearfix" style="<!--{if $item.error}-->background-color: <!--{$smarty.const.ERR_COLOR|h}-->;<!--{/if}-->">
-                                
+                            <div class="list-group-item clearfix cart-items" style="<!--{if $item.error}-->background-color: <!--{$smarty.const.ERR_COLOR|h}-->;<!--{/if}-->">
+
                                 <div class="col-xs-3 col-sm-3 col-md-2 padding-left-none padding-right-none">
                                 <!--{if $item.productsClass.main_image|strlen >= 1}-->
                                     <a class="expansion" target="_blank" href="<!--{$smarty.const.IMAGE_SAVE_URLPATH|h}--><!--{$item.productsClass.main_image|sfNoImageMainList|h}-->">
@@ -148,7 +148,7 @@
                                     <small>合計: </small>
                                     <span class="price"><!--{$arrData[$key].total-$arrData[$key].deliv_fee|number_format|h}-->円</span>
                                 </div>
-                                
+
                                 <!--{if $smarty.const.USE_POINT !== false}-->
                                     <!--{if $arrData[$key].birth_point > 0}-->
                                     <div class="col-xs-12 text-right">
