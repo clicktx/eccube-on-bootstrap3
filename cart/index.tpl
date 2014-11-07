@@ -93,15 +93,14 @@
                             <!--{foreach from=$cartItems[$key] item=item}-->
                             <div class="list-group-item clearfix cart-items" style="<!--{if $item.error}-->background-color: <!--{$smarty.const.ERR_COLOR|h}-->;<!--{/if}-->">
 
-                                <div class="row">
+                                <div class="clearfix">
                                     <div class="delete-cart col-xs-12 text-right">
                                         <a class="btn-delete" href="?" onclick="eccube.fnFormModeSubmit('form<!--{$key|h}-->', 'delete', 'cart_no', '<!--{$item.cart_no|h}-->'); return false;">
                                             <span class="fa fa-trash-o fa-lg"></span><span class="hidden-xs"> <small>カートから削除</small></span>
                                         </a>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-3 col-sm-3 col-md-2 padding-right-none">
+
+                                    <div class="col-xs-3 col-sm-3 col-md-2 padding-left-none padding-right-none">
                                     <!--{if $item.productsClass.main_image|strlen >= 1}-->
                                         <a class="expansion" target="_blank" href="<!--{$smarty.const.IMAGE_SAVE_URLPATH|h}--><!--{$item.productsClass.main_image|sfNoImageMainList|h}-->">
                                     <!--{/if}-->
