@@ -53,12 +53,12 @@
                     </div>
                     <div class="list-group-item">
                     <!--{foreach from=$tpl_arrOrderDetail item=orderDetail}-->
-                        <div class="row">
+                        <div class="row history-item">
                             <div class="col-xs-3 col-sm-2 col-md-1 padding-right-none">
                                 <img src="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$orderDetail.main_list_image|sfNoImageMainList|h}-->" class="img-responsive" alt="<!--{$orderDetail.product_name|h}-->" />
                             </div>
                             <div class="col-xs-9 col-sm-10 col-md-11">
-                                <div>
+                                <div class="history-item-title">
                                     <a<!--{if $orderDetail.enable}--> href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$orderDetail.product_id|u}-->"<!--{/if}--> class="text-bold"><!--{$orderDetail.product_name|h}-->
                                     </a><br />
                                     <small>
@@ -70,7 +70,7 @@
                                         <!--{/if}-->
                                     </small>
                                 </div>
-                                <div>
+                                <div class="history-item-price">
                                     <small>価格：</small><!--{$orderDetail.price_inctax|number_format|h}-->円
                                 <!--{if $orderDetail.price_inctax != $orderDetail.product_price_inctax}-->
                                     <div class="attention"><small>現在価格：</small><!--{$orderDetail.product_price_inctax|number_format|h}-->円</div>
@@ -92,7 +92,7 @@
                                     <!--{/if}-->
                                 <!--{/if}-->
                                 </div>
-                                <div class="text-right">
+                                <div class="text-right history-item-subtotal">
                                     <span class="padding-right-lg">
                                         <small>数量：</small><!--{$orderDetail.quantity|h}-->
                                     </span>
