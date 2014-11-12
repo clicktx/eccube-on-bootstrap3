@@ -39,11 +39,6 @@
             <!--{if $objNavi->all_row > 0}-->
 
                 <p><span class="attention"><!--{$objNavi->all_row}-->件</span>の購入履歴があります。</p>
-                <div class="pagenumber_area">
-                    <!--▼ページナビ-->
-                    <!--{$objNavi->strnavi}-->
-                    <!--▲ページナビ-->
-                </div>
 
                 <div class="list-group">
                     <!--{section name=cnt loop=$arrOrder}-->
@@ -69,6 +64,11 @@
                             </div>
                         </a>
                     <!--{/section}-->
+                </div>
+                <div class="pagenumber_area navi pagination">
+                    <!--▼ページナビ-->
+                    <!--{$objNavi->strnavi}-->
+                    <!--▲ページナビ-->
                 </div>
 
             <!--{else}-->
