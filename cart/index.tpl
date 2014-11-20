@@ -110,7 +110,7 @@
                                     <!--{/if}-->
                                     </div>
                                     <div class="col-xs-9 col-sm-9 col-md-10"><!--{* 商品名 *}-->
-                                        <strong class="item-title">
+                                        <strong class="cart-item-title">
                                             <a href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$item.productsClass.product_id|u}-->"><!--{$item.productsClass.name|h}--></a>
                                         </strong>
                                         <!--{if $item.productsClass.classcategory_name1 != ""}-->
@@ -119,7 +119,7 @@
                                         <!--{if $item.productsClass.classcategory_name2 != ""}-->
                                             <div><small><!--{$item.productsClass.class_name2|h}-->：<!--{$item.productsClass.classcategory_name2|h}--></small></div>
                                         <!--{/if}-->
-                                        <div>
+                                        <div class="cart-item-price">
                                             価格: <!--{$item.price_inctax|number_format|h}-->円
                                         </div>
                                     </div>
