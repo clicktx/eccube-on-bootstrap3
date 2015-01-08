@@ -30,7 +30,6 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="<!--{$TPL_URLPATH}-->bootstrap/3.1.0/css/bootstrap.min.css" />
-<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/font-awesome.min.css" />
 <link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/import.css" type="text/css" media="all" />
 <link rel="stylesheet" href="<!--{$smarty.const.ROOT_URLPATH}-->js/jquery.colorbox/colorbox.css" type="text/css" media="all" />
 <script type="text/javascript" src="<!--{$smarty.const.ROOT_URLPATH}-->js/jquery-1.4.2.min.js"></script>
