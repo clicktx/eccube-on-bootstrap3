@@ -27,7 +27,7 @@
     <h2 class="title"><!--{$tpl_title|h}--></h2>
     <p class="alert alert-info"><strong>必須項目</strong>「<span class="attention">※</span>」印は入力必須項目です。</p>
 
-    <form name="form1" id="form1" class="form-horizontal" method="post" action="?" onsubmit="return false;">
+    <form name="form1" id="form1" class="form-horizontal" method="post" action="?">
         <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
         <input type="hidden" name="mode" value="edit" />
         <input type="hidden" name="other_deliv_id" value="<!--{$smarty.session.other_deliv_id|h}-->" />
