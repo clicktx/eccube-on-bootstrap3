@@ -4,7 +4,7 @@ TwitterBootstrapを使った[EC-CUBE](http://www.ec-cube.net)用のデザイン�
 
 
 ### 開発環境
-- EC-CUBE 2.13.1
+- EC-CUBE 2.13.3
 - Twitter Bootstrap3.1.0
 
 
