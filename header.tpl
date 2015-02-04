@@ -91,11 +91,22 @@
                                     <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/login.php"><span class="glyphicon glyphicon-user"></span> MYページ</a>
                                 </li>
                                 <li>
-                                    <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/login.php"><span class="fa fa-calendar"></span> 購入履歴</a>
+                                    <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/login.php"><span class="fa fa-clock-o"></span> 購入履歴</a>
                                 </li>
                                 <li>
                                     <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/favorite.php"><span class="fa fa-star"></span> お気に入り</a>
                                 </li>
+                                <!--{if $smarty.session.customer.customer_id}-->
+                                <li class="dropdown-header">
+                                    設定
+                                </li>
+                                <li>
+                                    <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/change.php"><span class="fa fa-wrench"></span> 会員登録内容変更</a>
+                                </li>
+                                <li>
+                                    <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/delivery.php"><span class="fa fa-truck"></span> お届け先追加・変更</a>
+                                </li>
+                                <!--{/if}-->
                                 <li class="divider"></li>
                                 <!--{if $smarty.session.customer.customer_id}-->
                                 <li class="dropdown-header">
