@@ -29,6 +29,7 @@
         <!--{if $is_price_change == true}-->
             <div class="attention alert alert-danger fade in">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <span class="fa fa-warning"></span>
               金額が変更されている商品があるため、再注文時はご注意ください。
             </div>
         <!--{/if}-->

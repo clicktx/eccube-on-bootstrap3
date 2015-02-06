@@ -49,11 +49,11 @@
             <!--{/if}-->
 
             <!--{if strlen($tpl_error) != 0}-->
-                <div class="alert alert-danger"><!--{$tpl_error|h}--></div>
+                <div class="alert alert-danger"><span class="fa fa-warning"></span><!--{$tpl_error|h}--></div>
             <!--{/if}-->
 
             <!--{if strlen($tpl_message) != 0}-->
-                <div class="alert alert-danger"><!--{$tpl_message|h|nl2br}--></div>
+                <div class="alert alert-danger"><span class="fa fa-warning"></span><!--{$tpl_message|h|nl2br}--></div>
             <!--{/if}-->
         </p>
 

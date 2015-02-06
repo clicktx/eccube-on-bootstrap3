@@ -28,6 +28,7 @@
         ※下記質問の答えをお忘れになられた場合は、<a href="mailto:<!--{$arrSiteInfo.email02|escape:'hex'}-->"><!--{$arrSiteInfo.email02|escape:'hexentitiy'}--></a>までご連絡ください。<br />
     </p>
     <p class="message alert alert-danger">
+        <span class="fa fa-warning"></span>
         【重要】新しくパスワードを発行いたしますので、お忘れになったパスワードはご利用できなくなります。</p>
     </p>
     <form action="?" method="post" name="form1">

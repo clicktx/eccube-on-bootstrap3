@@ -35,8 +35,11 @@
                     退会処理を行います。
                 </div>
                 <div class="message_area">
-                    <p class="alert alert-danger">会員を退会された場合には、現在保存されている購入履歴や、
-                    お届け先などの情報は、全て削除されます。</p>
+                    <p class="alert alert-danger">
+                        <span class="fa fa-warning"></span>
+                        会員を退会された場合には、現在保存されている購入履歴や、
+                        お届け先などの情報は、全て削除されます。
+                    </p>
 
                     <div class="btn_area row">
                         <div class="col-sm-12 col-md-4">

@@ -24,6 +24,7 @@
 <!--{include file="`$smarty.const.TEMPLATE_REALDIR`popup_header.tpl" subtitle="エラー"}-->
 
 <div id="compbox" class="alert alert-danger margin-top-xl">
+    <span class="fa fa-warning"></span>
     <span class="red"><!--{$tpl_error}--></span><br />
 </div>
 

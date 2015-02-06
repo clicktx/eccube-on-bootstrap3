@@ -35,8 +35,10 @@
             <div id="complete_area">
                 <div class="message">退会手続きを実行してもよろしいでしょうか？</div>
                 <div class="message_area">
-                    <p class="alert alert-danger">退会手続きが完了した時点で、現在保存されている購入履歴や、<br />
-                        お届け先等の情報は全てなくなりますのでご注意ください。</p>
+                    <p class="alert alert-danger">
+                        <span class="fa fa-warning"></span>
+                        退会手続きが完了した時点で、現在保存されている購入履歴やお届け先等の情報は全てなくなりますのでご注意ください。
+                    </p>
                     <div class="btn_area row">
                         <div class="col-sm-7 padding-right-none hidden-xs">
                             <a href="./refusal.php" class="btn btn-default btn-block">いいえ、退会しません</a>
