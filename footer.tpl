@@ -29,6 +29,7 @@
                 &nbsp;<!--{if $smarty.const.RELEASE_YEAR != $smarty.now|date_format:"%Y"}--><!--{$smarty.const.RELEASE_YEAR}-->-<!--{/if}--><!--{$smarty.now|date_format:"%Y"}-->
                 &nbsp;<!--{$arrSiteInfo.shop_name_eng|default:$arrSiteInfo.shop_name|h}--> All rights reserved.
             </div>
+            <div>template by <a href="https://github.com/clicktx/eccube-on-bootstrap3">EC-CUBE on Bootstrap3</a></div>
         </div>
     </div>
 <!--{/strip}-->
