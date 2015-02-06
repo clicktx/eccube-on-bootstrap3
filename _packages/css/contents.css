@@ -85,6 +85,10 @@ div#undercolumn_error .message_area .error {
     left: 0;
 }
 @media (max-width: 767px) {
+    /*button*/
+    .btn.xs-btn-lg{
+        padding: 10px 16px;
+    }
     #product-list-wrap .soldout {
         top: 30px;
         left: 5px;
@@ -132,6 +136,10 @@ div#undercolumn_error .message_area .error {
     }
 }
 @media (min-width:768px){
+    /*button*/
+    .btn.sm-btn-lg{
+        padding: 10px 16px;
+    }
     #product-list-wrap div.list_area {
         padding-left: 4px;
         padding-right: 4px;
@@ -165,6 +173,10 @@ div#undercolumn_error .message_area .error {
     }
 }
 @media (min-width: 992px) {
+    /*button*/
+    .btn.xs-btn-lg, .btn.sm-btn-lg{
+        padding: 6px 12px;
+    }
     #product-list-wrap div.list_area {
         padding-left: 7px;
         padding-right: 7px;

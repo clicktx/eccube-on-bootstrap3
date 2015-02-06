@@ -61,7 +61,7 @@
         </p>
         <div class="btn_area row">
             <div class="col-sm-12 col-md-4">
-                <button name="next" id="next" class="btn-action btn btn-primary btn-block">次へ</button>
+                <button name="next" id="next" class="btn-action btn btn-primary btn-block xs-btn-lg sm-btn-lg">次へ</button>
             </div>
         </div>
     </form>

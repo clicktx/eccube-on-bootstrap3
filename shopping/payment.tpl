@@ -295,7 +295,7 @@
                     <a href="?mode=return" class="btn btn-default btn-block">戻る</a>
                 </div>
                 <div class="col-sm-6">
-                    <button name="next" id="next" class="btn btn-primary btn-block">次へ</button>
+                    <button name="next" id="next" class="btn btn-primary btn-block xs-btn-lg sm-btn-lg">次へ</button>
                 </div>
                 <div class="col-xs-12 visible-xs margin-top-sm">
                     <a href="?mode=return" class="btn btn-default btn-sm btn-block">戻る</a>

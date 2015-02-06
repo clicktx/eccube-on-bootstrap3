@@ -298,9 +298,9 @@
                 </div>
                 <div class="col-sm-6">
                 <!--{if $use_module}-->
-                <button name="next" id="next" class="btn btn-primary btn-block">次へ</button>
+                <button name="next" id="next" class="btn btn-primary btn-block xs-btn-lg sm-btn-lg">次へ</button>
                 <!--{else}-->
-                    <button name="next" id="next" class="btn btn-primary btn-block">ご注文確定</button>
+                    <button name="next" id="next" class="btn btn-primary btn-block xs-btn-lg sm-btn-lg">ご注文確定</button>
                 <!--{/if}-->
                 </div>
                 <div class="col-xs-12 visible-xs margin-top-sm">

@@ -37,7 +37,7 @@
 
         <div class="btn_area form-group padding-bottom-lg">
             <div class="col-sm-12 col-md-4 col-md-push-2">
-                <a class="btn-action btn btn-primary btn-block" href="javascript:" onclick="eccube.setValueAndSubmit('form1', 'mode', 'edit'); return false;">登録する</a>
+                <a class="btn-action btn btn-primary btn-block xs-btn-lg sm-btn-lg" href="javascript:" onclick="eccube.setValueAndSubmit('form1', 'mode', 'edit'); return false;">登録する</a>
             </div>
         </div>
     </form>

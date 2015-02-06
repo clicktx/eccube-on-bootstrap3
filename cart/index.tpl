@@ -173,7 +173,7 @@
                                 </div>
                             <!--{if strlen($tpl_error) == 0}-->
                                 <div class="col-md-4 col-md-push-5">
-                                    <button class="btn btn-success btn-block" name="confirm">ご購入手続きへ</button>
+                                    <button class="btn btn-success btn-block xs-btn-lg sm-btn-lg" name="confirm">ご購入手続きへ</button>
                                 </div>
                             <!--{/if}-->
                             </div>

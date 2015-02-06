@@ -44,7 +44,7 @@
                     <a href="?" onclick="eccube.setModeAndSubmit('return', '', ''); return false;" class="btn btn-default btn-block">戻る</a>
                 </div>
                 <div class="col-sm-6">
-                    <button name="send_button" id="send_button" class="btn btn-primary btn-block">会員登録する</button>
+                    <button name="send_button" id="send_button" class="btn btn-primary btn-block xs-btn-lg sm-btn-lg">会員登録する</button>
                 </div>
                 <div class="col-xs-12 visible-xs margin-top-sm">
                     <a href="?" onclick="eccube.setModeAndSubmit('return', '', ''); return false;" class="btn btn-default btn-sm btn-block">戻る</a>

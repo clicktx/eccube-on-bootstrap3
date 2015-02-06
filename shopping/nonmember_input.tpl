@@ -84,16 +84,16 @@
                     <!--{if $smarty.const.USE_MULTIPLE_SHIPPING !== false}-->
                         <p class="alignC">この商品を複数のお届け先に送りますか？</p>
                         <div class="col-sm-6">
-                            <a class="btn btn-primary btn-block margin-bottom-md" href="javascript:;" onclick="eccube.setModeAndSubmit('multiple', '', ''); return false">
+                            <button class="btn btn-primary btn-block margin-bottom-md xs-btn-lg sm-btn-lg" name="singular" id="singular">上記のお届け先のみ</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <a class="btn btn-primary btn-block margin-bottom-md xs-btn-lg sm-btn-lg" href="javascript:;" onclick="eccube.setModeAndSubmit('multiple', '', ''); return false">
                                 複数のお届け先に送る
                             </a>
                         </div>
-                        <div class="col-sm-6">
-                            <button class="btn btn-primary btn-block margin-bottom-md" name="singular" id="singular">上記のお届け先のみに送る</button>
-                        </div>
                     <!--{else}-->
                         <div class="col-md-6 col-md-push-3">
-                            <button class="btn btn-primary btn-block" name="singular" id="singular">次へ</button>
+                            <button class="btn btn-primary btn-block xs-btn-lg sm-btn-lg" name="singular" id="singular">次へ</button>
                         </div>
                     <!--{/if}-->
                 </div>

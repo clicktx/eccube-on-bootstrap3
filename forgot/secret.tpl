@@ -55,7 +55,7 @@
         </div>
         <div class="btn_area row">
             <div class="col-sm-12 col-md-4">
-                <button name="next" id="next" class="btn-action btn btn-primary btn-block">パスワードを再発行</button>
+                <button name="next" id="next" class="btn-action btn btn-primary btn-block xs-btn-lg sm-btn-lg">パスワードを再発行</button>
             </div>
         </div>
     </form>

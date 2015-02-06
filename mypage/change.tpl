@@ -40,7 +40,7 @@
 
             <div class="btn_area form-group">
                 <div class="col-sm-12 col-md-4 col-md-push-2">
-                    <button name="refusal" id="refusal" class="btn btn-primary btn-block">確認ページヘ</button>
+                    <button name="refusal" id="refusal" class="btn btn-primary btn-block xs-btn-lg sm-btn-lg">確認ページヘ</button>
                 </div>
             </div>
         </form>

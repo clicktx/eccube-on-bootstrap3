@@ -41,7 +41,7 @@
                         <a href="<!--{$smarty.const.TOP_URL}-->" class="btn btn-default btn-block">同意しない</a>
                     </div>
                     <div class="col-sm-6">
-                        <a href="<!--{$smarty.const.ENTRY_URL}-->" class="btn btn-success btn-block">同意して会員登録へ</a>
+                        <a href="<!--{$smarty.const.ENTRY_URL}-->" class="btn btn-success btn-block xs-btn-lg sm-btn-lg">同意して会員登録へ</a>
                     </div>
                 </div>
             </div>

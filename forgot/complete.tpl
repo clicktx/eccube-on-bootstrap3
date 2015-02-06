@@ -40,7 +40,7 @@
     <form action="?" method="post" name="form1">
         <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
         <div class="btn_area">
-            <a href="javascript:window.close()" class="btn btn-default btn-block">
+            <a href="javascript:window.close()" class="btn btn-default btn-block xs-btn-lg sm-btn-lg">
                     閉じる
             </a>
         </div>

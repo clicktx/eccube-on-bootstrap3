@@ -44,7 +44,7 @@
 
             <div class="btn_area row">
                 <div class="col-sm-12 col-md-6">
-                    <a href="<!--{$smarty.const.TOP_URL}-->" class="btn btn-default btn-block">トップページへ</a>
+                    <a href="<!--{$smarty.const.TOP_URL}-->" class="btn btn-default btn-block xs-btn-lg sm-btn-lg">トップページへ</a>
                 </div>
             </div>
         </div>
