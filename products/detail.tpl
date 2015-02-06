@@ -52,10 +52,12 @@
                                     <!--★拡大する★-->
                                     <a
                                         href="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrProduct.main_large_image|h}-->"
-                                        class="expansion"
+                                        class="expansion btn btn-link"
                                         target="_blank"
                                     >
-                                        画像を拡大する</a>
+                                        <span class="fa fa-search-plus"></span>
+                                        画像を拡大する
+                                    </a>
                             </span>
                         <!--{else}-->
                             <img src="<!--{$arrFile[$key].filepath|h}-->" width="470" height="470" alt="<!--{$arrProduct.name|h}-->" class="picture img-responsive img-thumbnail center-block" />
@@ -293,29 +295,38 @@
         <!--{assign var=ikey value="sub_image`$smarty.section.cnt.index+1`"}-->
         <!--{if $arrProduct[$key] != "" or $arrProduct[$ikey]|strlen >= 1}-->
             <div class="sub_area clearfix">
-                <h3><!--★サブタイトル★--><!--{$arrProduct[$key]|h}--></h3>
+                <div class="jumbotron padding-sm panel-heading margin-bottom-none">
+                    <h3><!--★サブタイトル★--><!--{$arrProduct[$key]|h}--></h3>
+                </div>
+                <div class="panel-body row">
                 <!--{assign var=ckey value="sub_comment`$smarty.section.cnt.index+1`"}-->
                 <!--▼サブ画像-->
                 <!--{assign var=lkey value="sub_large_image`$smarty.section.cnt.index+1`"}-->
                 <!--{if $arrProduct[$ikey]|strlen >= 1}-->
-                    <div class="subtext"><!--★サブテキスト★--><!--{$arrProduct[$ckey]|nl2br_html}--></div>
-                    <div class="subphotoimg">
+                    <!--{if $arrProduct[$ckey]|strlen >= 1}-->
+                    <div class="subtext col-md-8"><!--★サブテキスト★--><!--{$arrProduct[$ckey]|nl2br_html}--></div>
+                    <!--{/if}-->
+                    <div class="subphotoimg text-center<!--{if $arrProduct[$ckey]|strlen >= 1}--> col-md-4<!--{else}--> col-xs-12 margin-top-lg<!--{/if}-->">
                         <!--{if $arrProduct[$lkey]|strlen >= 1}-->
                             <a href="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrProduct[$lkey]|h}-->" class="expansion" target="_blank" >
                         <!--{/if}-->
-                        <img src="<!--{$arrFile[$ikey].filepath}-->" alt="<!--{$arrProduct.name|h}-->" width="<!--{$arrFile[$ikey].width}-->" height="<!--{$arrFile[$ikey].height}-->" />
+                        <img src="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrProduct[$lkey]|h}-->" alt="<!--{$arrProduct.name|h}-->" class="img-responsive" width="100%" />
                         <!--{if $arrProduct[$lkey]|strlen >= 1}-->
                             </a>
+                            <br />
                             <span class="mini">
-                                <a href="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrProduct[$lkey]|h}-->" class="expansion" target="_blank">
-                                    画像を拡大する</a>
+                                <a href="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrProduct[$lkey]|h}-->" class="expansion btn btn-link" target="_blank">
+                                    <span class="fa fa-search-plus"></span>
+                                    画像を拡大する
+                                </a>
                             </span>
                         <!--{/if}-->
                     </div>
                 <!--{else}-->
-                    <p class="subtext"><!--★サブテキスト★--><!--{$arrProduct[$ckey]|nl2br_html}--></p>
+                    <p class="subtext col-xs-12"><!--★サブテキスト★--><!--{$arrProduct[$ckey]|nl2br_html}--></p>
                 <!--{/if}-->
                 <!--▲サブ画像-->
+                </div>
             </div>
         <!--{/if}-->
     <!--{/section}-->

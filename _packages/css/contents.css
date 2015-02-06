@@ -304,6 +304,17 @@ body {
     display: inline;
 }
 
+/* サブ情報
+----------------------------------------------- */
+div.sub_area {
+    padding: 35px 0 0 0;
+}
+
+div.sub_area h3 {
+    margin: 0;
+    padding: 0;
+}
+
 /* お客様の声
 ----------------------------------------------- */
 div#customervoice_area {
