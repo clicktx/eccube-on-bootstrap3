@@ -49,7 +49,12 @@
             <input type="hidden" name="mode" value="confirm" />
             <input type="hidden" name="uniqid" value="<!--{$tpl_uniqid}-->" />
 
-            <h3 class="margin-top-xl"><span class="fa fa-arrow-circle-right"></span> ご注文内容</h3>
+            <h3 class="margin-top-xl margin-bottom-md">
+                <span class="fa fa-arrow-circle-right"></span> ご注文内容
+                <div class="pull-right">
+                    <a href="<!--{$smarty.const.CART_URL}-->" class="btn btn-default btn-xs"><span class="fa fa-pencil"></span> 変更</a>
+                </div>
+            </h3>
             <div class="list-group">
                 <!--{foreach from=$arrCartItems item=item}-->
                     <div class="list-group-item clearfix">
@@ -162,7 +167,14 @@
             <!--{* ログイン済みの会員のみ *}-->
 
             <!--{* ▼注文者 *}-->
-            <h3 class="margin-top-xl"><span class="fa fa-arrow-circle-right"></span> ご注文者</h3>
+            <h3 class="margin-top-xl margin-bottom-md">
+                <span class="fa fa-arrow-circle-right"></span> ご注文者
+                <div class="pull-right">
+                    <!--{if !$smarty.session.customer.customer_id}-->
+                    <a href="./?mode=nonmember" class="btn btn-default btn-xs"><span class="fa fa-pencil"></span> 変更</a>
+                    <!--{/if}-->
+                </div>
+            </h3>
             <div class="panel panel-default">
                 <div class="panel-body">
                     <small>
@@ -195,8 +207,11 @@
 
             <!--{* ▼お届け先 *}-->
             <!--{if $arrShipping}-->
-                <h3 class="margin-top-xl">
+                <h3 class="margin-top-xl margin-bottom-md">
                     <span class="fa fa-arrow-circle-right"></span> お届け先
+                    <div class="pull-right">
+                        <a href="./payment.php?mode=return" class="btn btn-default btn-xs"><span class="fa fa-pencil"></span> 変更</a>
+                    </div>
                 </h3>
             <!--{/if}-->
 
@@ -279,7 +294,12 @@
             <!--{/foreach}-->
             <!--{* ▲お届け先 *}-->
 
-            <h3 class="margin-top-xl"><span class="fa fa-arrow-circle-right"></span> 配送方法・お支払方法など</h3>
+            <h3 class="margin-top-xl margin-bottom-md">
+                <span class="fa fa-arrow-circle-right"></span> 配送方法・お支払方法など
+                <div class="pull-right">
+                    <a href="./payment.php" class="btn btn-default btn-xs"><span class="fa fa-pencil"></span> 変更</a>
+                </div>
+            </h3>
             <div class="list-group">
                 <div class="list-group-item">
                     <strong>配送方法：</strong><!--{$arrDeliv[$arrForm.deliv_id]|h}-->
