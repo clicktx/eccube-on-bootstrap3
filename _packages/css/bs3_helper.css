@@ -12,19 +12,19 @@
 
 /* フォント
 ----------------------------------------------- */
-.text-size-xs {
+.font-size-xs {
   font-size: 50% !important;
 }
-.text-size-sm {
+.font-size-sm {
   font-size: 80% !important;
 }
-.text-size-md {
+.font-size-md {
   font-size: 120% !important;
 }
-.text-size-lg {
+.font-size-lg {
   font-size: 150% !important;
 }
-.text-size-xl {
+.font-size-xl {
   font-size: 200% !important;
 }
 .text-normal {

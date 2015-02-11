@@ -49,7 +49,7 @@
             <p>今後ともご愛顧賜りますようよろしくお願い申し上げます。</p>
 
             <div class="shop_information">
-                <p class="name"><strong class="text-size-lg"><!--{$arrInfo.shop_name|h}--></strong></p>
+                <p class="name"><strong class="font-size-lg"><!--{$arrInfo.shop_name|h}--></strong></p>
                 <p>TEL：<!--{$arrInfo.tel01}-->-<!--{$arrInfo.tel02}-->-<!--{$arrInfo.tel03}--> <!--{if $arrInfo.business_hour != ""}-->（受付時間/<!--{$arrInfo.business_hour}-->）<!--{/if}--><br />
                 E-mail：<a href="mailto:<!--{$arrInfo.email02|escape:'hex'}-->"><!--{$arrInfo.email02|escape:'hexentity'}--></a>
                 </p>

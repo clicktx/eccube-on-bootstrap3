@@ -72,7 +72,7 @@
                                 。ログイン
                                 <!--{/if}-->
                                 <br />
-                                <span class="text-size-md">
+                                <span class="font-size-md">
                                     <span class="glyphicon glyphicon-user"></span> アカウントサービス<span class="caret"></span>
                                 </span>
                             </a>
@@ -125,7 +125,7 @@
                         <li class="entry hidden-xs hidden-sm">
                             <a href="<!--{$smarty.const.ROOT_URLPATH}-->entry/kiyaku.php">
                                 <br />
-                                <span class="text-size-md">
+                                <span class="font-size-md">
                                     <span class="glyphicon glyphicon-ok"></span> 会員登録
                                 </span>
 
@@ -134,7 +134,7 @@
                         <li class="hidden-xs">
                             <a href="<!--{$smarty.const.CART_URL}-->">
                                 <br />
-                                <span class="text-size-md">
+                                <span class="font-size-md">
                                     <span class="glyphicon glyphicon-shopping-cart"></span> カート<span class="badge bg-red" data-role="cart-total-quantity"></span>
                                 </span>
                             </a>

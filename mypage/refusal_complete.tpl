@@ -38,7 +38,7 @@
                     またのご利用を心よりお待ち申し上げます。
                 </p>
                 <address class="shop_information">
-                    <strong class="text-size-lg"><!--{$arrSiteInfo.company_name|h}--></strong><br />
+                    <strong class="font-size-lg"><!--{$arrSiteInfo.company_name|h}--></strong><br />
                     TEL：<!--{$arrSiteInfo.tel01}-->-<!--{$arrSiteInfo.tel02}-->-<!--{$arrSiteInfo.tel03}-->
                     <!--{if $arrSiteInfo.business_hour != ""}-->
                     (受付時間/<!--{$arrSiteInfo.business_hour}-->)

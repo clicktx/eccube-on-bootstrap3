@@ -52,7 +52,7 @@
                                 <span class="input-group-addon"><span class="fa fa-key"></span></span>
                                 <input type="password" name="login_pass" class="box140 form-control" placeholder="パスワード" />
                         </div>
-                        <div class="text-size-sm">
+                        <div class="font-size-sm">
                             <a href="<!--{$smarty.const.HTTPS_URL}-->forgot/<!--{$smarty.const.DIR_INDEX_PATH}-->" onclick="eccube.openWindow('<!--{$smarty.const.HTTPS_URL}-->forgot/<!--{$smarty.const.DIR_INDEX_PATH}-->','forget','600','400',{scrollbars:'no',resizable:'no'}); return false;" target="_blank">
                                 <span class="fa fa-question-circle"></span>
                                 パスワードを忘れた方

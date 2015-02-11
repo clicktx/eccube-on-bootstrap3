@@ -246,7 +246,7 @@
             <!--{if $tpl_login == 1 && $smarty.const.USE_POINT !== false}-->
                 <div class="point_area">
                     <h3 class="page-header"><span class="fa fa-arrow-circle-right"></span> ポイントのご利用</h3>
-                        <p class="text-size-md">
+                        <p class="font-size-md">
                             <span class="attention">1ポイントを<!--{$smarty.const.POINT_VALUE|number_format}-->円</span>として使用する事ができます。
                         </p>
                         <div class="point_announce">
