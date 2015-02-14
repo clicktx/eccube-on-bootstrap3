@@ -379,6 +379,10 @@ div#undercolumn_shopping .deliv-heading {
     display: block;
     background-color: #f5f5f5;
 }
+div#undercolumn_shopping .radio td {
+    border: none;
+    vertical-align: middle;
+}
 
 /* ==============================================
 ▼検索結果

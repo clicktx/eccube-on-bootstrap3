@@ -50,7 +50,7 @@
                         payment_body.empty();
                         for (var i in data.arrPayment) {
                             // 行
-                            var row = $('<div />').addClass('radio');
+                            var row = $('<tr />').addClass('radio');
                             // ラジオボタン
                             <!--{* IE7未満対応のため name と id をベタ書きする *}-->
                             var radio = $('<input type="radio" name="payment_id" id="pay_' + i + '" />')
@@ -61,7 +61,7 @@
                                 .text(data.arrPayment[i].payment_method);
                                 // 左カラム
                             row.append(
-                                $('<div />')
+                                $('<td />')
                                 .addClass('col-xs-5 col-md-3')
                                 .append(radio)
                                 .append(label)
@@ -72,9 +72,17 @@
                                 var payment_image = data.arrPayment[i].payment_image;
                                 if (payment_image) {
                                     var img = $('<img />').addClass('img-responsive padding-bottom-xs').attr('src', '<!--{$smarty.const.IMAGE_SAVE_URLPATH}-->' + payment_image);
-                                    row.append($('<div />').addClass('col-xs-7 col-md-9').append(img));
+                                    // ラベル
+                                    var label = $('<label />').attr('for', 'pay_' + i);
+                                    row.append(
+                                        $('<td />')
+                                        .addClass('col-xs-7 col-md-9')
+                                        .append(label.append(img))
+                                    );
                                 } else {
-                                    row.append($('<div />').addClass('col-xs-7 col-md-9'));
+                                    row.append(
+                                        $('<td />').addClass('col-xs-7 col-md-9')
+                                    );
                                 }
                             }
                             row.appendTo(payment_body);
@@ -162,23 +170,27 @@
                 <p class="attention"><!--{$arrErr[$key]}--></p>
                 <!--{/if}-->
 
-                <div id="payment" class="clearfix">
+                <table id="payment" class="clearfix table">
                     <!--{section name=cnt loop=$arrPayment}-->
-                        <div class="radio">
-                            <div class="col-xs-5 col-md-3">
+                        <tr class="radio">
+                            <td class="col-xs-5 col-md-3">
                                 <input type="radio" id="pay_<!--{$smarty.section.cnt.iteration}-->" name="<!--{$key}-->"  value="<!--{$arrPayment[cnt].payment_id}-->" style="<!--{$arrErr[$key]|sfGetErrorColor}-->" <!--{$arrPayment[cnt].payment_id|sfGetChecked:$arrForm[$key].value}--> />
-                                <label for="pay_<!--{$smarty.section.cnt.iteration}-->"><!--{$arrPayment[cnt].payment_method|h}--><!--{if $arrPayment[cnt].note != ""}--><!--{/if}--></label>
-                            </div>
-                            <div class="col-xs-7 col-md-9">
+                                <label for="pay_<!--{$smarty.section.cnt.iteration}-->">
+                                    <!--{$arrPayment[cnt].payment_method|h}--><!--{if $arrPayment[cnt].note != ""}--><!--{/if}-->
+                                </label>
+                            </td>
+                            <td class="col-xs-7 col-md-9">
                             <!--{if $img_show}-->
                                 <!--{if $arrPayment[cnt].payment_image != ""}-->
+                                <label for="pay_<!--{$smarty.section.cnt.iteration}-->">
                                     <img src="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrPayment[cnt].payment_image}-->" class="img-responsive padding-bottom-xs" />
+                                <label for="pay_<!--{$smarty.section.cnt.iteration}-->">
                                 <!--{/if}-->
                             <!--{/if}-->
-                            </div>
-                        </div>
+                            </td>
+                        </tr>
                     <!--{/section}-->
-                </div>
+                </table>
             </div>
 
             <!--{if $cartKey != $smarty.const.PRODUCT_TYPE_DOWNLOAD}-->
