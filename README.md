@@ -35,6 +35,15 @@ TwitterBootstrapを使った[EC-CUBE](http://www.ec-cube.net)用のデザイン�
 こちらのプラグインを利用するとスマートフォンからのアクセスの挙動をカスタマイズ出来ます。またガラケーの制御も同時に行えます。
 
 
+## プラグインについて
+公式サイトで配布されているプラグインはそのまま使えない場合が多いと思います（フロント機能のプラグインの場合はほぼ不可）eccube-on-bootstrap3テンプレートに最適化したプラグインを公開しています。
+
+1. [全ページ対応パンくずリスト表示プラグイン](https://github.com/clicktx/eccube-on-bootstrap3-plugin-BreadcrumbList)
+1. [AjaxZip3-for-2.13](https://github.com/clicktx/eccube-on-bootstrap3-plugin-AjaxZip3-for-2.13)
+1. [注文完了画面でも会員登録](https://github.com/clicktx/eccube-on-bootstrap3-plugin-RegisterWhileShopping)
+1. [ヘルプ機能](https://github.com/clicktx/eccube-on-bootstrap3-plugin-Help)
+
+
 ## その他
 ### vi/vimキーバインド
 今流行りの（？）vi/vimキーバインドを搭載しています。~~遊び機能なのでコードはやっつけです。~~
