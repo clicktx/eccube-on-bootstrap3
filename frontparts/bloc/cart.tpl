@@ -23,7 +23,10 @@
 <!--{if $arrCartList.0.TotalQuantity}-->
     <script>
         $(function(){
-            $('[data-role="cart-total-quantity"]').text("<!--{$arrCartList.0.TotalQuantity|number_format|default:0}-->");
+            var quantity = <!--{$arrCartList.0.TotalQuantity}--> < 100
+            ? <!--{$arrCartList.0.TotalQuantity|number_format|default:0}-->
+            : '99+';
+            $('[data-role="cart-total-quantity"]').text(quantity);
         });
     </script>
 <!--{/if}-->
