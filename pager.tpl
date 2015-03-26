@@ -20,7 +20,12 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *}-->
         <!--{* $max_pageが取得できないので作成 *}-->
-        <!--{math equation=ceil(a/b) a=$tpl_linemax b=$smarty.const.SEARCH_PMAX assign=max_page}-->
+        <!--{if $disp_number}-->
+            <!--{assign var=page_max value=$disp_number}-->
+            <!--{else}-->
+            <!--{assign var=page_max value=$smarty.const.SEARCH_PMAX}-->
+        <!--{/if}-->
+        <!--{math equation=ceil(a/b) a=$tpl_linemax b=$page_max assign=max_page}-->
 
         <!--{if !$tpl_pageno}--><!--{assign var=tpl_pageno value=1}--><!--{/if}-->
         <!--{* class=disabledの条件 *}-->
