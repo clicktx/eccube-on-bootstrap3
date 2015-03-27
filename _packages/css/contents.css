@@ -90,9 +90,9 @@ div#undercolumn_error .message_area .error {
         padding: 10px 16px;
     }
     #product-list-wrap .soldout {
-        top: 30px;
-        left: 5px;
-        font-size: 10px;
+        top: 28px;
+        left: 2px;
+        font-size: 12px;
     }
     #product-list-wrap {
     }
