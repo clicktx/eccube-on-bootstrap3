@@ -143,6 +143,12 @@
                 <!--▼商品-->
                 <div class="list_area clearfix col-sm-4 col-md-3">
                     <a href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$arrProduct.product_id|u}-->" class="thumbnail">
+
+                    <!--★SOLD OUT★-->
+                    <!--{if !$tpl_stock_find[$id]}-->
+                        <span class="soldout label label-danger fa-rotate-45">SOLD OUT</span>
+                    <!--{/if}-->
+
                     <!--★画像★-->
                         <img src="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrProduct.main_image|sfNoImageMainList|h}-->" alt="<!--{$arrProduct.name|h}-->" class="picture col-xs-5 col-sm-12" />
                         <div class="caption">
@@ -190,9 +196,6 @@
 
                             <!--▼買い物かご-->
                             <div class="cart_area clearfix">
-                                <!--{if !$tpl_stock_find[$id]}-->
-                                    <span class="soldout label label-danger fa-rotate-45">SOLD OUT</span>
-                                <!--{/if}-->
                             </div>
                             <!--▲買い物かご-->
                         </div>
