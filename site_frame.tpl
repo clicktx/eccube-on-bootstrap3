@@ -105,7 +105,6 @@
             if( range > 50){
                 // 左に移動
                 $('.row-offcanvas').removeClass('active');
-                // alert(range);
             } else if (start < 30 && range < -10){
                 // 右に移動
                 $('.row-offcanvas').addClass('active');
