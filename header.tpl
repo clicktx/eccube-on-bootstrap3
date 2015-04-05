@@ -167,7 +167,7 @@
           <div class="container text-center">
             <ul class="nav navbar-nav">
                 <li class="col-xs-3">
-                    <a href="#" class="btn btn-link" data-toggle="offcanvas">
+                    <a href="#" class="btn btn-link toggle-offcanvas">
                         <span class="glyphicon glyphicon-list-alt fa-2x"></span><br />
                         <small>カテゴリ</small>
                     </a>

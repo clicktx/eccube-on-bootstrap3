@@ -145,7 +145,7 @@
                             <!--{/foreach}-->
                             <!--{* ▲左ナビ *}-->
                             <p class="visible-xs">
-                                <button class="btn btn-default col-xs-4" data-toggle="offcanvas">
+                                <button class="btn btn-default col-xs-4 toggle-offcanvas">
                                     <span class="glyphicon glyphicon-chevron-left"></span>
                                 </button>
                             </p>
