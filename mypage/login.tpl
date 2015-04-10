@@ -47,7 +47,7 @@
                         </small>
 
                         <!--{assign var=key value="login_memory"}-->
-                        <label class="checkbox">
+                        <label class="checkbox margin-left-lg">
                           <input type="checkbox" name="<!--{$key}-->" value="1"<!--{$tpl_login_memory|sfGetChecked:1}--> id="login_memory" /> メールアドレスをコンピューターに記憶させる
                         </label>
                         <button class="btn btn-lg btn-primary btn-block" type="submit">ログイン</button>
