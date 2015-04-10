@@ -22,10 +22,10 @@
 <script>
     $(function(){
         var msf = $('#multiple-shippng-form');
-        msf.hide();
+        if ( !$('#deliv_label').prop("checked") ){ msf.hide(); }
+
         $('#deliv_label').click(function(){
-            var checkbox_val = $(this).prop("checked");
-            if (checkbox_val) {
+            if ( $(this).prop("checked") ) {
                 msf.show("normal");
             } else {
                 msf.hide("normal");
