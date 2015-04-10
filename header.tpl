@@ -122,15 +122,6 @@
                                 <!--{/if}-->
                             </ul>
                         </li>
-                        <li class="entry hidden-xs hidden-sm">
-                            <a href="<!--{$smarty.const.ROOT_URLPATH}-->entry/kiyaku.php">
-                                <br />
-                                <span class="font-size-md">
-                                    <span class="glyphicon glyphicon-ok"></span> 会員登録
-                                </span>
-
-                            </a>
-                        </li>
                         <li class="hidden-xs">
                             <a href="<!--{$smarty.const.CART_URL}-->">
                                 <br />
