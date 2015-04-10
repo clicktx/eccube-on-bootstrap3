@@ -44,7 +44,7 @@
                             <a href="<!--{$smarty.const.HTTPS_URL}-->forgot/<!--{$smarty.const.DIR_INDEX_PATH}-->" onclick="eccube.openWindow('<!--{$smarty.const.HTTPS_URL}-->forgot/<!--{$smarty.const.DIR_INDEX_PATH}-->','forget','600','460',{scrollbars:'no',resizable:'no'}); return false;" target="_blank"><span class="fa fa-question-circle"></span>パスワードを忘れた方はこちら</a>
                         </small>
                         <!--{assign var=key value="login_memory"}-->
-                        <label class="checkbox">
+                        <label class="checkbox margin-left-lg">
                           <input type="checkbox" name="<!--{$key}-->" value="1"<!--{$tpl_login_memory|sfGetChecked:1}--> id="login_memory" /> メールアドレスをコンピューターに記憶させる
                         </label>
                         <button class="btn btn-lg btn-primary btn-block" type="submit">ログイン</button>

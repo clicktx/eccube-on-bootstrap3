@@ -60,7 +60,7 @@
 <!--{/if}-->
 
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->bootstrap/3.1.0/css/bootstrap.min.css" />
+<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->bootstrap/3.3.4/css/bootstrap.min.css" />
 <link rel="stylesheet" href="<!--{$smarty.const.ROOT_URLPATH}-->js/jquery.colorbox/colorbox.css" type="text/css" media="all" />
 <link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/import.css" type="text/css" media="all" />
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -69,7 +69,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-<script src="<!--{$TPL_URLPATH}-->bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="<!--{$TPL_URLPATH}-->bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="<!--{$TPL_URLPATH}-->js/jquery.plugin.js"></script>
 
 <script type="text/javascript">//<![CDATA[

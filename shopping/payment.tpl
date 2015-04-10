@@ -172,7 +172,7 @@
 
                 <table id="payment" class="clearfix table">
                     <!--{section name=cnt loop=$arrPayment}-->
-                        <tr class="radio">
+                        <tr>
                             <td class="col-xs-5 col-md-3">
                                 <input type="radio" id="pay_<!--{$smarty.section.cnt.iteration}-->" name="<!--{$key}-->"  value="<!--{$arrPayment[cnt].payment_id}-->" style="<!--{$arrErr[$key]|sfGetErrorColor}-->" <!--{$arrPayment[cnt].payment_id|sfGetChecked:$arrForm[$key].value}--> />
                                 <label for="pay_<!--{$smarty.section.cnt.iteration}-->">

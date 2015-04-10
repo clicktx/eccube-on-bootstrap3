@@ -53,15 +53,19 @@
                 <!--{* ▲HeaderInternal COLUMN *}-->
                 </div>
                 <div id="header_navi" class="collapse navbar-collapse">
-                    <form class="navbar-form navbar-left hidden-xs hidden-sm" role="search" name="search_form" id="header_search_form" method="get" action="<!--{$smarty.const.ROOT_URLPATH}-->
-                        products/list.php">
-                        <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
-                        <input type="hidden" name="mode" value="search" />
-                        <div class="form-group">
-                          <input type="text" id="header-search" class="form-control" name="name" maxlength="50" value="<!--{$smarty.get.name|h}-->" placeholder="キーワードを入力">
-                        </div>
-                        <button type="submit" class="btn btn-default hidden-xs hidden-sm">検索</button>
-                    </form>
+                    <div class="navbar-form navbar-left hidden-xs hidden-sm">
+                        <form role="search" name="search_form" id="header_search_form" method="get" action="<!--{$smarty.const.ROOT_URLPATH}-->
+                            products/list.php">
+                            <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
+                            <input type="hidden" name="mode" value="search" />
+                            <div class="input-group">
+                              <input type="text" id="header-search" class="form-control" name="name" maxlength="50" value="<!--{$smarty.get.name|h}-->" placeholder="キーワードを入力">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-default hidden-xs hidden-sm">検索</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="mypage dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -121,15 +125,6 @@
                                 </li>
                                 <!--{/if}-->
                             </ul>
-                        </li>
-                        <li class="entry hidden-xs hidden-sm">
-                            <a href="<!--{$smarty.const.ROOT_URLPATH}-->entry/kiyaku.php">
-                                <br />
-                                <span class="font-size-md">
-                                    <span class="glyphicon glyphicon-ok"></span> 会員登録
-                                </span>
-
-                            </a>
                         </li>
                         <li class="hidden-xs">
                             <a href="<!--{$smarty.const.CART_URL}-->">
