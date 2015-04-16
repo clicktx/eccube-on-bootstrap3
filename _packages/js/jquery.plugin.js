@@ -139,7 +139,7 @@ f(this).data("owl-init"))return!1;f(this).data("owl-init",!0);var b=Object.creat
 responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-carousel",theme:"owl-theme",lazyLoad:!1,lazyFollow:!0,lazyEffect:"fade",autoHeight:!1,jsonPath:!1,jsonSuccess:!1,dragBeforeAnimFinish:!0,mouseDrag:!0,touchDrag:!0,addClassActive:!1,transitionStyle:!1,beforeUpdate:!1,afterUpdate:!1,beforeInit:!1,afterInit:!1,beforeMove:!1,afterMove:!1,afterAction:!1,startDragging:!1,afterLazyLoad:!1}})(jQuery,window,document);
 
 /*
- *  jQuery Vimize v0.0.2
+ *  jQuery Vimize v0.0.3
  *
  *  Copyright (c) 2014 clicktx
  *  https://github.com/clicktx/jquery-vimize
@@ -147,7 +147,7 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
  *  Licensed under MIT
  *
  */
-var Vimize={VERSION:"0.0.2"};(function(a){a.fn.vimize=function(j){var p={escKey:"true",searchBoxSelector:"",homePagePath:"/",scrollVal:a(window).height()*0.3,selectors:{0:"a"},defaultSelectors:0,command:{NEKO:function(){window.location.href="https://www.google.co.jp/search?tbm=isch&q=%E7%8C%AB";
+var Vimize={VERSION:"0.0.3"};(function(a){a.fn.vimize=function(j){var p={escKey:"true",searchBoxSelector:"",homePagePath:"/",scrollVal:a(window).height()*0.3,selectors:{0:"a"},defaultSelectors:0,command:{NEKO:function(){window.location.href="https://www.google.co.jp/search?tbm=isch&q=%E7%8C%AB";
 },NYAN:function(){window.location.href="https://www.google.co.jp/search?tbm=isch&q=%E3%81%AB%E3%82%83%E3%82%93";},CAT:function(){window.location.href="https://www.google.co.jp/search?tbm=isch&q=cat";
 }}};var s=a.extend(p,j);var q="";var k="";var m="";var c=s.defaultSelectors;var d={};var n={};var b=0;for(var v in s.selectors){d[v]=-1;n[v]=a(s.selectors[v]);
 ++b;}var h=function(){a((navigator.userAgent.indexOf("Opera")!=-1)?document.compatMode=="BackCompat"?"body":"html":"html,body").animate({scrollTop:0},"slow");
@@ -161,6 +161,6 @@ case 52:x(d[c]=(n[c].length-1));break;case 191:a(s.searchBoxSelector).focus();br
 }};var y=function(i){if(m!=71){m=71;return;}switch(i){case 71:h();break;}m="";};var w=function(i){switch(i){case 189:window.location.href=s.homePagePath;
 break;case 68:scrollBy(0,s.scrollVal);break;case 85:scrollBy(0,"-"+s.scrollVal);break;case 74:if((n[c].length-1)>d[c]){x(++d[c]);}break;case 75:if(d[c]>0){x(--d[c]);
 }break;case 72:if(c>0){--c;}if(d[c]<0){d[c]=0;}x(d[c]);break;case 76:if(c<b-1){++c;}if(d[c]<0){d[c]=0;}x(d[c]);break;case 66:history.back();break;case 78:history.forward();
-break;case 48:case 96:case 222:x(d[c]=0);break;case 191:a(s.searchBoxSelector).focus();return false;}m=i;};a(window).keydown(function(z){var i=a("input:focus");
+break;case 48:case 96:case 222:x(d[c]=0);break;case 191:a(s.searchBoxSelector).focus();return false;}m=i;};a(window).keydown(function(z){var i=a("input:focus, textarea:focus");
 if(z.keyCode==27){f(z.keyCode);}else{if(z.ctrlKey){g(z.keyCode,i);}}if(i.length){return;}if(z.shiftKey){t(z.keyCode);return false;}else{if(q=="cmd"){l(z.keyCode);
 return false;}else{if(z.keyCode==71){y(z.keyCode);return false;}else{ret=w(z.keyCode);return ret;}}}});};})(jQuery);
