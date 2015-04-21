@@ -184,7 +184,7 @@
                                 <!--{if $arrPayment[cnt].payment_image != ""}-->
                                 <label for="pay_<!--{$smarty.section.cnt.iteration}-->">
                                     <img src="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrPayment[cnt].payment_image}-->" class="img-responsive padding-bottom-xs" />
-                                <label for="pay_<!--{$smarty.section.cnt.iteration}-->">
+                                </label>
                                 <!--{/if}-->
                             <!--{/if}-->
                             </td>
