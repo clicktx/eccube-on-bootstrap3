@@ -172,6 +172,8 @@
                 <div class="pull-right">
                     <!--{if !$smarty.session.customer.customer_id}-->
                     <a href="./?mode=nonmember" class="btn btn-default btn-xs"><span class="fa fa-pencil"></span> 変更</a>
+                    <!--{else}-->
+                    <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/change.php" class="btn btn-default btn-xs"><span class="fa fa-pencil"></span> 変更</a>
                     <!--{/if}-->
                 </div>
             </h3>
