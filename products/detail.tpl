@@ -323,7 +323,7 @@
                         <!--{/if}-->
                     </div>
                 <!--{else}-->
-                    <p class="subtext col-xs-12"><!--★サブテキスト★--><!--{$arrProduct[$ckey]|nl2br_html}--></p>
+                    <div class="subtext col-xs-12"><!--★サブテキスト★--><!--{$arrProduct[$ckey]|nl2br_html}--></div>
                 <!--{/if}-->
                 <!--▲サブ画像-->
                 </div>
