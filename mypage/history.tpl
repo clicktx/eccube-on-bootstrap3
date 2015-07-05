@@ -60,8 +60,16 @@
                             </div>
                             <div class="col-xs-9 col-sm-10 col-md-11">
                                 <div class="history-item-title">
-                                    <a<!--{if $orderDetail.enable}--> href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$orderDetail.product_id|u}-->"<!--{/if}--> class="text-bold"><!--{$orderDetail.product_name|h}-->
-                                    </a><br />
+                                    <!--{if $orderDetail.enable}-->
+                                        <a href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$orderDetail.product_id|u}-->" class="text-bold">
+                                            <!--{$orderDetail.product_name|h}-->
+                                        </a>
+                                    <!--{else}-->
+                                        <span class="text-bold">
+                                            <!--{$orderDetail.product_name|h}-->
+                                        </span>
+                                    <!--{/if}-->
+                                    <br />
                                     <small>
                                         <!--{if $orderDetail.classcategory_name1 != ""}-->
                                             <!--{$orderDetail.classcategory_name1|h}-->
