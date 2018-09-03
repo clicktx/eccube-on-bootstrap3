@@ -170,7 +170,7 @@
             <h3 class="margin-top-xl margin-bottom-md">
                 <span class="fa fa-arrow-circle-right"></span> ご注文者
                 <div class="pull-right">
-                    <!--{if !$smarty.session.customer.customer_id}-->
+                    <!--{if !$smarty.session.customer}-->
                     <a href="./?mode=nonmember" class="btn btn-default btn-xs"><span class="fa fa-pencil"></span> 変更</a>
                     <!--{else}-->
                     <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/change.php" class="btn btn-default btn-xs"><span class="fa fa-pencil"></span> 変更</a>

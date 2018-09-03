@@ -70,7 +70,7 @@
                         <li class="mypage dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 こんにちは
-                                <!--{if $smarty.session.customer.customer_id}-->
+                                <!--{if $smarty.session.customer}-->
                                 、<!--{$smarty.session.customer.name01}--><!--{$smarty.session.customer.name02}-->さん
                                 <!--{else}-->
                                 。ログイン
@@ -81,7 +81,7 @@
                                 </span>
                             </a>
                             <ul class="dropdown-menu">
-                                <!--{if !$smarty.session.customer.customer_id}-->
+                                <!--{if !$smarty.session.customer}-->
                                 <li class="dropdown-header">
                                     <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/login.php" class="btn btn-default">ログイン</a>
                                     <span>はじめてのご利用ですか？<a href="<!--{$smarty.const.ROOT_URLPATH}-->entry/kiyaku.php">新規登録はこちら</a></span>
@@ -100,7 +100,7 @@
                                 <li>
                                     <a href="<!--{$smarty.const.HTTPS_URL}-->mypage/favorite.php"><span class="fa fa-star"></span> お気に入り</a>
                                 </li>
-                                <!--{if $smarty.session.customer.customer_id}-->
+                                <!--{if $smarty.session.customer}-->
                                 <li class="dropdown-header">
                                     設定
                                 </li>
@@ -112,7 +112,7 @@
                                 </li>
                                 <!--{/if}-->
                                 <li class="divider"></li>
-                                <!--{if $smarty.session.customer.customer_id}-->
+                                <!--{if $smarty.session.customer}-->
                                 <li class="dropdown-header">
                                     <!--{$smarty.session.customer.name01}--><!--{$smarty.session.customer.name02}-->さんではありませんか？
                                 </li>
